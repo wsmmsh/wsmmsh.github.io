@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="google-site-verification" content="M9qAE0OUPRpUVCE5Bj5aSvSsKjNwVrC5vmX1u9-ruh8">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="algorithm,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="MMSH的个人博客" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="所谓遍历(Traversal)是指沿着某条搜索路线，依次对树中每个结点均做一次且仅做一次访问。遍历是二叉树最重要的运算之一，是二叉树上进行其它运算的基础。">
+<meta name="keywords" content="algorithm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="二叉树的遍历">
+<meta property="og:url" content="http://yoursite.com/2016/03/26/二叉树的遍历/index.html">
+<meta property="og:site_name" content="MMSH的个人博客">
+<meta property="og:description" content="所谓遍历(Traversal)是指沿着某条搜索路线，依次对树中每个结点均做一次且仅做一次访问。遍历是二叉树最重要的运算之一，是二叉树上进行其它运算的基础。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-11-20T12:06:23.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="二叉树的遍历">
+<meta name="twitter:description" content="所谓遍历(Traversal)是指沿着某条搜索路线，依次对树中每个结点均做一次且仅做一次访问。遍历是二叉树最重要的运算之一，是二叉树上进行其它运算的基础。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/03/26/二叉树的遍历/">
+
+
+
+
+
+  <title>二叉树的遍历 | MMSH的个人博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MMSH的个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">一个人的朝圣，已经毕业，希望在工作中学到的东西越来越多</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/03/26/二叉树的遍历/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="MMSH">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MMSH的个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">二叉树的遍历</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-26T14:29:22+08:00">
+                2016-03-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/source/categories/Algorithm/" itemprop="url" rel="index">
+                    <span itemprop="name">Algorithm</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/03/26/二叉树的遍历/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2016/03/26/二叉树的遍历/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2016/03/26/二叉树的遍历/" class="leancloud_visitors" data-flag-title="二叉树的遍历">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.6k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  11
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>所谓遍历(Traversal)是指沿着某条搜索路线，依次对树中每个结点均做一次且仅做一次访问。遍历是二叉树最重要的运算之一，是二叉树上进行其它运算的基础。</p>
+<a id="more"></a>
+<p>根据访问结点操作发生位置命名：  </p>
+<ol>
+<li>前序遍历(Preorder Traversal)，访问根结点的操作发生在遍历其左右子树之前。  </li>
+<li>中序遍历(Inorder Traversal)，访问根结点的操作发生在遍历其左右子树之中。  </li>
+<li>后序遍历(Postorder Traversal)，访问根结点的操作发生在遍历其左右子树之后。  </li>
+<li>层序遍历(Level-order Traversal)，所有深度为d的结点要在深度为d+1的节点之前处理。由于它用的较少，所以本文不对它进行讨论。  </li>
+</ol>
+<p>注：由于先左后右和先右后左对称，故本文只讨论先左后右的三种次序。</p>
+<h2 id="二叉树节点定义"><a href="#二叉树节点定义" class="headerlink" title="二叉树节点定义"></a>二叉树节点定义</h2><p>二叉树节点使用以下数据结构进行表示，包括关键字、左儿子、右儿子属性和一个带默认参数的构造函数。</p>
+<pre><code>struct TreeNode {
+    public:
+        int val;
+        TreeNode *left, *right;
+        TreeNode(int v = 0, TreeNode *l = NULL, TreeNode *r = NULL) 
+        :val(v), left(l), right(r) { }
+    };</code></pre><h2 id="二叉树的遍历"><a href="#二叉树的遍历" class="headerlink" title="二叉树的遍历"></a>二叉树的遍历</h2><p>二叉树遍历的实现方式主要有三种：递归遍历，非递归遍历和Morris遍历。</p>
+<h3 id="递归遍历"><a href="#递归遍历" class="headerlink" title="递归遍历"></a>递归遍历</h3><p>递归遍历的实现非常简单，按照遍历的次序，对当前结点分别调用左子树和右子树即可。此时每个结点只需遍历一次，故时间复杂度为O(n)。最差情况下递归调用的深度为O(n)，所以空间复杂度为O(n)。</p>
+<h4 id="前序遍历"><a href="#前序遍历" class="headerlink" title="前序遍历"></a>前序遍历</h4><pre><code>void preOrder(TreeNode *root) {
+    if(root == NULL) {
+        return; 
+    }
+    cout &lt;&lt; root-&gt;val &lt;&lt;endl;
+    preOrder(root-&gt;left);
+    preOrder(root-&gt;right);    
+}
+/*void函数如果想在它们的中间位置提前退出，可以使用return语句，此时return有点类似break；
+  只要函数的返回类型不是void，则每条return语句必须返回一个值。*/ </code></pre><h4 id="中序遍历"><a href="#中序遍历" class="headerlink" title="中序遍历"></a>中序遍历</h4><pre><code>void inOrder(TreeNode *root)  {
+    if(root == NULL) {
+        return;
+    }
+    inOrder(root-&gt;left);
+    cout &lt;&lt; root-&gt;val &lt;&lt;endl;
+    inOrder(root-&gt;right);        
+}</code></pre><h4 id="后序遍历"><a href="#后序遍历" class="headerlink" title="后序遍历"></a>后序遍历</h4><pre><code>void postOrder(TreeNode *root)  {
+    if(root == NULL) {
+        return;
+    }
+    postOrder(root-&gt;left);
+    postOrder(root-&gt;right);        
+    cout &lt;&lt; root-&gt;val &lt;&lt;endl;
+}</code></pre><h3 id="非递归遍历"><a href="#非递归遍历" class="headerlink" title="非递归遍历"></a>非递归遍历</h3><p>递归算法的本质是利用函数的调用栈进行，实际上我们可以自行使用栈来进行模拟，实现二叉树遍历的非递归实现。此时每个结点只需遍历一次，故时间复杂度为O(n)，空间复杂度为O(h),h为二叉树的高度。</p>
+<h4 id="前序遍历-1"><a href="#前序遍历-1" class="headerlink" title="前序遍历"></a>前序遍历</h4><p>首先把根节点入栈，然后在每次循环中执行以下操作：</p>
+<ul>
+<li><p>此时栈顶元素即为当前的根节点，弹出并打印当前的根节点；</p>
+</li>
+<li><p>把当前根节点的右儿子入栈；</p>
+</li>
+<li><p>把当前根节点的左儿子入栈。</p>
+<pre><code>void preOrder2(TreeNode *root)  {
+    if(root == NULL) {
+        return;
+    }
+    stack&lt;TreeNode *&gt; stk;
+    stk.push(root);
+    while(!stk.empty()) {
+        TreeNode *pNode = stk.top();
+        stk.pop();
+        cout &lt;&lt; pNode-&gt;val &lt;&lt; endl;
+        if(pNode-&gt;left) {
+            stk.push(pNode-&gt;left);
+        }
+        if(pNode-&gt;right) {
+            stk.push(pNode-&gt;right);
+        }
+
+    }
+}</code></pre></li>
+</ul>
+<h4 id="中序遍历-1"><a href="#中序遍历-1" class="headerlink" title="中序遍历"></a>中序遍历</h4><ol>
+<li><p>初始化一个二叉树结点pNode指向根结点；</p>
+</li>
+<li><p>若pNode非空，那么就把pNode入栈，并把pNode变为其左儿子，直到最左边的结点；</p>
+</li>
+<li><p>若pNode为空，弹出栈顶的结点，并访问该结点，将pNode指向其右儿子。</p>
+<pre><code>void inOrder2(TreeNode *root) {
+    if(root == NULL) {
+        return;
+    }
+    stack&lt;TreeNode *&gt; stk;
+    TreeNode *pNode = root;
+    while(pNode || !stk.empty()) {
+        if(pNode) {
+            stk.push(pNode);
+            pNode = pNode-&gt;left;
+        } else {
+            pNode = stk.top();
+            stk.pop();
+            cout &lt;&lt; pNode-&gt;val &lt;&lt; endl;
+            pNode = pNode-&gt;right;
+        }
+    }
+}</code></pre></li>
+</ol>
+<h4 id="后序遍历-1"><a href="#后序遍历-1" class="headerlink" title="后序遍历"></a>后序遍历</h4><p>因为后序遍历的顺序是：左子树-&gt;右子树-&gt;根节点，于是我们在前序遍历的代码中，当访问完当前节点后，先把当前节点的左子树入栈，再把右子树入栈，这样最终得到的顺序为：根节点-&gt;右子树-&gt;左子树，刚好是后序遍历倒过来的版本，于是把这个结果做一次翻转即为真正的后序遍历。而翻转可以通过使用另外一个栈简单完成，这样的代价是需要两个栈，但就复杂度而言，空间复杂度仍然是O(h)。</p>
+<pre><code>void postOrder2(TreeNode *root)  {
+    if(root == NULL) {
+        return;
+    }
+    stack&lt;TreeNode *&gt; stk1,stk2;
+    stk1.push(root);
+    while(!stk1.empty()) {
+        TreeNode *pNode = stk1.top();
+        stk1.pop();
+        stk2.push(pNode);
+        if(pNode-&gt;right) {
+            stk1.push(pNode-&gt;right);
+        }
+        if(pNode-&gt;left) {
+            stk1.push(pNode-&gt;left);
+        }
+    }
+    while(!stk2.empty()) {
+        cout &lt;&lt; stk2.top()-&gt;val &lt;&lt; endl;
+        stk2.pop();
+    }
+}  </code></pre><h3 id="Morris遍历"><a href="#Morris遍历" class="headerlink" title="Morris遍历"></a>Morris遍历</h3><p>Morris遍历的神奇之处在于它是非递归的算法，且不需要额外的O(h)的空间，而且复杂度仍然是线性的。这样的算法最关键的问题是当访问完一棵子树后，如何回到其对于的根节点再继续访问右子树呢？Morris是通过修改二叉树某些节点的指针来做到的。</p>
+<h4 id="中序遍历-2"><a href="#中序遍历-2" class="headerlink" title="中序遍历"></a>中序遍历</h4><p>按照定义，在中序遍历中，对于一棵以root为根的二叉树，当访问完root的前驱节点后，需要回到root节点进行访问，然后再到root的右儿子进行访问。于是我们可以每次访问到一棵子树时，找到它的前驱节点，把前驱节点的右儿子变为当前的根节点root，这样当遍历完前驱节点后，可以顺着这个右儿子回到根节点root。但问题是修改了该前驱节点的右儿子后什么时候再改回来呢？  </p>
+<ul>
+<li>当第一次访问以root为根的子树时，找到它的前驱pre，此时pre的右儿子必定为空，于是把这个右儿子设置为root，以便以后根据这个指针回到root节点。</li>
+<li>当第二次回到以root为根的子树时，再找到它的前驱pre，此时pre的右儿子已经被设置成了当前的root，这时把该右儿子重新设置成NULL，然后继续进行root的右儿子的遍历。于是完成了指针的修改。  </li>
+</ul>
+<p>在这样的情景下，寻找当前节点的前驱节点时，不仅需要判断其是否有右儿子，而且还要判断右儿子是否为当前的root节点，跟普通情况下的寻址前驱节点稍微多了一个条件。由于在每次遍历一个节点的时候都需要寻找其前驱节点，而寻找前驱节点的时间一般与树的高度相关，这样看上去算法的复杂度应该为O(nlogn)才对。但由于其只需要对有左儿子的节点才寻找前驱，于是所有寻找前驱时走过的路加起来至多为一棵树的节点数，例如在下文的例子中，只需要对以下节点寻找前驱：</p>
+<pre><code>     4
+   /   \
+  2     6
+ / \   / \
+1   3 5   7</code></pre><ul>
+<li>节点4：寻找路径为：2-3</li>
+<li>节点2：寻找路径为：1</li>
+<li>节点6：寻找路径为：5  </li>
+</ul>
+<p>于是寻找前驱加上遍历的运算量之和至多为2*n，n为节点个数，于是算法的复杂度为仍然为O(n)。</p>
+<pre><code>void inOrder3(TreeNode *root)  {
+    if(root == NULL) {
+        return;
+    }
+    TreeNode *pNode = root;
+    while(pNode) {
+        if(pNode-&gt;left == NULL) {
+            cout &lt;&lt; pNode-&gt;val &lt;&lt; endl;
+            pNode = pNode-&gt;right;
+        } else {
+            TreeNode *pPre = pNode-&gt;left;
+            while(pPre-&gt;right != NULL &amp;&amp; pPre-&gt;right != pNode) {
+                pPre = pPre-&gt;right;
+            }
+
+            if(pPre-&gt;right == NULL) {
+                pPre-&gt;right = pNode;
+                pNode = pNode-&gt;left;
+            } else {
+                pPre-&gt;right = NULL;
+                cout &lt;&lt; pNode-&gt;val &lt;&lt; endl;
+                pNode = pNode-&gt;right; 
+            } 
+        }
+    }
+}</code></pre><h4 id="前序遍历-2"><a href="#前序遍历-2" class="headerlink" title="前序遍历"></a>前序遍历</h4><p>前序遍历和中序遍历类似，只是在遍历过程中访问节点的顺序稍有不同。即在第一次访问一棵子树时，就要先对根节点进行访问，于是cout输出语句被放到了if判断中第一次访问的分支中。</p>
+<pre><code>void preOrder3(TreeNode *root)  {
+    if(root == NULL) {
+        return;
+    }
+    TreeNode *pNode = root;
+    while(pNode) {
+        if(pNode-&gt;left == NULL) {
+            cout &lt;&lt; pNode-&gt;val &lt;&lt; endl;
+            pNode = pNode-&gt;right;
+        } else {
+            TreeNode *pPre = pNode-&gt;left;
+            while(pPre-&gt;right &amp;&amp; pPre-&gt;right != pNode) {
+                pPre = pPre-&gt;right;
+            }
+
+            if(pPre-&gt;right == NULL) {
+                pPre-&gt;right = pNode;
+                cout &lt;&lt; pNode-&gt;val &lt;&lt; endl;        //先输出左结点 
+                pNode = pNode-&gt;left;
+            } else {
+                pPre-&gt;right = NULL;
+                pNode = pNode-&gt;right; 
+            } 
+        }
+    }
+}</code></pre><h4 id="后序遍历-2"><a href="#后序遍历-2" class="headerlink" title="后序遍历"></a>后序遍历</h4><p>后序遍历稍微复杂，但其遍历的基本顺序也是和前/中序遍历类似，只是在打印的时候做了一个翻转。考虑下文例子中的后序遍历结果：1 3 2 5 7 6 4。其可以这样进行拆分并进行解释：</p>
+<pre><code>     4
+   /   \
+  2     6
+ / \   / \
+1   3 5   7</code></pre><ul>
+<li>1：最左下角的结果节点</li>
+<li>3 2：节点2、3的倒序</li>
+<li>5：右儿子的最左下角的节点</li>
+<li>7 6 4：右边一列节点4、6、7的倒序  </li>
+</ul>
+<p>于是我们可以在中序遍历过程中，当第二次访问到一个节点时，把它的左儿子到它的前驱节点的路径上的节点进行翻转打印，即可得到后序遍历的结果。但这样的话根节点到最右下角那一列会访问不到，增加一个辅助节点作为新的根节点，把原有根节点作为其左儿子即可。</p>
+<pre><code>void reverse(TreeNode *p1, TreeNode *p2) {
+    if(p1 == p2) 
+        return;
+    TreeNode *x = p1; 
+    TreeNode *y = p1-&gt;right;
+    while(true) {
+        TreeNode *temp = y-&gt;right;
+        y-&gt;right = x;
+        x = y;
+        y = temp;
+        if(x == p2) 
+            break;
+    }   
+}
+
+void printReverse(TreeNode *p1, TreeNode *p2) {
+    reverse(p1, p2);
+    TreeNode *pNode = p2; 
+    while(true) {
+        cout &lt;&lt; pNode-&gt;val &lt;&lt; endl;
+        if(pNode == p1) 
+            break;
+        pNode = pNode-&gt;right;
+    }   
+    reverse(p2, p1);
+}
+
+void postOrder3(TreeNode *root) {
+    if(root == NULL) {
+        return;
+    }
+    TreeNode *dummy = new TreeNode(-1);
+    dummy-&gt;left = root;
+    TreeNode *pNode = dummy;
+    while(pNode) {
+        if(pNode-&gt;left == NULL)
+            pNode = pNode-&gt;right;
+        else {
+            TreeNode *pPrev = pNode-&gt;left;
+            while(pPrev-&gt;right &amp;&amp; pPrev-&gt;right != pNode){
+                pPrev = pPrev-&gt;right;
+            }
+            if(pPrev-&gt;right == NULL) {
+                pPrev-&gt;right = pNode;
+                pNode = pNode-&gt;left;
+            }
+            else {
+                printReverse(pNode-&gt;left, pPrev);
+                pPrev-&gt;right = NULL;
+                pNode = pNode-&gt;right;
+            }
+        }
+    }
+}</code></pre><h2 id="代码测试"><a href="#代码测试" class="headerlink" title="代码测试"></a>代码测试</h2><p>我们对以下简单的二叉树进行测试。</p>
+<pre><code>     4
+   /   \
+  2     6
+ / \   / \
+1   3 5   7  </code></pre><p>测试代码</p>
+<pre><code>int main() {
+    TreeNode a1(1), a3(3), a5(5), a7(7);
+    TreeNode a2(2, &amp;a1, &amp;a3), a6(6, &amp;a5, &amp;a7);
+    TreeNode a4(4, &amp;a2, &amp;a6);
+
+    //前序遍历：4 2 1 3 6 5 7 5 
+    preOrder(&amp;a4);
+    preOrder2(&amp;a4);
+    preOrder3(&amp;a4);
+    cout &lt;&lt; endl; 
+
+    //中序遍历：1 2 3 4 5 6 7
+    inOrder(&amp;a4);
+    inOrder2(&amp;a4);
+    inOrder3(&amp;a4);
+    cout &lt;&lt; endl; 
+
+    //后序遍历：1 3 2 5 7 6 4
+    postOrder(&amp;a4);
+    postOrder2(&amp;a4);
+    postOrder3(&amp;a4);
+}</code></pre><p>参考链接：<br>&emsp;&emsp;<a href="http://baike.baidu.com/view/549587.htm" target="_blank" rel="noopener">二叉树遍历</a><br>&emsp;&emsp;<a href="http://noalgo.info/832.html" target="_blank" rel="noopener">二叉树遍历（递归、非递归、Morris遍历）</a><br>&emsp;&emsp;<a href="http://www.wengweitao.com/er-cha-shu-de-san-chong-bian-li-fang-shi-di-gui-fei-di-gui-he-morrisbian-li.html" target="_blank" rel="noopener">二叉树的三种遍历方式</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="MMSH 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="MMSH 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/source/tags/algorithm/" rel="tag"># algorithm</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/03/08/POJ 1006 /" rel="next" title="POJ 1006">
+                <i class="fa fa-chevron-left"></i> POJ 1006
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/03/29/HTML网络协议/" rel="prev" title="HTML网络协议">
+                HTML网络协议 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="MMSH">
+            
+              <p class="site-author-name" itemprop="name">MMSH</p>
+              <p class="site-description motion-element" itemprop="description">一个人的朝圣</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:wsmmsh@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i></a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#二叉树节点定义"><span class="nav-number">1.</span> <span class="nav-text">二叉树节点定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二叉树的遍历"><span class="nav-number">2.</span> <span class="nav-text">二叉树的遍历</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#递归遍历"><span class="nav-number">2.1.</span> <span class="nav-text">递归遍历</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#前序遍历"><span class="nav-number">2.1.1.</span> <span class="nav-text">前序遍历</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#中序遍历"><span class="nav-number">2.1.2.</span> <span class="nav-text">中序遍历</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#后序遍历"><span class="nav-number">2.1.3.</span> <span class="nav-text">后序遍历</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#非递归遍历"><span class="nav-number">2.2.</span> <span class="nav-text">非递归遍历</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#前序遍历-1"><span class="nav-number">2.2.1.</span> <span class="nav-text">前序遍历</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#中序遍历-1"><span class="nav-number">2.2.2.</span> <span class="nav-text">中序遍历</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#后序遍历-1"><span class="nav-number">2.2.3.</span> <span class="nav-text">后序遍历</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Morris遍历"><span class="nav-number">2.3.</span> <span class="nav-text">Morris遍历</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#中序遍历-2"><span class="nav-number">2.3.1.</span> <span class="nav-text">中序遍历</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#前序遍历-2"><span class="nav-number">2.3.2.</span> <span class="nav-text">前序遍历</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#后序遍历-2"><span class="nav-number">2.3.3.</span> <span class="nav-text">后序遍历</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码测试"><span class="nav-number">3.</span> <span class="nav-text">代码测试</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2016 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MMSH</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+  <div class="footer-custom">一个人的朝圣之路</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'tMXVSzE1S23J7K8LvNb4PHjE-gzGzoHsz',
+        appKey: 'alkTzSa8Jvnx5oCA1D6b6i14',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("tMXVSzE1S23J7K8LvNb4PHjE-gzGzoHsz", "alkTzSa8Jvnx5oCA1D6b6i14");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script>
+
+
+  
+
+</body>
+</html>
