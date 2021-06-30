@@ -93,7 +93,7 @@
 <meta property="og:image" content="http://7xsex4.com1.z0.glb.clouddn.com/merge_sort.gif">
 <meta property="og:image" content="http://7xsex4.com1.z0.glb.clouddn.com/Heapsort.gif">
 <meta property="article:published_time" content="2016-10-10T12:06:05.000Z">
-<meta property="article:modified_time" content="2017-11-28T03:23:36.000Z">
+<meta property="article:modified_time" content="2021-06-30T08:16:25.803Z">
 <meta property="article:author" content="MMSH">
 <meta property="article:tag" content="algorithm">
 <meta property="article:tag" content="排序">
@@ -499,29 +499,10 @@
 
 <h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><p>冒泡排序（bubblesort）是先从数组第一个元素开始，依次比较相邻两个数，若前者比后者大，就将两者交换位置，然后处理下一对，依此类推，不断扫描数组，直到完成排序。时间复杂度最好为$O(n)$，最坏为$O(n^2)$，平均为$O(n^2)$。空间复杂度为O(1)。它是稳定的排序算法。</p>
 <h3 id="示意图"><a href="#示意图" class="headerlink" title="示意图"></a>示意图</h3><p><img src="http://7xsex4.com1.z0.glb.clouddn.com/bubble_sort.gif" alt="冒泡排序"></p>
-<h3 id="C-实现"><a href="#C-实现" class="headerlink" title="C++实现"></a>C++实现</h3><pre><code>template &lt;typename Comparable&gt;
-void bubbleSort(vector&lt;Comparable&gt; &amp; a) &#123;
-    int len = a.size();
-    for(int i=0; i&lt;len-1; i++)  &#123;
-        for(int j=0; j&lt;len-1-i; j++) &#123;
-            if(a[j] &gt; a[j+1]) &#123;
-                swap(a[j], a[j+1]);
-            &#125;
-        &#125;
-    &#125;
-&#125;
-</code></pre>
-<h3 id="PHP实现"><a href="#PHP实现" class="headerlink" title="PHP实现"></a>PHP实现</h3><pre><code>function bubbleSort(&amp;$arr)&#123;
-    $len = count($arr);
-    for($i=0; $i&lt;$len-1; $i++)&#123;
-        for($j=0; $j&lt;$len-$i-1; $j++)&#123;
-            if($arr[$j] &gt; $arr[$j+1])&#123;
-                list($arr[$j+1], $arr[$j]) = array($arr[$j], $arr[$j+1]);
-            &#125;
-        &#125;
-    &#125;
-&#125;
-</code></pre>
+<h3 id="C-实现"><a href="#C-实现" class="headerlink" title="C++实现"></a>C++实现</h3><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs arduino"><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> Comparable&gt;<br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">bubbleSort</span><span class="hljs-params">(vector&lt;Comparable&gt; &amp; a)</span> </span>&#123;<br>	<span class="hljs-keyword">int</span> len = a.<span class="hljs-built_in">size</span>();<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>; i&lt;len<span class="hljs-number">-1</span>; i++)  &#123;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">0</span>; j&lt;len<span class="hljs-number">-1</span>-i; j++) &#123;<br>			<span class="hljs-keyword">if</span>(a[j] &gt; a[j+<span class="hljs-number">1</span>]) &#123;<br>				<span class="hljs-built_in">swap</span>(a[j], a[j+<span class="hljs-number">1</span>]);<br>			&#125;<br>		&#125;<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="PHP实现"><a href="#PHP实现" class="headerlink" title="PHP实现"></a>PHP实现</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">bubbleSort</span>(<span class="hljs-params">&amp;<span class="hljs-variable">$arr</span></span>)</span>&#123;<br>	<span class="hljs-variable">$len</span> = count(<span class="hljs-variable">$arr</span>);<br>	<span class="hljs-keyword">for</span>(<span class="hljs-variable">$i</span>=<span class="hljs-number">0</span>; <span class="hljs-variable">$i</span>&lt;<span class="hljs-variable">$len</span>-<span class="hljs-number">1</span>; <span class="hljs-variable">$i</span>++)&#123;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-variable">$j</span>=<span class="hljs-number">0</span>; <span class="hljs-variable">$j</span>&lt;<span class="hljs-variable">$len</span>-<span class="hljs-variable">$i</span>-<span class="hljs-number">1</span>; <span class="hljs-variable">$j</span>++)&#123;<br>			<span class="hljs-keyword">if</span>(<span class="hljs-variable">$arr</span>[<span class="hljs-variable">$j</span>] &gt; <span class="hljs-variable">$arr</span>[<span class="hljs-variable">$j</span>+<span class="hljs-number">1</span>])&#123;<br>				<span class="hljs-keyword">list</span>(<span class="hljs-variable">$arr</span>[<span class="hljs-variable">$j</span>+<span class="hljs-number">1</span>], <span class="hljs-variable">$arr</span>[<span class="hljs-variable">$j</span>]) = <span class="hljs-keyword">array</span>(<span class="hljs-variable">$arr</span>[<span class="hljs-variable">$j</span>], <span class="hljs-variable">$arr</span>[<span class="hljs-variable">$j</span>+<span class="hljs-number">1</span>]);<br>			&#125;<br>		&#125;<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
 <h3 id="C语言实现"><a href="#C语言实现" class="headerlink" title="C语言实现"></a>C语言实现</h3><pre><code>void BubbleSort(int arr[], int length)
 &#123;
     int i = 0;
@@ -1206,7 +1187,7 @@ function heapSort(&amp;$arr) &#123;
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
