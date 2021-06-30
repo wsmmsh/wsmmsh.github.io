@@ -87,7 +87,7 @@
 <meta property="og:description" content="转眼间，自己已经从学校毕业走入职场，打算重新拾起博客，记录学习的历程。因为之前的博客是在实验室电脑上更新的，离开学校想要继续写博客，需要在工作电脑上重新搭建博客环境。自己折腾了许久，主要记录下迁移过程中的一些问题吧。">
 <meta property="og:locale">
 <meta property="article:published_time" content="2021-06-29T08:45:00.000Z">
-<meta property="article:modified_time" content="2021-06-30T07:06:14.675Z">
+<meta property="article:modified_time" content="2021-06-30T07:54:24.407Z">
 <meta property="article:author" content="MMSH">
 <meta property="article:tag" content="hexo">
 <meta property="article:tag" content="blog">
@@ -437,12 +437,8 @@
 next主题 version: 5.1.3  
 </code></pre>
 <p>之前搭建博客的时候，写数学公式主要是用的hexo-math插件，但重新安装的时候各种调不出来，决定使用next主题自带的</p>
-<pre><code># MathJax Support
-mathjax:
-  enable: true
-  per_page: true
-  cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML  
-</code></pre>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># MathJax Support</span><br><span class="hljs-attr">mathjax:</span><br>  <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">per_page:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">cdn:</span> <span class="hljs-string">//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML</span>  <br></code></pre></td></tr></table></figure>
+
 <p>这样可以不使用插件就能正常渲染公式。需要注意的需要在有公式的文章的Front-matter区域添加<code>mathjax: true</code>，这样就能正常显示公式了。<br>自此，博客已经在新电脑上生根发芽，希望以后能够坚持记录自己学到的一些东西吧。  </p>
 <h2 id="3、博客功能丰富"><a href="#3、博客功能丰富" class="headerlink" title="3、博客功能丰富"></a>3、博客功能丰富</h2><p>另外，给自己的博客使用leancloud添加了评论和文章阅读量统计功能。</p>
 <h2 id="4、网站访问量统计"><a href="#4、网站访问量统计" class="headerlink" title="4、网站访问量统计"></a>4、网站访问量统计</h2><p>使用了不蒜子的服务，注意在本地调试的时候网站访问量会报错，但上传github后显示正常。</p>
