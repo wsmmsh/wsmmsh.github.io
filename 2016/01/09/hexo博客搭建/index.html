@@ -49,7 +49,7 @@
 
 
 
-
+<link rel="dns-prefetch" href="https://blog-comment-wsmmsh.vercel.app">
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
@@ -133,7 +133,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -146,7 +146,6 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E5%AE%89%E8%A3%85git%E3%80%81node-js%E3%80%81hexo"><span class="nav-number">1.</span> <span class="nav-text">1、安装git、node.js、hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81hexo%E9%85%8D%E7%BD%AE%E3%80%81%E4%BC%98%E5%8C%96"><span class="nav-number">2.</span> <span class="nav-text">2、hexo配置、优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81hexo%E9%83%A8%E7%BD%B2%E7%9B%B8%E5%85%B3"><span class="nav-number">3.</span> <span class="nav-text">3、hexo部署相关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81hexo%E9%85%8D%E7%BD%AE"><span class="nav-number">4.</span> <span class="nav-text">4、hexo配置()</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -265,14 +264,15 @@
     </span>
 
   
-    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+  
+  
+    <span class="post-meta-item" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
       <span class="post-meta-item-text">阅读次数：</span>
-      <span id="busuanzi_value_page_pv"></span>
+      <span class="waline-pageview-count" data-path="/2016/01/09/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"></span>
     </span>
-  
   
     <span class="post-meta-break"></span>
     <span class="post-meta-item" title="本文字数">
@@ -280,14 +280,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span></span>
+      <span>998</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>NaN:aN</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -298,18 +298,45 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>这是我的第一篇github博客，鼓捣了好几天总算是搭建好了，总结下搭建整个环境的步骤吧。在真实搭建的时候参考了很多网上的资料，也走了很多弯路，在此按着正确的思路进行一下总结。</p>
-<span id="more"></span>
-<h2 id="1、安装git、node-js、hexo"><a href="#1、安装git、node-js、hexo" class="headerlink" title="1、安装git、node.js、hexo"></a>1、安装git、node.js、hexo</h2><p>这个属于前期工作，具体的可以参考hexo的官方教程。<br>参考：<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo官方中文文档</a><br>&emsp;&emsp;&emsp;<a target="_blank" rel="noopener" href="http://zipperary.com/2013/05/28/hexo-guide-2/">搭建hexo博客</a>  </p>
-<h2 id="2、hexo配置、优化"><a href="#2、hexo配置、优化" class="headerlink" title="2、hexo配置、优化"></a>2、hexo配置、优化</h2><p>我使用的主题是NexT，大家可以在hexo的主题列表里选择自己喜欢的。站点配置文件的设置可以参考<a target="_blank" rel="noopener" href="http://zipperary.com/2013/05/29/hexo-guide-3/">hexo博客的配置使用</a>，主题配置文件的可以参考你选择的主题的配置。<br>参考：<a target="_blank" rel="noopener" href="http://theme-next.iissnan.com/">NexT使用文档</a><br>&emsp;&emsp;&emsp;<a target="_blank" rel="noopener" href="https://github.com/iissnan/hexo-theme-next/wiki/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83">NexT主题配置参考</a>  </p>
-<h2 id="3、hexo部署相关"><a href="#3、hexo部署相关" class="headerlink" title="3、hexo部署相关"></a>3、hexo部署相关</h2><p>在本地写完博客或者对博客进行修改后，每次都需要<code>hexo g</code>来重新生成文件，然后push到github端，在deploy的时候为了避免每次都需要重新输入github的账号和密码，可以添加SSH，此处SSH的作用相当于一把钥匙，当装着这把钥匙的电脑deploy的时候就无需再次输入github的账号密码。添加SSH的具体做法参考<a target="_blank" rel="noopener" href="https://help.github.com/articles/generating-an-ssh-key/">Generating an SSH key</a>。<br>如果你在添加SSH后发现部署的时候仍然需要输入用户名密码，那么需要在你的站点配置文件(站点目录里的__config.yml)里进行修改，    在deploy里，把repo的地址从<code>https://github.com/USERNAME/REPOSITORY.git</code>改为<code>git@github.com:USERNAME/OTHERREPOSITORY.git</code>。原因是你之前使用的是https进行本地和远程github的连接，你使用SSH的时候自然也需要把链接改成SSH链接。<br>当然你也可以选择使用github桌面客户端来进行上传，此时和本地和远程的链接使用的HTTPS，无需在在本地添加SSH密钥。<br>参考：<a target="_blank" rel="noopener" href="https://help.github.com/articles/which-remote-url-should-i-use/#cloning-with-https-urls-recommended">Which remote URL should I use?</a><br>&emsp;&emsp;&emsp;重点参考里面的<code>Cloning with HTTPS URLs</code>和<code>Cloning with SSH URLs</code>。  </p>
-<h2 id="4、hexo配置"><a href="#4、hexo配置" class="headerlink" title="4、hexo配置()"></a>4、hexo配置()</h2><ul>
-<li>支持数学公式<br><code>npm install hexo-math --save</code><br>在站点_config.yml里添加<pre><code>  plugins: 
-        hexo-math
-</code></pre>
-</li>
-</ul>
-<p>参考资料：<br>(1)<a target="_blank" rel="noopener" href="http://ibruce.info/2013/11/22/hexo-your-blog/">hexo你的博客</a><br>(2)<a target="_blank" rel="noopener" href="http://www.ituring.com.cn/article/23">怎样使用Markdown</a><br>(3)<a target="_blank" rel="noopener" href="http://wowubuntu.com/markdown/basic.html">Markdown: Basics （快速入门）</a><br>(4)<a target="_blank" rel="noopener" href="http://wowubuntu.com/markdown/index.html">Markdown 语法说明 (简体中文版)</a><br>(5)<a target="_blank" rel="noopener" href="http://lowrank.science/Hexo-Migration/">多机更新 Hexo 博客</a></p>
+        <p>这是我的第一篇github博客，鼓捣了好几天总算是搭建好了，总结下搭建整个环境的步骤吧。在真实搭建的时候参考了很多网上的资料，也走了很多弯路，在此按着正确的思路进行一下总结。
+<span id="more"></span> ## 1、安装git、node.js、hexo
+这个属于前期工作，具体的可以参考hexo的官方教程。<br />
+参考：<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo官方中文文档</a><br />
+   <a
+target="_blank" rel="noopener" href="http://zipperary.com/2013/05/28/hexo-guide-2/">搭建hexo博客</a><br />
+## 2、hexo配置、优化
+我使用的主题是NexT，大家可以在hexo的主题列表里选择自己喜欢的。站点配置文件的设置可以参考<a
+target="_blank" rel="noopener" href="http://zipperary.com/2013/05/29/hexo-guide-3/">hexo博客的配置使用</a>，主题配置文件的可以参考你选择的主题的配置。<br />
+参考：<a target="_blank" rel="noopener" href="http://theme-next.iissnan.com/">NexT使用文档</a><br />
+   <a
+target="_blank" rel="noopener" href="https://github.com/iissnan/hexo-theme-next/wiki/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83">NexT主题配置参考</a><br />
+## 3、hexo部署相关
+在本地写完博客或者对博客进行修改后，每次都需要<code>hexo g</code>来重新生成文件，然后push到github端，在deploy的时候为了避免每次都需要重新输入github的账号和密码，可以添加SSH，此处SSH的作用相当于一把钥匙，当装着这把钥匙的电脑deploy的时候就无需再次输入github的账号密码。添加SSH的具体做法参考<a
+target="_blank" rel="noopener" href="https://help.github.com/articles/generating-an-ssh-key/">Generating
+an SSH key</a>。<br />
+如果你在添加SSH后发现部署的时候仍然需要输入用户名密码，那么需要在你的站点配置文件(站点目录里的__config.yml)里进行修改，
+在deploy里，把repo的地址从<code>https://github.com/USERNAME/REPOSITORY.git</code>改为<code>git@github.com:USERNAME/OTHERREPOSITORY.git</code>。原因是你之前使用的是https进行本地和远程github的连接，你使用SSH的时候自然也需要把链接改成SSH链接。<br />
+当然你也可以选择使用github桌面客户端来进行上传，此时和本地和远程的链接使用的HTTPS，无需在在本地添加SSH密钥。<br />
+参考：<a
+target="_blank" rel="noopener" href="https://help.github.com/articles/which-remote-url-should-i-use/#cloning-with-https-urls-recommended">Which
+remote URL should I use?</a><br />
+   重点参考里面的<code>Cloning with HTTPS URLs</code>和<code>Cloning with SSH URLs</code>。<br />
+## 4、hexo配置() - 支持数学公式<br />
+<code>npm install hexo-math --save</code><br />
+在站点_config.yml里添加</p>
+<pre><code>    plugins: 
+        hexo-math</code></pre>
+<p>参考资料：<br />
+(1)<a
+target="_blank" rel="noopener" href="http://ibruce.info/2013/11/22/hexo-your-blog/">hexo你的博客</a><br />
+(2)<a
+target="_blank" rel="noopener" href="http://www.ituring.com.cn/article/23">怎样使用Markdown</a><br />
+(3)<a target="_blank" rel="noopener" href="http://wowubuntu.com/markdown/basic.html">Markdown: Basics
+（快速入门）</a><br />
+(4)<a target="_blank" rel="noopener" href="http://wowubuntu.com/markdown/index.html">Markdown 语法说明
+(简体中文版)</a><br />
+(5)<a target="_blank" rel="noopener" href="http://lowrank.science/Hexo-Migration/">多机更新 Hexo
+博客</a></p>
 
     </div>
 
@@ -318,23 +345,6 @@
     
 
     <footer class="post-footer">
-          <div class="followme">
-  <span>欢迎关注我的其它发布渠道</span>
-
-  <div class="social-list">
-
-      <div class="social-item">
-        <a target="_blank" class="social-link" href="/atom.xml">
-          <span class="icon">
-            <i class="fa fa-rss"></i>
-          </span>
-
-          <span class="label">RSS</span>
-        </a>
-      </div>
-  </div>
-</div>
-
           <div class="post-tags">
               <a href="/tags/hexo/" rel="tag"># hexo</a>
               <a href="/tags/blog/" rel="tag"># blog</a>
@@ -381,14 +391,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">NaNm</span>
+    <span title="站点总字数">59k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">NaN:aN</span>
+    <span title="站点阅读时长">1:38</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -437,8 +447,17 @@
 <script src="/js/third-party/math/mathjax.js"></script>
 
 
-<script class="next-config" data-name="changyan" type="application/json">{"enable":true,"appid":"cyw49Jh7U","appkey":"bfb3ab83d0d1be3069fefd9b20a20024"}</script>
-<script src="/js/third-party/comments/changyan.js"></script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://blog-comment-wsmmsh.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":true,"placeholder":"请文明评论。（填写邮箱可在被回复时收到邮件提醒）","emoji":["https://unpkg.com/@waline/emojis@1.0.1/qq"],"wordLimit":0,"login":"enable","pageSize":10,"copyright":true,"el":"#waline","comment":true,"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","path":"/2016/01/09/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"}</script>
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() =>
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => 
+    Waline.init(Object.assign({}, CONFIG.waline,{ el: document.querySelector(CONFIG.waline.el) }))
+  );
+});
+</script>
 
 </body>
 </html>

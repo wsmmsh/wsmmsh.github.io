@@ -21,12 +21,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"wsmmsh.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.11.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="本问题来自于《编程珠玑》第八章。问题：输入是具有n个整数的向量，输出是输入向量的任何连续子向量中的最大和。">
+    <meta name="description" content="本问题来自于《编程珠玑》第八章。 问题：输入是具有n个整数的向量，输出是输入向量的任何连续子向量中的最大和。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="求连续子向量的最大和">
 <meta property="og:url" content="http://wsmmsh.github.io/2016/04/14/%E6%B1%82%E8%BF%9E%E7%BB%AD%E5%AD%90%E5%90%91%E9%87%8F%E7%9A%84%E6%9C%80%E5%A4%A7%E5%92%8C/index.html">
 <meta property="og:site_name" content="MMSH的个人博客">
-<meta property="og:description" content="本问题来自于《编程珠玑》第八章。问题：输入是具有n个整数的向量，输出是输入向量的任何连续子向量中的最大和。">
+<meta property="og:description" content="本问题来自于《编程珠玑》第八章。 问题：输入是具有n个整数的向量，输出是输入向量的任何连续子向量中的最大和。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2016-04-14T03:33:27.000Z">
 <meta property="article:modified_time" content="2017-12-01T01:16:10.000Z">
@@ -48,7 +48,7 @@
 
 
 
-
+<link rel="dns-prefetch" href="https://blog-comment-wsmmsh.vercel.app">
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
@@ -145,7 +145,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E4%B8%80"><span class="nav-number">1.</span> <span class="nav-text">算法一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E4%BA%8C"><span class="nav-number">2.</span> <span class="nav-text">算法二</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E4%B8%89"><span class="nav-number">3.</span> <span class="nav-text">算法三</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E5%9B%9B"><span class="nav-number">4.</span> <span class="nav-text">算法四</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%A8%E9%83%A8%E4%BB%A3%E7%A0%81"><span class="nav-number">5.</span> <span class="nav-text">全部代码</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E4%BA%8C"><span class="nav-number">1.</span> <span class="nav-text">算法二</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E4%B8%89"><span class="nav-number">2.</span> <span class="nav-text">算法三</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E5%9B%9B"><span class="nav-number">3.</span> <span class="nav-text">算法四</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%A8%E9%83%A8%E4%BB%A3%E7%A0%81"><span class="nav-number">4.</span> <span class="nav-text">全部代码</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -264,26 +264,27 @@
     </span>
 
   
-    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/2016/04/14/%E6%B1%82%E8%BF%9E%E7%BB%AD%E5%AD%90%E5%90%91%E9%87%8F%E7%9A%84%E6%9C%80%E5%A4%A7%E5%92%8C/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/2016/04/14/%E6%B1%82%E8%BF%9E%E7%BB%AD%E5%AD%90%E5%90%91%E9%87%8F%E7%9A%84%E6%9C%80%E5%A4%A7%E5%92%8C/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-item" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
       <span class="post-meta-item-text">阅读次数：</span>
-      <span id="busuanzi_value_page_pv"></span>
+      <span class="waline-pageview-count" data-path="/2016/04/14/%E6%B1%82%E8%BF%9E%E7%BB%AD%E5%AD%90%E5%90%91%E9%87%8F%E7%9A%84%E6%9C%80%E5%A4%A7%E5%92%8C/"></span>
     </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    <a title="求连续子向量的最大和" href="/2016/04/14/%E6%B1%82%E8%BF%9E%E7%BB%AD%E5%AD%90%E5%90%91%E9%87%8F%E7%9A%84%E6%9C%80%E5%A4%A7%E5%92%8C/#SOHUCS" itemprop="discussionUrl">
-      <span id="sourceId::f03f9796f95aef58215df9a789c0f871" class="cy_cmt_count" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
   
     <span class="post-meta-break"></span>
     <span class="post-meta-item" title="本文字数">
@@ -291,14 +292,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span></span>
+      <span>2.8k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>NaN:aN</span>
+      <span>5 分钟</span>
     </span>
 </div>
 
@@ -309,9 +310,13 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>本问题来自于《编程珠玑》第八章。<br>问题：输入是具有n个整数的向量，输出是输入向量的任何连续子向量中的最大和。</p>
-<span id="more"></span>
-<h3 id="算法一"><a href="#算法一" class="headerlink" title="算法一"></a>算法一</h3><p>立方算法，该算法需求出所有子序列的和，时间复杂度为$O(n^3)$。本算法对$max$进行了$n^3/2$次调用。</p>
+        <p>本问题来自于《编程珠玑》第八章。<br />
+问题：输入是具有n个整数的向量，输出是输入向量的任何连续子向量中的最大和。
+<span id="more"></span> ### 算法一
+立方算法，该算法需求出所有子序列的和，时间复杂度为<span
+class="math inline">\(O(n^3)\)</span>。本算法对<span
+class="math inline">\(max\)</span>进行了<span
+class="math inline">\(n^3/2\)</span>次调用。</p>
 <pre><code>int maxSum1(vector&lt;int&gt; nums) &#123;
     int maxsofar = 0, len = nums.size();
     if(len == 0) &#123;
@@ -320,10 +325,10 @@
         for(int i=0; i&lt;len; i++) &#123;
             for(int j=i; j&lt;len; j++) &#123;
                 int sum = 0;
-                for(int k=i; k&lt;=j; k++) &#123;    
+                for(int k=i; k&lt;=j; k++) &#123;   
                     sum += nums[k];
                 &#125;
-                maxsofar = max(maxsofar, sum);    //求出所有子序列的和
+                maxsofar = max(maxsofar, sum);  //求出所有子序列的和
             &#125;
         &#125;
         if(maxsofar &gt; 0) &#123;
@@ -332,9 +337,17 @@
             return 0;
         &#125;
     &#125;
-&#125;
-</code></pre>
-<h3 id="算法二"><a href="#算法二" class="headerlink" title="算法二"></a>算法二</h3><p>算法二都是通过固定的步数而不是算法一的$[j-i+1]$步内完成对$nums[i,j]$的求和，但根据在固定时间内计算总和时使用方法的不同分为了<strong>a、b</strong>两种算法，两者的时间复杂度都为$O(n^2)$。本算法对$max$进行了$n^2/2$次调用。<br><strong>a</strong>算法由$nums[i,j]$的总和与前面计算出的总和$nums[i,j-1]$密切相关可得。</p>
+&#125;</code></pre>
+<h3 id="算法二">算法二</h3>
+<p>算法二都是通过固定的步数而不是算法一的<span
+class="math inline">\([j-i+1]\)</span>步内完成对<span
+class="math inline">\(nums[i,j]\)</span>的求和，但根据在固定时间内计算总和时使用方法的不同分为了<strong>a、b</strong>两种算法，两者的时间复杂度都为<span
+class="math inline">\(O(n^2)\)</span>。本算法对<span
+class="math inline">\(max\)</span>进行了<span
+class="math inline">\(n^2/2\)</span>次调用。<br />
+<strong>a</strong>算法由<span
+class="math inline">\(nums[i,j]\)</span>的总和与前面计算出的总和<span
+class="math inline">\(nums[i,j-1]\)</span>密切相关可得。</p>
 <pre><code>int maxSum2a(vector&lt;int&gt; nums) &#123;
     int maxsofar = 0, len = nums.size();
     if(len == 0) &#123;
@@ -353,9 +366,11 @@
             return 0;
         &#125;
     &#125;
-&#125;    
-</code></pre>
-<p><strong>b</strong>算法是通过访问在循环执行前就已构建的数据结构来计算综合。cumarr中的第i个元素包含$nums[0,i]$中各个数的累加和，所以$nums[i,j]$中各个数的和可由$cumarr[j]-cumarr[i-1]$得到。</p>
+&#125;   </code></pre>
+<p><strong>b</strong>算法是通过访问在循环执行前就已构建的数据结构来计算综合。cumarr中的第i个元素包含<span
+class="math inline">\(nums[0,i]\)</span>中各个数的累加和，所以<span
+class="math inline">\(nums[i,j]\)</span>中各个数的和可由<span
+class="math inline">\(cumarr[j]-cumarr[i-1]\)</span>得到。</p>
 <pre><code>int maxSum2b(vector&lt;int&gt; nums) &#123;
     int maxsofar = 0, len = nums.size();
     int cumarr[len];
@@ -378,9 +393,12 @@
             return 0;
         &#125;
     &#125;
-&#125;
-</code></pre>
-<h3 id="算法三"><a href="#算法三" class="headerlink" title="算法三"></a>算法三</h3><p>采用分治算法，将输入向量分为左、右两部分，分别计算左、右半部分的子序列和，再加上横跨左右两部分的最大连续子序列和，最后返回三个和中的最大值，该算法的时间复杂度为$O(nlogn)$。 本算法使用了对数的额外空间，其他算法仅使用了常熟的额外空间。<br><strong>注：</strong>开始的时候以为<code>for</code>循环里只是求出了半截子序列的所有和，并没有对子序列里的任意连续子序列求和，仔细研读书本后，发现了是在<code>return</code>里的<code>maxSum3</code>里实现了递归。</p>
+&#125;</code></pre>
+<h3 id="算法三">算法三</h3>
+<p>采用分治算法，将输入向量分为左、右两部分，分别计算左、右半部分的子序列和，再加上横跨左右两部分的最大连续子序列和，最后返回三个和中的最大值，该算法的时间复杂度为<span
+class="math inline">\(O(nlogn)\)</span>。
+本算法使用了对数的额外空间，其他算法仅使用了常熟的额外空间。
+<strong>注：</strong>开始的时候以为<code>for</code>循环里只是求出了半截子序列的所有和，并没有对子序列里的任意连续子序列求和，仔细研读书本后，发现了是在<code>return</code>里的<code>maxSum3</code>里实现了递归。</p>
 <pre><code>int maxSum3(vector&lt;int&gt; nums, int l, int u) &#123;
     if(l &gt; u) &#123;
         return 0;
@@ -405,9 +423,16 @@
     ? lmax+rmax : maxSum3(nums, m+1, u)) 
     : (maxSum3(nums, 1, m) &gt;= maxSum3(nums, m+1, u) 
     ? maxSum3(nums, 1, m) : maxSum3(nums, m+1, u)); 
-&#125;
-</code></pre>
-<h3 id="算法四"><a href="#算法四" class="headerlink" title="算法四"></a>算法四</h3><p>该算法为扫描算法，从数组最左端开始扫描，一直到最右端，记下遇到的子序列的和的最大值。最大和的最大值为0，假设我们已经解决了$nums[0,i-1]$的问题，此处可以采用类似于分治法的思路，前i个元素中，子序列最大和要么在前$i-1$个元素中（我们将其存储在子啊$maxsofar$中），要么在其结束位置i处（我们将其存储在$maxendinghere$中），该算法的时间复杂度为$O(n)$。本算法对$max$进行了$2n$次调用，是实时的，一趟输入完毕它就计算出答案，也别适用于处理磁盘文件。</p>
+&#125;</code></pre>
+<h3 id="算法四">算法四</h3>
+<p>该算法为扫描算法，从数组最左端开始扫描，一直到最右端，记下遇到的子序列的和的最大值。最大和的最大值为0，假设我们已经解决了<span
+class="math inline">\(nums[0,i-1]\)</span>的问题，此处可以采用类似于分治法的思路，前i个元素中，子序列最大和要么在前<span
+class="math inline">\(i-1\)</span>个元素中（我们将其存储在子啊<span
+class="math inline">\(maxsofar\)</span>中），要么在其结束位置i处（我们将其存储在<span
+class="math inline">\(maxendinghere\)</span>中），该算法的时间复杂度为<span
+class="math inline">\(O(n)\)</span>。本算法对<span
+class="math inline">\(max\)</span>进行了<span
+class="math inline">\(2n\)</span>次调用，是实时的，一趟输入完毕它就计算出答案，也别适用于处理磁盘文件。</p>
 <pre><code>int maxSum4(vector&lt;int&gt; nums) &#123;
     int maxsofar = 0, maxendinghere = 0, len = nums.size();
     if(len == 0) &#123;
@@ -419,9 +444,10 @@
         &#125;
         return maxsofar;
     &#125;
-&#125;
-</code></pre>
-<h3 id="全部代码"><a href="#全部代码" class="headerlink" title="全部代码"></a>全部代码</h3><p><a target="_blank" rel="noopener" href="https://github.com/wsmmsh/algorithm/blob/master/%E8%BF%9E%E7%BB%AD%E5%AD%90%E5%BA%8F%E5%88%97%E6%B1%82%E6%9C%80%E5%A4%A7%E5%92%8C.md">全部代码</a></p>
+&#125;</code></pre>
+<h3 id="全部代码">全部代码</h3>
+<p><a
+target="_blank" rel="noopener" href="https://github.com/wsmmsh/algorithm/blob/master/%E8%BF%9E%E7%BB%AD%E5%AD%90%E5%BA%8F%E5%88%97%E6%B1%82%E6%9C%80%E5%A4%A7%E5%92%8C.md">全部代码</a></p>
 
     </div>
 
@@ -430,23 +456,6 @@
     
 
     <footer class="post-footer">
-          <div class="followme">
-  <span>欢迎关注我的其它发布渠道</span>
-
-  <div class="social-list">
-
-      <div class="social-item">
-        <a target="_blank" class="social-link" href="/atom.xml">
-          <span class="icon">
-            <i class="fa fa-rss"></i>
-          </span>
-
-          <span class="label">RSS</span>
-        </a>
-      </div>
-  </div>
-</div>
-
           <div class="post-tags">
               <a href="/tags/algorithm%EF%BC%8C%E7%BC%96%E7%A8%8B%E7%8F%A0%E7%8E%91/" rel="tag"># algorithm，编程珠玑</a>
           </div>
@@ -474,7 +483,7 @@
 
 
 
-    <div class="comments" id="SOHUCS" sid="f03f9796f95aef58215df9a789c0f871"></div>
+    <div class="comments" id="waline"></div>
 </div>
   </main>
 
@@ -496,14 +505,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">NaNm</span>
+    <span title="站点总字数">59k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">NaN:aN</span>
+    <span title="站点阅读时长">1:38</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -552,8 +561,17 @@
 <script src="/js/third-party/math/mathjax.js"></script>
 
 
-<script class="next-config" data-name="changyan" type="application/json">{"enable":true,"appid":"cyw49Jh7U","appkey":"bfb3ab83d0d1be3069fefd9b20a20024"}</script>
-<script src="/js/third-party/comments/changyan.js"></script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://blog-comment-wsmmsh.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":true,"placeholder":"请文明评论。（填写邮箱可在被回复时收到邮件提醒）","emoji":["https://unpkg.com/@waline/emojis@1.0.1/qq"],"wordLimit":0,"login":"enable","pageSize":10,"copyright":true,"el":"#waline","comment":true,"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","path":"/2016/04/14/%E6%B1%82%E8%BF%9E%E7%BB%AD%E5%AD%90%E5%90%91%E9%87%8F%E7%9A%84%E6%9C%80%E5%A4%A7%E5%92%8C/"}</script>
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() =>
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => 
+    Waline.init(Object.assign({}, CONFIG.waline,{ el: document.querySelector(CONFIG.waline.el) }))
+  );
+});
+</script>
 
 </body>
 </html>

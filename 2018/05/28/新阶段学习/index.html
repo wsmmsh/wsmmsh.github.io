@@ -21,12 +21,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"wsmmsh.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.11.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="软考考完了，开始自己新的学习历程吧，先mark两门课程。谷歌的《机器学习速成课程》和吴恩达的《深度学习工程师》">
+    <meta name="description" content="软考考完了，开始自己新的学习历程吧，先mark两门课程。 谷歌的《机器学习速成课程》和吴恩达的《深度学习工程师》">
 <meta property="og:type" content="article">
 <meta property="og:title" content="新阶段学习">
 <meta property="og:url" content="http://wsmmsh.github.io/2018/05/28/%E6%96%B0%E9%98%B6%E6%AE%B5%E5%AD%A6%E4%B9%A0/index.html">
 <meta property="og:site_name" content="MMSH的个人博客">
-<meta property="og:description" content="软考考完了，开始自己新的学习历程吧，先mark两门课程。谷歌的《机器学习速成课程》和吴恩达的《深度学习工程师》">
+<meta property="og:description" content="软考考完了，开始自己新的学习历程吧，先mark两门课程。 谷歌的《机器学习速成课程》和吴恩达的《深度学习工程师》">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2018-05-28T11:26:03.000Z">
 <meta property="article:modified_time" content="2021-08-15T00:33:38.760Z">
@@ -48,7 +48,7 @@
 
 
 
-
+<link rel="dns-prefetch" href="https://blog-comment-wsmmsh.vercel.app">
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
@@ -145,7 +145,9 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#20180528-Reducing-Loss"><span class="nav-number">1.</span> <span class="nav-text">20180528 Reducing Loss</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#20180531-%E4%BD%BF%E7%94%A8TF%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%AD%A5%E9%AA%A4"><span class="nav-number">2.</span> <span class="nav-text">20180531 使用TF的基本步骤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#20180604-%E9%AA%8C%E8%AF%81-Validation"><span class="nav-number">3.</span> <span class="nav-text">20180604 验证 (Validation)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#20180611-2-9-logistic%E4%B8%AD%E7%9A%84%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95"><span class="nav-number">4.</span> <span class="nav-text">20180611 2.9 logistic中的梯度下降法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#20180612-3-1-%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E6%A6%82%E8%A7%88"><span class="nav-number">5.</span> <span class="nav-text">20180612 3.1 神经网络概览</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#20180613-3-9-%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%9A%84%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95"><span class="nav-number">6.</span> <span class="nav-text">20180613 3.9 神经网络的梯度下降法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#20180614-4-6-%E5%89%8D%E5%90%91%E5%92%8C%E5%8F%8D%E5%90%91%E4%BC%A0%E6%92%AD"><span class="nav-number">7.</span> <span class="nav-text">20180614 4.6 前向和反向传播</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#20180619-%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%92%8C%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%AD%A6%E4%B9%A0%E5%AE%8C%E6%AF%95%EF%BC%8C%E6%89%93%E7%AE%97%E5%AE%8C%E6%88%90%E6%9C%AC%E7%AB%A0%E7%BC%96%E7%A8%8B%E4%B9%A0%E9%A2%98%E3%80%82mark%E4%B9%A6%E3%80%8ADeep-learning%E3%80%8B"><span class="nav-number">8.</span> <span class="nav-text">20180619 神经网络和深度学习学习完毕，打算完成本章编程习题。mark书《Deep learning》</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#20180702-%E7%BB%83%E4%B9%A0assignment2-2"><span class="nav-number">9.</span> <span class="nav-text">20180702 练习assignment2_2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#20180705-assignment2-2%E7%BB%93%E6%9D%9F%EF%BC%8C%E6%94%B9%E5%96%84%E6%B7%B1%E5%B1%82%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%EF%BC%9A%E8%B6%85%E5%8F%82%E6%95%B0%E8%B0%83%E8%AF%95%E3%80%81%E6%AD%A3%E5%88%99%E5%8C%96%E4%BB%A5%E5%8F%8A%E4%BC%98%E5%8C%961-1%E7%BB%93%E6%9D%9F%EF%BC%8C%E5%90%8E%E7%BB%AD%E8%BE%B9%E7%9C%8B%E6%96%B0%E7%9A%84%E8%BE%B9%E7%BB%83%E4%B9%A0%E6%97%A7%E7%9A%84%E3%80%82"><span class="nav-number">10.</span> <span class="nav-text">20180705 assignment2_2结束，改善深层神经网络：超参数调试、正则化以及优化1.1结束，后续边看新的边练习旧的。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#20180712-1-4-%E6%AD%A3%E5%88%99%E5%8C%96"><span class="nav-number">11.</span> <span class="nav-text">20180712 1.4 正则化</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#reducing-loss"><span class="nav-number">1.</span> <span class="nav-text">20180528 Reducing
+Loss</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8tf%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%AD%A5%E9%AA%A4"><span class="nav-number">2.</span> <span class="nav-text">20180531 使用TF的基本步骤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%AA%8C%E8%AF%81-validation"><span class="nav-number">3.</span> <span class="nav-text">20180604 验证
+(Validation)</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -264,26 +266,27 @@
     </span>
 
   
-    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/2018/05/28/%E6%96%B0%E9%98%B6%E6%AE%B5%E5%AD%A6%E4%B9%A0/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/2018/05/28/%E6%96%B0%E9%98%B6%E6%AE%B5%E5%AD%A6%E4%B9%A0/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-item" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
       <span class="post-meta-item-text">阅读次数：</span>
-      <span id="busuanzi_value_page_pv"></span>
+      <span class="waline-pageview-count" data-path="/2018/05/28/%E6%96%B0%E9%98%B6%E6%AE%B5%E5%AD%A6%E4%B9%A0/"></span>
     </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    <a title="新阶段学习" href="/2018/05/28/%E6%96%B0%E9%98%B6%E6%AE%B5%E5%AD%A6%E4%B9%A0/#SOHUCS" itemprop="discussionUrl">
-      <span id="sourceId::a3faaaf2a607ec98aeddb2baa15a7135" class="cy_cmt_count" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
   
     <span class="post-meta-break"></span>
     <span class="post-meta-item" title="本文字数">
@@ -291,14 +294,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span></span>
+      <span>405</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>NaN:aN</span>
+      <span>1 分钟</span>
     </span>
 </div>
 
@@ -309,13 +312,38 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>软考考完了，开始自己新的学习历程吧，先mark两门课程。<br>谷歌的<a target="_blank" rel="noopener" href="https://developers.google.cn/machine-learning/crash-course">《机器学习速成课程》</a>和吴恩达的<a target="_blank" rel="noopener" href="https://developers.google.cn/machine-learning/crash-course">《深度学习工程师》</a></p>
-<span id="more"></span>
-
-
+        <p>软考考完了，开始自己新的学习历程吧，先mark两门课程。 谷歌的<a
+target="_blank" rel="noopener" href="https://developers.google.cn/machine-learning/crash-course">《机器学习速成课程》</a>和吴恩达的<a
+target="_blank" rel="noopener" href="https://developers.google.cn/machine-learning/crash-course">《深度学习工程师》</a>
+<span id="more"></span></p>
 <p>学习打卡进度：</p>
-<h4 id="20180528-Reducing-Loss"><a href="#20180528-Reducing-Loss" class="headerlink" title="20180528 Reducing Loss"></a>20180528 <a target="_blank" rel="noopener" href="https://developers.google.cn/machine-learning/crash-course/reducing-loss/video-lecture">Reducing Loss</a></h4><h4 id="20180531-使用TF的基本步骤"><a href="#20180531-使用TF的基本步骤" class="headerlink" title="20180531 使用TF的基本步骤"></a>20180531 <a target="_blank" rel="noopener" href="https://developers.google.cn/machine-learning/crash-course/first-steps-with-tensorflow/programming-exercises">使用TF的基本步骤</a></h4><h4 id="20180604-验证-Validation"><a href="#20180604-验证-Validation" class="headerlink" title="20180604 验证 (Validation)"></a>20180604 <a target="_blank" rel="noopener" href="https://developers.google.cn/machine-learning/crash-course/validation/video-lecture">验证 (Validation)</a></h4><p>神经网络和深度学习 <a target="_blank" rel="noopener" href="http://mooc.study.163.com/learn/2001281002?tid=2001392029#/learn/content?type=detail&id=2001701007">1.5 关于这门课</a></p>
-<h4 id="20180611-2-9-logistic中的梯度下降法"><a href="#20180611-2-9-logistic中的梯度下降法" class="headerlink" title="20180611 2.9 logistic中的梯度下降法"></a>20180611 <a target="_blank" rel="noopener" href="http://mooc.study.163.com/learn/2001281002?tid=2001392029#/learn/content?type=detail&id=2001702009&cid=2001700037">2.9 logistic中的梯度下降法</a></h4><h4 id="20180612-3-1-神经网络概览"><a href="#20180612-3-1-神经网络概览" class="headerlink" title="20180612 3.1 神经网络概览"></a>20180612 <a target="_blank" rel="noopener" href="http://mooc.study.163.com/learn/2001281002?tid=2001392029#/learn/content?type=detail&id=2001701017">3.1 神经网络概览</a></h4><h4 id="20180613-3-9-神经网络的梯度下降法"><a href="#20180613-3-9-神经网络的梯度下降法" class="headerlink" title="20180613 3.9 神经网络的梯度下降法"></a>20180613 <a target="_blank" rel="noopener" href="http://mooc.study.163.com/learn/2001281002?tid=2001392029#/learn/content?type=detail&id=2001701020&cid=2001694278">3.9 神经网络的梯度下降法</a></h4><h4 id="20180614-4-6-前向和反向传播"><a href="#20180614-4-6-前向和反向传播" class="headerlink" title="20180614 4.6 前向和反向传播"></a>20180614 <a target="_blank" rel="noopener" href="http://mooc.study.163.com/learn/2001281002?tid=2001392029#/learn/content?type=detail&id=2001702025&cid=2001700050">4.6 前向和反向传播</a></h4><h4 id="20180619-神经网络和深度学习学习完毕，打算完成本章编程习题。mark书《Deep-learning》"><a href="#20180619-神经网络和深度学习学习完毕，打算完成本章编程习题。mark书《Deep-learning》" class="headerlink" title="20180619 神经网络和深度学习学习完毕，打算完成本章编程习题。mark书《Deep learning》"></a>20180619 神经网络和深度学习学习完毕，打算完成本章编程习题。mark书<a target="_blank" rel="noopener" href="https://github.com/exacity/deeplearningbook-chinese">《Deep learning》</a></h4><h4 id="20180702-练习assignment2-2"><a href="#20180702-练习assignment2-2" class="headerlink" title="20180702 练习assignment2_2"></a>20180702 练习assignment2_2</h4><h4 id="20180705-assignment2-2结束，改善深层神经网络：超参数调试、正则化以及优化1-1结束，后续边看新的边练习旧的。"><a href="#20180705-assignment2-2结束，改善深层神经网络：超参数调试、正则化以及优化1-1结束，后续边看新的边练习旧的。" class="headerlink" title="20180705 assignment2_2结束，改善深层神经网络：超参数调试、正则化以及优化1.1结束，后续边看新的边练习旧的。"></a>20180705 assignment2_2结束，改善深层神经网络：超参数调试、正则化以及优化1.1结束，后续边看新的边练习旧的。</h4><h4 id="20180712-1-4-正则化"><a href="#20180712-1-4-正则化" class="headerlink" title="20180712 1.4 正则化"></a>20180712 <a target="_blank" rel="noopener" href="http://mooc.study.163.com/learn/2001281003?tid=2001391036#/learn/content?type=detail&id=2001701043&cid=2001700055">1.4 正则化</a></h4>
+<h4 id="reducing-loss">20180528 <a
+target="_blank" rel="noopener" href="https://developers.google.cn/machine-learning/crash-course/reducing-loss/video-lecture">Reducing
+Loss</a></h4>
+<h4 id="使用tf的基本步骤">20180531 <a
+target="_blank" rel="noopener" href="https://developers.google.cn/machine-learning/crash-course/first-steps-with-tensorflow/programming-exercises">使用TF的基本步骤</a></h4>
+<h4 id="验证-validation">20180604 <a
+target="_blank" rel="noopener" href="https://developers.google.cn/machine-learning/crash-course/validation/video-lecture">验证
+(Validation)</a></h4>
+<p>神经网络和深度学习 <a
+target="_blank" rel="noopener" href="http://mooc.study.163.com/learn/2001281002?tid=2001392029#/learn/content?type=detail&amp;id=2001701007">1.5
+关于这门课</a> #### 20180611 <a
+target="_blank" rel="noopener" href="http://mooc.study.163.com/learn/2001281002?tid=2001392029#/learn/content?type=detail&amp;id=2001702009&amp;cid=2001700037">2.9
+logistic中的梯度下降法</a> #### 20180612 <a
+target="_blank" rel="noopener" href="http://mooc.study.163.com/learn/2001281002?tid=2001392029#/learn/content?type=detail&amp;id=2001701017">3.1
+神经网络概览</a> #### 20180613 <a
+target="_blank" rel="noopener" href="http://mooc.study.163.com/learn/2001281002?tid=2001392029#/learn/content?type=detail&amp;id=2001701020&amp;cid=2001694278">3.9
+神经网络的梯度下降法</a> #### 20180614 <a
+target="_blank" rel="noopener" href="http://mooc.study.163.com/learn/2001281002?tid=2001392029#/learn/content?type=detail&amp;id=2001702025&amp;cid=2001700050">4.6
+前向和反向传播</a> #### 20180619
+神经网络和深度学习学习完毕，打算完成本章编程习题。mark书<a
+target="_blank" rel="noopener" href="https://github.com/exacity/deeplearningbook-chinese">《Deep
+learning》</a> #### 20180702 练习assignment2_2 #### 20180705
+assignment2_2结束，改善深层神经网络：超参数调试、正则化以及优化1.1结束，后续边看新的边练习旧的。
+#### 20180712 <a
+target="_blank" rel="noopener" href="http://mooc.study.163.com/learn/2001281003?tid=2001391036#/learn/content?type=detail&amp;id=2001701043&amp;cid=2001700055">1.4
+正则化</a></p>
+
     </div>
 
     
@@ -323,23 +351,6 @@
     
 
     <footer class="post-footer">
-          <div class="followme">
-  <span>欢迎关注我的其它发布渠道</span>
-
-  <div class="social-list">
-
-      <div class="social-item">
-        <a target="_blank" class="social-link" href="/atom.xml">
-          <span class="icon">
-            <i class="fa fa-rss"></i>
-          </span>
-
-          <span class="label">RSS</span>
-        </a>
-      </div>
-  </div>
-</div>
-
           <div class="post-tags">
               <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="tag"># 机器学习</a>
           </div>
@@ -367,7 +378,7 @@
 
 
 
-    <div class="comments" id="SOHUCS" sid="a3faaaf2a607ec98aeddb2baa15a7135"></div>
+    <div class="comments" id="waline"></div>
 </div>
   </main>
 
@@ -389,14 +400,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">NaNm</span>
+    <span title="站点总字数">59k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">NaN:aN</span>
+    <span title="站点阅读时长">1:38</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -445,8 +456,17 @@
 <script src="/js/third-party/math/mathjax.js"></script>
 
 
-<script class="next-config" data-name="changyan" type="application/json">{"enable":true,"appid":"cyw49Jh7U","appkey":"bfb3ab83d0d1be3069fefd9b20a20024"}</script>
-<script src="/js/third-party/comments/changyan.js"></script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://blog-comment-wsmmsh.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":true,"placeholder":"请文明评论。（填写邮箱可在被回复时收到邮件提醒）","emoji":["https://unpkg.com/@waline/emojis@1.0.1/qq"],"wordLimit":0,"login":"enable","pageSize":10,"copyright":true,"el":"#waline","comment":true,"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","path":"/2018/05/28/%E6%96%B0%E9%98%B6%E6%AE%B5%E5%AD%A6%E4%B9%A0/"}</script>
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() =>
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => 
+    Waline.init(Object.assign({}, CONFIG.waline,{ el: document.querySelector(CONFIG.waline.el) }))
+  );
+});
+</script>
 
 </body>
 </html>

@@ -49,7 +49,7 @@
 
 
 
-
+<link rel="dns-prefetch" href="https://blog-comment-wsmmsh.vercel.app">
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
@@ -133,7 +133,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -146,7 +146,6 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E5%AE%89%E8%A3%85%E3%80%81%E9%87%8D%E8%A3%85"><span class="nav-number">1.</span> <span class="nav-text">1、安装、重装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E5%AE%89%E8%A3%85%E6%97%B6%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">2、安装时配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E5%AE%89%E8%A3%85%E5%AE%8C%E6%88%90%E5%90%8E"><span class="nav-number">3.</span> <span class="nav-text">3、安装完成后</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81Win7%E5%8F%8C%E7%B3%BB%E7%BB%9F%E5%BC%95%E5%AF%BC"><span class="nav-number">4.</span> <span class="nav-text">4、Win7双系统引导</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5%E3%80%81%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6"><span class="nav-number">5.</span> <span class="nav-text">5、常用软件</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -265,26 +264,27 @@
     </span>
 
   
-    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/2016/01/16/Win7%E5%92%8CCentos-7-2-1511%E5%8F%8C%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/2016/01/16/Win7%E5%92%8CCentos-7-2-1511%E5%8F%8C%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-item" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
       <span class="post-meta-item-text">阅读次数：</span>
-      <span id="busuanzi_value_page_pv"></span>
+      <span class="waline-pageview-count" data-path="/2016/01/16/Win7%E5%92%8CCentos-7-2-1511%E5%8F%8C%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/"></span>
     </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    <a title="Win7和Centos 7.2.1511的双系统安装" href="/2016/01/16/Win7%E5%92%8CCentos-7-2-1511%E5%8F%8C%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/#SOHUCS" itemprop="discussionUrl">
-      <span id="sourceId::f9421a1c29c585f72135d8d416865cff" class="cy_cmt_count" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
   
     <span class="post-meta-break"></span>
     <span class="post-meta-item" title="本文字数">
@@ -292,14 +292,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span></span>
+      <span>2.5k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>NaN:aN</span>
+      <span>4 分钟</span>
     </span>
 </div>
 
@@ -310,57 +310,74 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>本文针对使用U盘在Windows下安装Centos双系统，Centos版本号为7.2.1511。</p>
-<span id="more"></span>
-<h2 id="1、安装、重装"><a href="#1、安装、重装" class="headerlink" title="1、安装、重装"></a>1、安装、重装</h2><p>第一次安装的时候，在Windows的磁盘管理里压缩卷，压缩出的空白卷不分配盘符。如果需要重装，则需要把之前装centos的boot盘和centos在的盘删除，不分配盘符。如果分配盘符后在进入centos后的安装界面首页会出现无法识别硬盘的错误。如果重装的时候不小心误删了windows的其他盘符，请使用Diskgenuis软件进行搜索分区修复，注意此功能需要收费版本，免费版没有此功能。<br>安装centos的U盘需要格式化为FAT32，而Centos安装包大于4G，注意在格式化U盘的时候需要在分配单元大小那选择8G，这样安装文件才能写道U盘里，否则无法写入U盘。</p>
-<h2 id="2、安装时配置"><a href="#2、安装时配置" class="headerlink" title="2、安装时配置"></a>2、安装时配置</h2><p>在centos的安装界面里可以配置网络，根据自己的实际网络情况选择静态IP或自动获取，需要注意的是新版centos的静态IP在配置文件里的选项为none，而在之前的版本里为static。<br>安装的时候记的选择图形界面，否则进入系统后只有命令行界面。</p>
-<h2 id="3、安装完成后"><a href="#3、安装完成后" class="headerlink" title="3、安装完成后"></a>3、安装完成后</h2><p>需要修改centos的启动引导grub，否则重启后无法进入windows选项。此处提供几种修改方法。<br>(1)可修改模板文件，/etc/grub.d/40_custom<br>   在最后加入以下行  </p>
+        <p>本文针对使用U盘在Windows下安装Centos双系统，Centos版本号为7.2.1511。
+<span id="more"></span> ## 1、安装、重装
+第一次安装的时候，在Windows的磁盘管理里压缩卷，压缩出的空白卷不分配盘符。如果需要重装，则需要把之前装centos的boot盘和centos在的盘删除，不分配盘符。如果分配盘符后在进入centos后的安装界面首页会出现无法识别硬盘的错误。如果重装的时候不小心误删了windows的其他盘符，请使用Diskgenuis软件进行搜索分区修复，注意此功能需要收费版本，免费版没有此功能。<br />
+安装centos的U盘需要格式化为FAT32，而Centos安装包大于4G，注意在格式化U盘的时候需要在分配单元大小那选择8G，这样安装文件才能写道U盘里，否则无法写入U盘。
+## 2、安装时配置
+在centos的安装界面里可以配置网络，根据自己的实际网络情况选择静态IP或自动获取，需要注意的是新版centos的静态IP在配置文件里的选项为none，而在之前的版本里为static。<br />
+安装的时候记的选择图形界面，否则进入系统后只有命令行界面。 ##
+3、安装完成后
+需要修改centos的启动引导grub，否则重启后无法进入windows选项。此处提供几种修改方法。<br />
+(1)可修改模板文件，/etc/grub.d/40_custom 在最后加入以下行</p>
 <pre><code>menuentry &#39;win7&#39;&#123; 
    set root=(hd0,1) 
    chainloader +1    
- &#125;
-</code></pre>
-<p>   然后运行<code>grub2-mkconfig -o /boot/grub2/grub.cfg</code>，此命令可在boot/grub2/grub.cfg里生成win7引导。注意chainloader和+间有空格。<br>(2)在安装centos系统后，在线安装nfts-3g插件，这样就可以使用<code>grub2-mkconfig -o /boot/grub2/grub.cfg</code>，此命令会自动扫描系统，形成包含windows7的安装选项。    </p>
+ &#125;</code></pre>
+<p>然后运行<code>grub2-mkconfig -o /boot/grub2/grub.cfg</code>，此命令可在boot/grub2/grub.cfg里生成win7引导。注意chainloader和+间有空格。<br />
+(2)在安装centos系统后，在线安装nfts-3g插件，这样就可以使用<code>grub2-mkconfig -o /boot/grub2/grub.cfg</code>，此命令会自动扫描系统，形成包含windows7的安装选项。</p>
 <pre><code>sudo yum install ntfs-3g    
-sudo grub2-mkconfig -o /boot/grub2/grub.cfg more /boot/grub2/grub.cfg
-</code></pre>
-<p>(3)直接在/boot/grub2/grub.cfg添加，缺点是升级后重新生成的grub文件会覆盖掉。第一种方法实际上就是间接写入grub.cfg。  </p>
-<p>参考：<a target="_blank" rel="noopener" href="https://wiki.centos.org/zh/HowTos/Grub2">https://wiki.centos.org/zh/HowTos/Grub2</a></p>
-<h2 id="4、Win7双系统引导"><a href="#4、Win7双系统引导" class="headerlink" title="4、Win7双系统引导"></a>4、Win7双系统引导</h2><p>经过第三步后，重启电脑我们就可以在启动选项里选择win7，如果觉得这种启动方式不方便，我们还可以在win7里使用easybcd进行启动引导，推荐选择这样的双系统启动方式。<br>参考：<a target="_blank" rel="noopener" href="http://tieba.baidu.com/p/3191017719">http://tieba.baidu.com/p/3191017719</a></p>
-<h2 id="5、常用软件"><a href="#5、常用软件" class="headerlink" title="5、常用软件"></a>5、常用软件</h2><ul>
-<li><p><strong>Firefox</strong>： centos的系统安装包里带的firefox都是旧版的，要想使用最新版的可以去火狐官网下载压缩包，直接解压就可以使用了，此时如果安装了flash重启浏览器后还是提示没有flash，需要把flash安装后的.so文件进行移动：<br><code>sudo cp libflashplayer.so/usr/lib/mozilla/plugins</code></p>
-</li>
-<li><p><strong>Chrome</strong>：从官网下载rpm安装包后，在命令行下进行启动，启动命令：<br><code>google-chrome --no-sandbox --user-data-dir</code><br>或者在opt/google/chrome里面，以文本方式打开google-chrome，在<br> <code>exec -a &quot;$0&quot; &quot;$HERE/chrome&quot; &quot;$@&quot;</code><br>后面添加语句，注意之间的空格和两横杆。<br><code>exec -a &quot;$0&quot; &quot;$HERE/chrome&quot;  &quot;$@&quot; --no-sandbox --user-data-dir</code><br><font face="微软雅黑" size=4>注意</font>此处的chrome启动不使用沙盒，可能对安全性有所影响。</p>
-</li>
-<li><p><strong>VLC</strong>：无法启动，查看系统日志发现是提示无法使用root启动。执行以下命令：<br> <code>sed -i &#39;s/geteuid/getppid/&#39; /usr/bin/vlc</code>  </p>
-</li>
-<li><p><strong>搭建LAMP</strong><br>  <em><strong>(1)安装Apache</strong></em>    </p>
-<pre><code> yum install httpd          
- systemctl start httpd.service          
- systemctl enable httpd.service        
-</code></pre>
-<p>  <em><strong>(2)安装MySQL</strong></em>  </p>
-<pre><code> wget http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm
- rpm -ivh mysql-community-release-el7-5.noarch.rpm
- yum install mysql-community-server
- systemctl enable mysqld
- systemctl start mysqld
- mysql_secure_installation  
-</code></pre>
-<p> 参考:<a target="_blank" rel="noopener" href="http://www.ahlinux.com/centos/23340.html">http://www.ahlinux.com/centos/23340.html</a></p>
-<p> <em><strong>(3)安装PHP</strong></em>  </p>
-<pre><code> yum install php        
- yum -y install php-mysql php-gd php-ldap php-odbc php-pear php-xml php-xmlrpc php-mbstring php-snmp php-soap curl curl-devel          
-</code></pre>
-<p> <em><strong>(4)安装phpMyAdmin</strong></em></p>
-<pre><code> yum install phpmyadmin
- systemctl restart httpd
- http://server_domain_or_IP/phpMyAdmin
-</code></pre>
-<p> 参考：<a target="_blank" rel="noopener" href="https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-with-apache-on-a-centos-7-server">https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-with-apache-on-a-centos-7-server</a></p>
-</li>
-</ul>
-<p>参考：<a target="_blank" rel="noopener" href="http://seisman.info/how-to-install-softwares-under-centos-7.html">http://seisman.info/how-to-install-softwares-under-centos-7.html</a></p>
+sudo grub2-mkconfig -o /boot/grub2/grub.cfg more /boot/grub2/grub.cfg</code></pre>
+<p>(3)直接在/boot/grub2/grub.cfg添加，缺点是升级后重新生成的grub文件会覆盖掉。第一种方法实际上就是间接写入grub.cfg。</p>
+<p>参考：<a target="_blank" rel="noopener" href="https://wiki.centos.org/zh/HowTos/Grub2"
+class="uri">https://wiki.centos.org/zh/HowTos/Grub2</a> ##
+4、Win7双系统引导
+经过第三步后，重启电脑我们就可以在启动选项里选择win7，如果觉得这种启动方式不方便，我们还可以在win7里使用easybcd进行启动引导，推荐选择这样的双系统启动方式。<br />
+参考：<a target="_blank" rel="noopener" href="http://tieba.baidu.com/p/3191017719"
+class="uri">http://tieba.baidu.com/p/3191017719</a> ## 5、常用软件 *
+<strong>Firefox</strong>：
+centos的系统安装包里带的firefox都是旧版的，要想使用最新版的可以去火狐官网下载压缩包，直接解压就可以使用了，此时如果安装了flash重启浏览器后还是提示没有flash，需要把flash安装后的.so文件进行移动：<br />
+<code>sudo cp libflashplayer.so/usr/lib/mozilla/plugins</code> *
+<strong>Chrome</strong>：从官网下载rpm安装包后，在命令行下进行启动，启动命令：
+<code>google-chrome --no-sandbox --user-data-dir</code><br />
+或者在opt/google/chrome里面，以文本方式打开google-chrome，在
+<code>exec -a "$0" "$HERE/chrome" "$@"</code><br />
+后面添加语句，注意之间的空格和两横杆。<br />
+<code>exec -a "$0" "$HERE/chrome"  "$@" --no-sandbox --user-data-dir</code><br />
+<font face="微软雅黑" size=4>注意</font>此处的chrome启动不使用沙盒，可能对安全性有所影响。
+*
+<strong>VLC</strong>：无法启动，查看系统日志发现是提示无法使用root启动。执行以下命令：
+<code>sed -i 's/geteuid/getppid/' /usr/bin/vlc</code><br />
+* <strong>搭建LAMP</strong><br />
+<strong><em>(1)安装Apache</em></strong></p>
+<pre><code>    yum install httpd         
+    systemctl start httpd.service         
+    systemctl enable httpd.service      
+
+***(2)安装MySQL***  
+
+    wget http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm
+    rpm -ivh mysql-community-release-el7-5.noarch.rpm
+    yum install mysql-community-server
+    systemctl enable mysqld
+    systemctl start mysqld
+    mysql_secure_installation  
+参考:&lt;http://www.ahlinux.com/centos/23340.html&gt;
+
+***(3)安装PHP***  
+    
+    yum install php     
+    yum -y install php-mysql php-gd php-ldap php-odbc php-pear php-xml php-xmlrpc php-mbstring php-snmp php-soap curl curl-devel          
+***(4)安装phpMyAdmin***
+
+    yum install phpmyadmin
+    systemctl restart httpd
+    http://server_domain_or_IP/phpMyAdmin
+
+参考：&lt;https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-with-apache-on-a-centos-7-server&gt;</code></pre>
+<p>参考：<a
+target="_blank" rel="noopener" href="http://seisman.info/how-to-install-softwares-under-centos-7.html"
+class="uri">http://seisman.info/how-to-install-softwares-under-centos-7.html</a></p>
 
     </div>
 
@@ -369,23 +386,6 @@ sudo grub2-mkconfig -o /boot/grub2/grub.cfg more /boot/grub2/grub.cfg
     
 
     <footer class="post-footer">
-          <div class="followme">
-  <span>欢迎关注我的其它发布渠道</span>
-
-  <div class="social-list">
-
-      <div class="social-item">
-        <a target="_blank" class="social-link" href="/atom.xml">
-          <span class="icon">
-            <i class="fa fa-rss"></i>
-          </span>
-
-          <span class="label">RSS</span>
-        </a>
-      </div>
-  </div>
-</div>
-
           <div class="post-tags">
               <a href="/tags/Centos/" rel="tag"># Centos</a>
               <a href="/tags/Linux/" rel="tag"># Linux</a>
@@ -414,7 +414,7 @@ sudo grub2-mkconfig -o /boot/grub2/grub.cfg more /boot/grub2/grub.cfg
 
 
 
-    <div class="comments" id="SOHUCS" sid="f9421a1c29c585f72135d8d416865cff"></div>
+    <div class="comments" id="waline"></div>
 </div>
   </main>
 
@@ -436,14 +436,14 @@ sudo grub2-mkconfig -o /boot/grub2/grub.cfg more /boot/grub2/grub.cfg
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">NaNm</span>
+    <span title="站点总字数">59k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">NaN:aN</span>
+    <span title="站点阅读时长">1:38</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -492,8 +492,17 @@ sudo grub2-mkconfig -o /boot/grub2/grub.cfg more /boot/grub2/grub.cfg
 <script src="/js/third-party/math/mathjax.js"></script>
 
 
-<script class="next-config" data-name="changyan" type="application/json">{"enable":true,"appid":"cyw49Jh7U","appkey":"bfb3ab83d0d1be3069fefd9b20a20024"}</script>
-<script src="/js/third-party/comments/changyan.js"></script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://blog-comment-wsmmsh.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":true,"placeholder":"请文明评论。（填写邮箱可在被回复时收到邮件提醒）","emoji":["https://unpkg.com/@waline/emojis@1.0.1/qq"],"wordLimit":0,"login":"enable","pageSize":10,"copyright":true,"el":"#waline","comment":true,"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","path":"/2016/01/16/Win7%E5%92%8CCentos-7-2-1511%E5%8F%8C%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/"}</script>
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() =>
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => 
+    Waline.init(Object.assign({}, CONFIG.waline,{ el: document.querySelector(CONFIG.waline.el) }))
+  );
+});
+</script>
 
 </body>
 </html>
