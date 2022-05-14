@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.0">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 5.4.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
@@ -19,28 +20,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"wsmmsh.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.11.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"wsmmsh.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.11.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="本文重点讲解冒泡排序、插入排序、希尔排序、归并排序、快速排序和堆排序，代码使用C++和PHP实现。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="排序算法总结(PHP 和 C++ 实现)">
-<meta property="og:url" content="http://wsmmsh.github.io/2016/10/10/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93-PHP%E5%92%8CC-%E5%AE%9E%E7%8E%B0/index.html">
-<meta property="og:site_name" content="MMSH的个人博客">
-<meta property="og:description" content="本文重点讲解冒泡排序、插入排序、希尔排序、归并排序、快速排序和堆排序，代码使用C++和PHP实现。">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://7xsex4.com1.z0.glb.clouddn.com/bubble_sort.gif">
-<meta property="og:image" content="http://7xsex4.com1.z0.glb.clouddn.com/insert-sort.gif">
-<meta property="og:image" content="http://7xsex4.com1.z0.glb.clouddn.com/shellsort.gif">
-<meta property="og:image" content="http://7xsex4.com1.z0.glb.clouddn.com/quicksort.gif">
-<meta property="og:image" content="http://7xsex4.com1.z0.glb.clouddn.com/merge_sort.gif">
-<meta property="og:image" content="http://7xsex4.com1.z0.glb.clouddn.com/Heapsort.gif">
-<meta property="article:published_time" content="2016-10-10T12:06:05.000Z">
-<meta property="article:modified_time" content="2021-06-30T08:16:25.803Z">
-<meta property="article:author" content="MMSH">
-<meta property="article:tag" content="algorithm">
-<meta property="article:tag" content="排序">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://7xsex4.com1.z0.glb.clouddn.com/bubble_sort.gif">
 
 
 <link rel="canonical" href="http://wsmmsh.github.io/2016/10/10/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93-PHP%E5%92%8CC-%E5%AE%9E%E7%8E%B0/">
@@ -153,7 +134,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F"><span class="nav-number">1.</span> <span class="nav-text">冒泡排序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A4%BA%E6%84%8F%E5%9B%BE"><span class="nav-number">1.1.</span> <span class="nav-text">示意图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#c%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.2.</span> <span class="nav-text">C++实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#php%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.3.</span> <span class="nav-text">PHP实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#c%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.4.</span> <span class="nav-text">C语言实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F"><span class="nav-number">2.</span> <span class="nav-text">插入排序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A4%BA%E6%84%8F%E5%9B%BE-1"><span class="nav-number">2.1.</span> <span class="nav-text">示意图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#c%E5%AE%9E%E7%8E%B0-1"><span class="nav-number">2.2.</span> <span class="nav-text">C++实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#php%E5%AE%9E%E7%8E%B0-1"><span class="nav-number">2.3.</span> <span class="nav-text">PHP实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#c%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0-1"><span class="nav-number">2.4.</span> <span class="nav-text">C语言实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F"><span class="nav-number">3.</span> <span class="nav-text">希尔排序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A4%BA%E6%84%8F%E5%9B%BE-2"><span class="nav-number">3.1.</span> <span class="nav-text">示意图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#c%E5%AE%9E%E7%8E%B0-2"><span class="nav-number">3.2.</span> <span class="nav-text">C++实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#php%E5%AE%9E%E7%8E%B0-2"><span class="nav-number">3.3.</span> <span class="nav-text">PHP实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#c%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0-2"><span class="nav-number">3.4.</span> <span class="nav-text">C语言实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F"><span class="nav-number">4.</span> <span class="nav-text">快速排序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A4%BA%E6%84%8F%E5%9B%BE-3"><span class="nav-number">4.1.</span> <span class="nav-text">示意图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#c%E5%AE%9E%E7%8E%B0-3"><span class="nav-number">4.2.</span> <span class="nav-text">C++实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#php%E5%AE%9E%E7%8E%B0-3"><span class="nav-number">4.3.</span> <span class="nav-text">PHP实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#c%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0-3"><span class="nav-number">4.4.</span> <span class="nav-text">C语言实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F"><span class="nav-number">5.</span> <span class="nav-text">归并排序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A4%BA%E6%84%8F%E5%9B%BE-4"><span class="nav-number">5.1.</span> <span class="nav-text">示意图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#c%E5%AE%9E%E7%8E%B0-4"><span class="nav-number">5.2.</span> <span class="nav-text">C++实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#php%E5%AE%9E%E7%8E%B0-4"><span class="nav-number">5.3.</span> <span class="nav-text">PHP实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#c%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0-4"><span class="nav-number">5.4.</span> <span class="nav-text">C语言实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A0%86%E6%8E%92%E5%BA%8F"><span class="nav-number">6.</span> <span class="nav-text">堆排序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A4%BA%E6%84%8F%E5%9B%BE-5"><span class="nav-number">6.1.</span> <span class="nav-text">示意图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#c%E5%AE%9E%E7%8E%B0-5"><span class="nav-number">6.2.</span> <span class="nav-text">C++实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#php%E5%AE%9E%E7%8E%B0-5"><span class="nav-number">6.3.</span> <span class="nav-text">PHP实现</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F"><span class="nav-number">2.</span> <span class="nav-text">冒泡排序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A4%BA%E6%84%8F%E5%9B%BE"><span class="nav-number">2.1.</span> <span class="nav-text">示意图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C-%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.2.</span> <span class="nav-text">C++实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.3.</span> <span class="nav-text">PHP实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.4.</span> <span class="nav-text">C语言实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F"><span class="nav-number">3.</span> <span class="nav-text">插入排序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A4%BA%E6%84%8F%E5%9B%BE-1"><span class="nav-number">3.1.</span> <span class="nav-text">示意图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C-%E5%AE%9E%E7%8E%B0-1"><span class="nav-number">3.2.</span> <span class="nav-text">C++实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP%E5%AE%9E%E7%8E%B0-1"><span class="nav-number">3.3.</span> <span class="nav-text">PHP实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0-1"><span class="nav-number">3.4.</span> <span class="nav-text">C语言实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F"><span class="nav-number">4.</span> <span class="nav-text">希尔排序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A4%BA%E6%84%8F%E5%9B%BE-2"><span class="nav-number">4.1.</span> <span class="nav-text">示意图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C-%E5%AE%9E%E7%8E%B0-2"><span class="nav-number">4.2.</span> <span class="nav-text">C++实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP%E5%AE%9E%E7%8E%B0-2"><span class="nav-number">4.3.</span> <span class="nav-text">PHP实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0-2"><span class="nav-number">4.4.</span> <span class="nav-text">C语言实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F"><span class="nav-number">5.</span> <span class="nav-text">快速排序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A4%BA%E6%84%8F%E5%9B%BE-3"><span class="nav-number">5.1.</span> <span class="nav-text">示意图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C-%E5%AE%9E%E7%8E%B0-3"><span class="nav-number">5.2.</span> <span class="nav-text">C++实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP%E5%AE%9E%E7%8E%B0-3"><span class="nav-number">5.3.</span> <span class="nav-text">PHP实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0-3"><span class="nav-number">5.4.</span> <span class="nav-text">C语言实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F"><span class="nav-number">6.</span> <span class="nav-text">归并排序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A4%BA%E6%84%8F%E5%9B%BE-4"><span class="nav-number">6.1.</span> <span class="nav-text">示意图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C-%E5%AE%9E%E7%8E%B0-4"><span class="nav-number">6.2.</span> <span class="nav-text">C++实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP%E5%AE%9E%E7%8E%B0-4"><span class="nav-number">6.3.</span> <span class="nav-text">PHP实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0-4"><span class="nav-number">6.4.</span> <span class="nav-text">C语言实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A0%86%E6%8E%92%E5%BA%8F"><span class="nav-number">7.</span> <span class="nav-text">堆排序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A4%BA%E6%84%8F%E5%9B%BE-5"><span class="nav-number">7.1.</span> <span class="nav-text">示意图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C-%E5%AE%9E%E7%8E%B0-5"><span class="nav-number">7.2.</span> <span class="nav-text">C++实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP%E5%AE%9E%E7%8E%B0-5"><span class="nav-number">7.3.</span> <span class="nav-text">PHP实现</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -286,14 +267,6 @@
   </span>
   
   
-    <span class="post-meta-item" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="waline-pageview-count" data-path="/2016/10/10/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93-PHP%E5%92%8CC-%E5%AE%9E%E7%8E%B0/"></span>
-    </span>
-  
     <span class="post-meta-break"></span>
     <span class="post-meta-item" title="本文字数">
       <span class="post-meta-item-icon">
@@ -318,167 +291,74 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        本文重点讲解冒泡排序、插入排序、希尔排序、归并排序、快速排序和堆排序，代码使用C++和PHP实现。
-<span id="more"></span> ## 概述
-<table>
-<tr>
-<th>
-排序方法
-</th>
-<th>
-平均情况
-</th>
-<th>
-最好情况
-</th>
-<th>
-最坏情况
-</th>
-<th>
-空间复杂度
-</th>
-<th>
-稳定性
-</th>
-</tr>
-<tr>
-<td>
-冒泡排序
-</td>
-<td>
-<span class="math inline">\(O(n^2)\)</span>
-</td>
-<td>
-<span class="math inline">\(O(n)\)</span>
-</td>
-<td>
-<span class="math inline">\(O(n^2)\)</span>
-</td>
-<td>
-<span class="math inline">\(O(1)\)</span>
-</td>
-<td>
-稳定
-</td>
-</tr>
-<tr>
-<td>
-插入排序
-</td>
-<td>
-<span class="math inline">\(O(n^2)\)</span>
-</td>
-<td>
-<span class="math inline">\(O(n)\)</span>
-</td>
-<td>
-<span class="math inline">\(O(n^2)\)</span>
-</td>
-<td>
-<span class="math inline">\(O(1)\)</span>
-</td>
-<td>
-稳定
-</td>
-</tr>
-<tr>
-<td>
-希尔排序
-</td>
-<td>
-<span class="math inline">\(O(n^{1.3})\)</span>
-</td>
-<td>
-<span class="math inline">\(O(nlogn)\)</span>
-</td>
-<td>
-<span class="math inline">\(O(n^2)\)</span>
-</td>
-<td>
-<span class="math inline">\(O(1)\)</span>
-</td>
-<td>
-不稳定
-</td>
-</tr>
-<tr>
-<td>
-快速排序
-</td>
-<td>
-<span class="math inline">\(O(nlogn)\)</span>
-</td>
-<td>
-<span class="math inline">\(O(nlogn)\)</span>
-</td>
-<td>
-<span class="math inline">\(O(n^2)\)</span>
-</td>
-<td>
-<span class="math inline">\(O(nlogn)\)</span>
-</td>
-<td>
-不稳定
-</td>
-</tr>
-<tr>
-<td>
-归并排序
-</td>
-<td>
-<span class="math inline">\(O(nlogn)\)</span>
-</td>
-<td>
-<span class="math inline">\(O(nlogn)\)</span>
-</td>
-<td>
-<span class="math inline">\(O(nlogn)\)</span>
-</td>
-<td>
-<span class="math inline">\(O(n)\)</span>
-</td>
-<td>
-稳定
-</td>
-</tr>
-<tr>
-<td>
-堆排序
-</td>
-<td>
-<span class="math inline">\(O(nlogn)\)</span>
-</td>
-<td>
-<span class="math inline">\(O(nlogn)\)</span>
-</td>
-<td>
-<span class="math inline">\(O(nlogn)\)</span>
-</td>
-<td>
-<span class="math inline">\(O(1)\)</span>
-</td>
-<td>
-不稳定
-</td>
-</tr>
+        <p>本文重点讲解冒泡排序、插入排序、希尔排序、归并排序、快速排序和堆排序，代码使用C++和PHP实现。</p>
+<span id="more"></span>
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><table>
+    <tr>
+        <th>排序方法</th> 
+        <th>平均情况</th>
+        <th>最好情况</th>
+        <th>最坏情况</th>
+        <th>空间复杂度</th>        
+        <th>稳定性</th>
+    </tr>
+    <tr>
+        <td>冒泡排序</td>
+        <td>$O(n^2)$</td>
+        <td>$O(n)$</td>
+        <td>$O(n^2)$</td>
+        <td>$O(1)$</td>
+        <td>稳定</td>
+    </tr>
+    <tr>
+        <td>插入排序</td>
+        <td>$O(n^2)$</td>
+        <td>$O(n)$</td>
+        <td>$O(n^2)$</td>
+        <td>$O(1)$</td>
+        <td>稳定</td>
+    </tr>
+    <tr>
+        <td>希尔排序</td>
+        <td>$O(n^{1.3})$</td>
+        <td>$O(nlogn)$</td>
+        <td>$O(n^2)$</td>
+        <td>$O(1)$</td>
+        <td>不稳定</td>
+    </tr>
+    <tr>
+        <td>快速排序</td>
+        <td>$O(nlogn)$</td>
+        <td>$O(nlogn)$</td>
+        <td>$O(n^2)$</td>
+        <td>$O(nlogn)$</td>
+        <td>不稳定</td>
+    </tr>
+    <tr>
+        <td>归并排序</td>
+        <td>$O(nlogn)$</td>
+        <td>$O(nlogn)$</td>
+        <td>$O(nlogn)$</td>
+        <td>$O(n)$</td>
+        <td>稳定</td>
+    </tr>
+    <tr>
+        <td>堆排序</td>
+        <td>$O(nlogn)$</td>
+        <td>$O(nlogn)$</td>
+        <td>$O(nlogn)$</td>
+        <td>$O(1)$</td>
+        <td>不稳定</td>
+    </tr>
 </table>
-<h2 id="冒泡排序">冒泡排序</h2>
-<p>冒泡排序（bubblesort）是先从数组第一个元素开始，依次比较相邻两个数，若前者比后者大，就将两者交换位置，然后处理下一对，依此类推，不断扫描数组，直到完成排序。时间复杂度最好为<span
-class="math inline">\(O(n)\)</span>，最坏为<span
-class="math inline">\(O(n^2)\)</span>，平均为<span
-class="math inline">\(O(n^2)\)</span>。空间复杂度为O(1)。它是稳定的排序算法。</p>
-<h3 id="示意图">示意图</h3>
-<figure>
-<img src="http://7xsex4.com1.z0.glb.clouddn.com/bubble_sort.gif"
-alt="冒泡排序" />
-<figcaption aria-hidden="true">冒泡排序</figcaption>
-</figure>
-<h3 id="c实现">C++实现</h3>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Comparable&gt;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">bubbleSort</span><span class="params">(vector&lt;Comparable&gt; &amp; a)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> len = a.<span class="built_in">size</span>();</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;len<span class="number">-1</span>; i++)  &#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;len<span class="number">-1</span>-i; j++) &#123;</span><br><span class="line">			<span class="keyword">if</span>(a[j] &gt; a[j+<span class="number">1</span>]) &#123;</span><br><span class="line">				<span class="built_in">swap</span>(a[j], a[j+<span class="number">1</span>]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="php实现">PHP实现</h3>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bubbleSort</span>(<span class="params">&amp;<span class="variable">$arr</span></span>)</span>&#123;</span><br><span class="line">	<span class="variable">$len</span> = <span class="title function_ invoke__">count</span>(<span class="variable">$arr</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="variable">$i</span>=<span class="number">0</span>; <span class="variable">$i</span>&lt;<span class="variable">$len</span>-<span class="number">1</span>; <span class="variable">$i</span>++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="variable">$j</span>=<span class="number">0</span>; <span class="variable">$j</span>&lt;<span class="variable">$len</span>-<span class="variable">$i</span>-<span class="number">1</span>; <span class="variable">$j</span>++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(<span class="variable">$arr</span>[<span class="variable">$j</span>] &gt; <span class="variable">$arr</span>[<span class="variable">$j</span>+<span class="number">1</span>])&#123;</span><br><span class="line">				<span class="keyword">list</span>(<span class="variable">$arr</span>[<span class="variable">$j</span>+<span class="number">1</span>], <span class="variable">$arr</span>[<span class="variable">$j</span>]) = <span class="keyword">array</span>(<span class="variable">$arr</span>[<span class="variable">$j</span>], <span class="variable">$arr</span>[<span class="variable">$j</span>+<span class="number">1</span>]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="c语言实现">C语言实现</h3>
-<pre><code>void BubbleSort(int arr[], int length)
+
+<h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><p>冒泡排序（bubblesort）是先从数组第一个元素开始，依次比较相邻两个数，若前者比后者大，就将两者交换位置，然后处理下一对，依此类推，不断扫描数组，直到完成排序。时间复杂度最好为$O(n)$，最坏为$O(n^2)$，平均为$O(n^2)$。空间复杂度为O(1)。它是稳定的排序算法。</p>
+<h3 id="示意图"><a href="#示意图" class="headerlink" title="示意图"></a>示意图</h3><p><img src="http://7xsex4.com1.z0.glb.clouddn.com/bubble_sort.gif" alt="冒泡排序"></p>
+<h3 id="C-实现"><a href="#C-实现" class="headerlink" title="C++实现"></a>C++实现</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Comparable&gt;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">bubbleSort</span><span class="params">(vector&lt;Comparable&gt; &amp; a)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> len = a.<span class="built_in">size</span>();</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;len<span class="number">-1</span>; i++)  &#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;len<span class="number">-1</span>-i; j++) &#123;</span><br><span class="line">			<span class="keyword">if</span>(a[j] &gt; a[j+<span class="number">1</span>]) &#123;</span><br><span class="line">				<span class="built_in">swap</span>(a[j], a[j+<span class="number">1</span>]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="PHP实现"><a href="#PHP实现" class="headerlink" title="PHP实现"></a>PHP实现</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bubbleSort</span>(<span class="params">&amp;<span class="variable">$arr</span></span>)</span>&#123;</span><br><span class="line">	<span class="variable">$len</span> = <span class="title function_ invoke__">count</span>(<span class="variable">$arr</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="variable">$i</span>=<span class="number">0</span>; <span class="variable">$i</span>&lt;<span class="variable">$len</span>-<span class="number">1</span>; <span class="variable">$i</span>++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="variable">$j</span>=<span class="number">0</span>; <span class="variable">$j</span>&lt;<span class="variable">$len</span>-<span class="variable">$i</span>-<span class="number">1</span>; <span class="variable">$j</span>++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(<span class="variable">$arr</span>[<span class="variable">$j</span>] &gt; <span class="variable">$arr</span>[<span class="variable">$j</span>+<span class="number">1</span>])&#123;</span><br><span class="line">				<span class="keyword">list</span>(<span class="variable">$arr</span>[<span class="variable">$j</span>+<span class="number">1</span>], <span class="variable">$arr</span>[<span class="variable">$j</span>]) = <span class="keyword">array</span>(<span class="variable">$arr</span>[<span class="variable">$j</span>], <span class="variable">$arr</span>[<span class="variable">$j</span>+<span class="number">1</span>]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="C语言实现"><a href="#C语言实现" class="headerlink" title="C语言实现"></a>C语言实现</h3><pre><code>void BubbleSort(int arr[], int length)
 &#123;
     int i = 0;
     int j = 0;
@@ -494,24 +374,14 @@ alt="冒泡排序" />
         &#123;
             if(arr[i] &gt; arr[j])&#123;
                 swap(&amp;arr[i], &amp;arr[j]);
-            &#125;   
+            &#125;	
         &#125;
      &#125;
-&#125;</code></pre>
-<h2 id="插入排序">插入排序</h2>
-<p>插入排序（insertsort）是逐一取出元素，在已经排序的元素序列中从后向前扫描，放到适当的位置，它保证了从位置0到位置i-1上的元素是已经排序好的。时间复杂度最好为<span
-class="math inline">\(O(n)\)</span>，最坏为<span
-class="math inline">\(O(n^2)\)</span>，平均为<span
-class="math inline">\(O(n^2)\)</span>。空间复杂度为<span
-class="math inline">\(O(1)\)</span>。它是稳定的排序算法。</p>
-<h3 id="示意图-1">示意图</h3>
-<figure>
-<img src="http://7xsex4.com1.z0.glb.clouddn.com/insert-sort.gif"
-alt="插入排序" />
-<figcaption aria-hidden="true">插入排序</figcaption>
-</figure>
-<h3 id="c实现-1">C++实现</h3>
-<pre><code>template &lt;typename Comparable&gt;
+&#125;
+</code></pre>
+<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><p>插入排序（insertsort）是逐一取出元素，在已经排序的元素序列中从后向前扫描，放到适当的位置，它保证了从位置0到位置i-1上的元素是已经排序好的。时间复杂度最好为$O(n)$，最坏为$O(n^2)$，平均为$O(n^2)$。空间复杂度为$O(1)$。它是稳定的排序算法。</p>
+<h3 id="示意图-1"><a href="#示意图-1" class="headerlink" title="示意图"></a>示意图</h3><p><img src="http://7xsex4.com1.z0.glb.clouddn.com/insert-sort.gif" alt="插入排序"></p>
+<h3 id="C-实现-1"><a href="#C-实现-1" class="headerlink" title="C++实现"></a>C++实现</h3><pre><code>template &lt;typename Comparable&gt;
 void insertSort(vector&lt;Comparable&gt; &amp; a) &#123;
     int len = a.size(), j;
     for(int i=1; i&lt;len; i++) &#123;
@@ -521,9 +391,9 @@ void insertSort(vector&lt;Comparable&gt; &amp; a) &#123;
         &#125;
         a[j] = tmp;
     &#125;
-&#125;</code></pre>
-<h3 id="php实现-1">PHP实现</h3>
-<pre><code>function insertsort(&amp;$arr) &#123;
+&#125;
+</code></pre>
+<h3 id="PHP实现-1"><a href="#PHP实现-1" class="headerlink" title="PHP实现"></a>PHP实现</h3><pre><code>function insertsort(&amp;$arr) &#123;
     $len = count($arr);
     for($i=1; $i&lt;$len; $i++)&#123;
         $tmp = $arr[$i];
@@ -532,9 +402,9 @@ void insertSort(vector&lt;Comparable&gt; &amp; a) &#123;
         &#125;
         $arr[$j] = $tmp;
     &#125;
-&#125;</code></pre>
-<h3 id="c语言实现-1">C语言实现</h3>
-<pre><code>void InsertSort(int arr[], int length)
+&#125;
+</code></pre>
+<h3 id="C语言实现-1"><a href="#C语言实现-1" class="headerlink" title="C语言实现"></a>C语言实现</h3><pre><code>void InsertSort(int arr[], int length)
 &#123;
     int i = 0;
     int j = 0;
@@ -553,12 +423,9 @@ void insertSort(vector&lt;Comparable&gt; &amp; a) &#123;
         &#125;
         arr[j] = tmp; 
     &#125;
-&#125;</code></pre>
-<h2 id="希尔排序">希尔排序</h2>
-<p>希尔排序（shellsort），也称缩小增量排序，实质是分组插入排序,选择一个步长，然后按间隔为步长的单元进行排序，步长递归变小，直至为1。时间复杂度最好为<span
-class="math inline">\(O(nlogn)\)</span>，最坏为<span
-class="math inline">\(O(n^2)\)</span>，平均为<span
-class="math inline">\(O(n^{1.3})\)</span>。空间复杂度为O(1)。它是不稳定的排序算法。</p>
+&#125;
+</code></pre>
+<h2 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h2><p>希尔排序（shellsort），也称缩小增量排序，实质是分组插入排序,选择一个步长，然后按间隔为步长的单元进行排序，步长递归变小，直至为1。时间复杂度最好为$O(nlogn)$，最坏为$O(n^2)$，平均为$O(n^{1.3})$。空间复杂度为O(1)。它是不稳定的排序算法。</p>
 <pre><code>原数组：[13 14 94 33 82 25 59 94 65 23 45 27 73 25 39 10]
 我们以步长为5开始进行排序(一般初始步长为数组长度的一半)，先分组：
 13 14 94 33 82
@@ -576,15 +443,10 @@ class="math inline">\(O(n^{1.3})\)</span>。空间复杂度为O(1)。它是不�
 45
 分组后进行排序：
 [10 14 13 25 23 33 27 25 59 39 65 73 45 94 82 94]
-最后以1步长进行排序（此时就是简单的插入排序了）。</code></pre>
-<h3 id="示意图-2">示意图</h3>
-<figure>
-<img src="http://7xsex4.com1.z0.glb.clouddn.com/shellsort.gif"
-alt="希尔排序" />
-<figcaption aria-hidden="true">希尔排序</figcaption>
-</figure>
-<h3 id="c实现-2">C++实现</h3>
-<pre><code>template &lt;typename Comparable&gt;
+最后以1步长进行排序（此时就是简单的插入排序了）。
+</code></pre>
+<h3 id="示意图-2"><a href="#示意图-2" class="headerlink" title="示意图"></a>示意图</h3><p><img src="http://7xsex4.com1.z0.glb.clouddn.com/shellsort.gif" alt="希尔排序"></p>
+<h3 id="C-实现-2"><a href="#C-实现-2" class="headerlink" title="C++实现"></a>C++实现</h3><pre><code>template &lt;typename Comparable&gt;
 void shellSort(vector&lt;Comparable&gt; &amp; a) &#123;
     int len = a.size(), j;
     for(int gap=len/2; gap&gt;0; gap/=2) &#123;
@@ -596,11 +458,11 @@ void shellSort(vector&lt;Comparable&gt; &amp; a) &#123;
             a[j] = tmp;
         &#125;
     &#125;
-&#125;</code></pre>
-<h3 id="php实现-2">PHP实现</h3>
-<pre><code>function shellsort(&amp;$arr)&#123;
+&#125;
+</code></pre>
+<h3 id="PHP实现-2"><a href="#PHP实现-2" class="headerlink" title="PHP实现"></a>PHP实现</h3><pre><code>function shellsort(&amp;$arr)&#123;
     $len = count($arr);
-    $step = (int)$len/2;    //php的整数相除不一定是整数,int靠0取整
+    $step = (int)$len/2;	//php的整数相除不一定是整数,int靠0取整
     for( ;$step&gt;=1; $step=(int)$step/2)&#123;
         for($i=$step; $i&lt;$len; $i++)&#123;
             $tmp = $arr[$i];
@@ -610,9 +472,9 @@ void shellSort(vector&lt;Comparable&gt; &amp; a) &#123;
             $arr[$j] = $tmp;
         &#125;
     &#125;
-&#125;</code></pre>
-<h3 id="c语言实现-2">C语言实现</h3>
-<pre><code>void ShellSort(int arr[], int length)
+&#125;
+</code></pre>
+<h3 id="C语言实现-2"><a href="#C语言实现-2" class="headerlink" title="C语言实现"></a>C语言实现</h3><pre><code>void ShellSort(int arr[], int length)
 &#123;
     int i = 0;
     int j = 0;
@@ -633,32 +495,22 @@ void shellSort(vector&lt;Comparable&gt; &amp; a) &#123;
             &#123;
                 if(tmp &lt; arr[j - duration])
                 &#123;
-                    arr[j] = arr[j - duration]; 
+                    arr[j] = arr[j - duration];	
                 &#125;
                 else
                 &#123;
                     break;
                 &#125;
             &#125;
-            arr[j] = tmp;           
+            arr[j] = tmp;			
         &#125; 
     &#125; 
-&#125; </code></pre>
-<h2 id="快速排序">快速排序</h2>
-<p>快速排序（quicksort），先选择枢纽元，然后把比它小的放在左边，大的放在右边，然后再对左右区间分别使用这一过程，直到区间内只剩一个元素。时间复杂度最好为<span
-class="math inline">\(O(nlogn)\)</span>，最坏为<span
-class="math inline">\(O(n^2)\)</span>，平均为<span
-class="math inline">\(O(nlogn)\)</span>。空间复杂度为<span
-class="math inline">\(O(nlogn)\)</span>。它是不稳定的排序算法。枢纽元的选取使用三数中值法。</p>
-<h3 id="示意图-3">示意图</h3>
-<figure>
-<img src="http://7xsex4.com1.z0.glb.clouddn.com/quicksort.gif"
-alt="快速排序" />
-<figcaption aria-hidden="true">快速排序</figcaption>
-</figure>
-<h3 id="c实现-3">C++实现</h3>
-<pre><code>//使用三数中值法取枢纽元
-template &lt;typename Comparable&gt;  
+&#125; 
+</code></pre>
+<h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><p>快速排序（quicksort），先选择枢纽元，然后把比它小的放在左边，大的放在右边，然后再对左右区间分别使用这一过程，直到区间内只剩一个元素。时间复杂度最好为$O(nlogn)$，最坏为$O(n^2)$，平均为$O(nlogn)$。空间复杂度为$O(nlogn)$。它是不稳定的排序算法。枢纽元的选取使用三数中值法。</p>
+<h3 id="示意图-3"><a href="#示意图-3" class="headerlink" title="示意图"></a>示意图</h3><p><img src="http://7xsex4.com1.z0.glb.clouddn.com/quicksort.gif" alt="快速排序"></p>
+<h3 id="C-实现-3"><a href="#C-实现-3" class="headerlink" title="C++实现"></a>C++实现</h3><pre><code>//使用三数中值法取枢纽元
+template &lt;typename Comparable&gt;	
 const Comparable &amp; median3(vector&lt;Comparable&gt; &amp; a, int left, int right) &#123;
     int center = (left + right) / 2 ;
     if(a[center] &lt; a[left]) &#123;
@@ -670,7 +522,7 @@ const Comparable &amp; median3(vector&lt;Comparable&gt; &amp; a, int left, int r
     if(a[right] &lt; a[center]) &#123;
         swap(a[center], a[right]);
     &#125;
-    return a[center];   //在返回中值的时候已经对首、中、尾三个元素进行了排序 
+    return a[center];	//在返回中值的时候已经对首、中、尾三个元素进行了排序 
 &#125;
 
 template &lt;typename Comparable&gt;
@@ -678,22 +530,22 @@ void quicksort_l(vector&lt;Comparable&gt; &amp; a, int left, int right) &#123;
     Comparable pivot = median3(a, left, right);
     int i = left, j = right;
     do &#123;
-        while(a[++i] &lt; pivot) &#123; &#125;   //首、中、尾三个元素已经进行了排序 
-        while(pivot &lt; a[--j]) &#123; &#125;
+        while(a[++i] &lt; pivot) &#123;	&#125;	//首、中、尾三个元素已经进行了排序 
+        while(pivot &lt; a[--j]) &#123;	&#125;
         if(i &lt; j) &#123;
             swap(a[i], a[j]);
-        &#125;       
+        &#125; 		
     &#125; while(i&lt;=j);
-    if(left &lt; j) quicksort_l(a, left, j);    //对左区间内的元素排序 
-    if(i &lt; right) quicksort_l(a, i, right); //对右区间内的元素排序    
+    if(left &lt; j) quicksort_l(a, left, j);	 //对左区间内的元素排序 
+    if(i &lt; right) quicksort_l(a, i, right);	//对右区间内的元素排序 	
 &#125;
     
 template &lt;typename Comparable&gt;
 void quickSort(vector&lt;Comparable&gt; &amp; a) &#123;
     quicksort_l(a, 0, a.size() - 1);
-&#125;</code></pre>
-<h3 id="php实现-3">PHP实现</h3>
-<pre><code>//调换数组元素顺序
+&#125;
+</code></pre>
+<h3 id="PHP实现-3"><a href="#PHP实现-3" class="headerlink" title="PHP实现"></a>PHP实现</h3><pre><code>//调换数组元素顺序
 function swap(&amp;$a, &amp;$b) &#123;
     list($b, $a) = array($a, $b);
 &#125;
@@ -721,7 +573,7 @@ function quicksort1(&amp;$arr, $left, $right) &#123;
         while($arr[++$i] &lt; $key) &#123; &#125; 
         while($arr[--$j] &gt; $key) &#123; &#125;
         if($i &lt; $j) &#123;
-            swap($arr[$i], $arr[$j]);   
+            swap($arr[$i], $arr[$j]);	
         &#125;
     &#125; while($i &lt;= $j);
     if($j &gt; $left) &#123;
@@ -735,9 +587,9 @@ function quicksort1(&amp;$arr, $left, $right) &#123;
 
 function quicksort(&amp;$arr) &#123;
     quicksort1($arr, 0, count($arr)-1);
-&#125;</code></pre>
-<h3 id="c语言实现-3">C语言实现</h3>
-<pre><code>void Qsort(int arr[], int start, int end)
+&#125;
+</code></pre>
+<h3 id="C语言实现-3"><a href="#C语言实现-3" class="headerlink" title="C语言实现"></a>C语言实现</h3><pre><code>void Qsort(int arr[], int start, int end)
 &#123;
     int lt = start;
     int gt = end;
@@ -757,12 +609,12 @@ function quicksort(&amp;$arr) &#123;
         &#125;
         else if(arr[i] &gt; pivot)
         &#123;
-            swap(&amp;arr[gt--], &amp;arr[i]);  //此处不能i++，否则原来gt指向的元素没有与pivot进行比较
+            swap(&amp;arr[gt--], &amp;arr[i]);	//此处不能i++，否则原来gt指向的元素没有与pivot进行比较
         &#125;
         else
         &#123;
             i++;
-        &#125;       
+        &#125;		
     &#125;
     
     Qsort(arr, start, lt - 1);
@@ -777,22 +629,14 @@ void QuickSort(int arr[], int length)
     &#125;
     
     Qsort(arr, 0, length - 1);
-&#125;</code></pre>
-<h2 id="归并排序">归并排序</h2>
-<p>归并排序（mergesort）是将数组分成两半，这两半分别排序后，再归并在一起。排序某一半时，继续沿用同样的排序算法，最终你将归并两个只含一个元素的数组，这样算法的重担都落在“归并”的部分上。该算法是采用分治法的一个非常典型的应用。时间复杂度都为<span
-class="math inline">\(O(nlogn)\)</span>。空间复杂度为<span
-class="math inline">\(O(n)\)</span>。它是稳定的排序算法。</p>
-<h3 id="示意图-4">示意图</h3>
-<figure>
-<img src="http://7xsex4.com1.z0.glb.clouddn.com/merge_sort.gif"
-alt="归并排序" />
-<figcaption aria-hidden="true">归并排序</figcaption>
-</figure>
-<h3 id="c实现-4">C++实现</h3>
-<pre><code>template &lt;typename Comparable&gt;
+&#125;
+</code></pre>
+<h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><p>归并排序（mergesort）是将数组分成两半，这两半分别排序后，再归并在一起。排序某一半时，继续沿用同样的排序算法，最终你将归并两个只含一个元素的数组，这样算法的重担都落在“归并”的部分上。该算法是采用分治法的一个非常典型的应用。时间复杂度都为$O(nlogn)$。空间复杂度为$O(n)$。它是稳定的排序算法。</p>
+<h3 id="示意图-4"><a href="#示意图-4" class="headerlink" title="示意图"></a>示意图</h3><p><img src="http://7xsex4.com1.z0.glb.clouddn.com/merge_sort.gif" alt="归并排序"></p>
+<h3 id="C-实现-4"><a href="#C-实现-4" class="headerlink" title="C++实现"></a>C++实现</h3><pre><code>template &lt;typename Comparable&gt;
 void merge(vector&lt;Comparable&gt; &amp; a, vector&lt;Comparable&gt; &amp; tmpArray, int leftPos,  
 int rightPos, int rightEnd) &#123;
-    int leftEnd = rightPos - 1;     //center
+    int leftEnd = rightPos - 1;		//center
     int tmpPos = leftPos;
     int numElements = rightEnd - leftPos + 1;
     while(leftPos &lt;= leftEnd &amp;&amp; rightPos &lt;= rightEnd)  &#123;
@@ -802,7 +646,7 @@ int rightPos, int rightEnd) &#123;
             tmpArray[tmpPos++] = a[rightPos++];
         &#125;
     &#125;
-    while(leftPos &lt;= leftEnd) &#123;     
+    while(leftPos &lt;= leftEnd) &#123;		
         tmpArray[tmpPos++] = a[leftPos++];
     &#125;
     while(rightPos &lt;= rightEnd) &#123;
@@ -817,7 +661,7 @@ template &lt;typename Comparable&gt;
 void mergeSort_l(vector&lt;Comparable&gt; &amp; a, vector&lt;Comparable&gt; &amp; tmpArray, int left, int right) &#123;
     if(left &lt; right) &#123;
         int center = (left + right) / 2;
-        mergeSort_l(a, tmpArray, left, center);     //对半个数组分别进行排序 
+        mergeSort_l(a, tmpArray, left, center);		//对半个数组分别进行排序 
         mergeSort_l(a, tmpArray, center+1, right);
         merge(a, tmpArray, left, center+1, right);
     &#125;
@@ -827,17 +671,17 @@ template &lt;typename Comparable&gt;
 void mergeSort(vector&lt;Comparable&gt; &amp; a) &#123;
     vector&lt;Comparable&gt; tmpArray(a.size());
     mergeSort_l(a, tmpArray, 0, a.size()-1);
-&#125;</code></pre>
-<h3 id="php实现-4">PHP实现</h3>
-<pre><code>function mergeSort(&amp;$arr) &#123;
+&#125;
+</code></pre>
+<h3 id="PHP实现-4"><a href="#PHP实现-4" class="headerlink" title="PHP实现"></a>PHP实现</h3><pre><code>function mergeSort(&amp;$arr) &#123;
     mergeSort1($arr,0, count($arr)-1);
 &#125;
 
 function mergeSort1(&amp;$arr, $left, $right) &#123;   
-    if($left &lt; $right) &#123;    
+    if($left &lt; $right) &#123; 	
         $middle = (int) (($left + $right) / 2);
-        mergeSort1($arr, $left, $middle);       //对半个数组分别进行排序 
-        mergeSort1($arr, $middle+1, $right);        
+        mergeSort1($arr, $left, $middle);		//对半个数组分别进行排序 
+        mergeSort1($arr, $middle+1, $right);		
         merge($arr, $left, $middle+1, $right);
     &#125;
 &#125;
@@ -863,9 +707,9 @@ function merge(&amp;$arr, $leftPos, $rightPos, $rightEnd)&#123;
     for($i=0; $i&lt;$numElements; $i++, $rightEnd--) &#123;
         $arr[$rightEnd] = $tmpArr[$rightEnd];
     &#125;
-&#125;</code></pre>
-<h3 id="c语言实现-4">C语言实现</h3>
-<pre><code>void Merge(int arr[], int tmpArr[], int leftPos, int rightPos, int rightEnd) 
+&#125;
+</code></pre>
+<h3 id="C语言实现-4"><a href="#C语言实现-4" class="headerlink" title="C语言实现"></a>C语言实现</h3><pre><code>void Merge(int arr[], int tmpArr[], int leftPos, int rightPos, int rightEnd) 
 &#123;
     int i = leftPos;
     int j = rightPos;
@@ -895,7 +739,7 @@ function merge(&amp;$arr, $leftPos, $rightPos, $rightEnd)&#123;
      
      for(i = 0; i &lt; numElements; i++, rightEnd--)
      &#123;
-        arr[rightEnd] = tmpArr[rightEnd];
+     	arr[rightEnd] = tmpArr[rightEnd];
      &#125;
 &#125;
 
@@ -928,24 +772,15 @@ void MergeSort(int arr[], int length)
     &#123;
         return;
     &#125;
-&#125;</code></pre>
-<h2 id="堆排序">堆排序</h2>
-<p>以线性时间建立二叉堆，然后依次通过下滤操作建立一个<span
-class="math inline">\(max\)</span>堆，建立完成后依次通过<code>deleteMax</code>操作，将删除后的元素移至堆尾，完成操作。时间复杂度都为<span
-class="math inline">\(O(nlogn)\)</span>。空间复杂度为<span
-class="math inline">\(O(n)\)</span>。它是不稳定的排序算法。具体步骤如下：<br />
-* <strong>建立最大堆（build max
-heap）</strong>：若数组下标范围为0~n，考虑到单独一个元素是大根堆，则从下标n/2开始的元素均为大根堆。于是只要从n/2-1开始，向前依次构造大根堆，这样就能保证，构造到某个节点时，它的左右子树都已经是大根堆。<br />
-*
-<strong>堆排序（heapsort）</strong>：由于堆是用数组模拟的,在得到一个大根堆后，数组内部并不是有序的，因此需要将数组有序化。思想是移除根节点，并做下滤操作。第一次将heap[0]与heap[n-1]交换，再对heap[0...n-2]做下滤操作。第二次将heap[0]与heap[n-2]交换，再对heap[0...n-3]做下滤操作。重复该操作直至heap[0]和heap[1]交换。由于每次都是将最大的数并入到后面的有序区间，故操作完后整个数组就是有序的了。</p>
-<h3 id="示意图-5">示意图</h3>
-<figure>
-<img src="http://7xsex4.com1.z0.glb.clouddn.com/Heapsort.gif"
-alt="堆排序" />
-<figcaption aria-hidden="true">堆排序</figcaption>
-</figure>
-<h3 id="c实现-5">C++实现</h3>
-<pre><code>inline int leftChild(int i) &#123;
+&#125;
+</code></pre>
+<h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><p>以线性时间建立二叉堆，然后依次通过下滤操作建立一个$max$堆，建立完成后依次通过<code>deleteMax</code>操作，将删除后的元素移至堆尾，完成操作。时间复杂度都为$O(nlogn)$。空间复杂度为$O(n)$。它是不稳定的排序算法。具体步骤如下：  </p>
+<ul>
+<li><strong>建立最大堆（build max heap）</strong>：若数组下标范围为0~n，考虑到单独一个元素是大根堆，则从下标n&#x2F;2开始的元素均为大根堆。于是只要从n&#x2F;2-1开始，向前依次构造大根堆，这样就能保证，构造到某个节点时，它的左右子树都已经是大根堆。  </li>
+<li><strong>堆排序（heapsort）</strong>：由于堆是用数组模拟的,在得到一个大根堆后，数组内部并不是有序的，因此需要将数组有序化。思想是移除根节点，并做下滤操作。第一次将heap[0]与heap[n-1]交换，再对heap[0…n-2]做下滤操作。第二次将heap[0]与heap[n-2]交换，再对heap[0…n-3]做下滤操作。重复该操作直至heap[0]和heap[1]交换。由于每次都是将最大的数并入到后面的有序区间，故操作完后整个数组就是有序的了。</li>
+</ul>
+<h3 id="示意图-5"><a href="#示意图-5" class="headerlink" title="示意图"></a>示意图</h3><p><img src="http://7xsex4.com1.z0.glb.clouddn.com/Heapsort.gif" alt="堆排序"></p>
+<h3 id="C-实现-5"><a href="#C-实现-5" class="headerlink" title="C++实现"></a>C++实现</h3><pre><code>inline int leftChild(int i) &#123;
     return 2 * i;
 &#125;
 
@@ -953,7 +788,7 @@ template &lt;typename Comparable&gt;
 void percDown(vector &lt;Comparable&gt; &amp; a, int i, int n) &#123;
     int child;
     Comparable tmp;
-    for(tmp=a[i]; leftChild(i)&lt;n; i=child) &#123;        //leftChild确保在堆内计算 
+    for(tmp=a[i]; leftChild(i)&lt;n; i=child) &#123;		//leftChild确保在堆内计算 
         child = leftChild(i);
         if(child!=n-1 &amp;&amp; a[child]&lt;a[child+1]) &#123;
             child++;
@@ -969,16 +804,16 @@ void percDown(vector &lt;Comparable&gt; &amp; a, int i, int n) &#123;
 
 template &lt;typename Comparable&gt;
 void heapSort(vector &lt;Comparable&gt; &amp; a) &#123;
-    for(int i=a.size()/2; i&gt;=0; i--) &#123;      //建立max堆 
+    for(int i=a.size()/2; i&gt;=0; i--) &#123;		//建立max堆 
         percDown(a, i, a.size());
     &#125;
-    for(int j=a.size()-1; j&gt;0; j--) &#123;       //进行堆排序
+    for(int j=a.size()-1; j&gt;0; j--) &#123;		//进行堆排序
         swap(a[0], a[j]);
         percDown(a, 0, j);
     &#125;
-&#125;</code></pre>
-<h3 id="php实现-5">PHP实现</h3>
-<pre><code>function swap(&amp;$a, &amp;$b) &#123;       //调换数组元素
+&#125;
+</code></pre>
+<h3 id="PHP实现-5"><a href="#PHP实现-5" class="headerlink" title="PHP实现"></a>PHP实现</h3><pre><code>function swap(&amp;$a, &amp;$b) &#123;		//调换数组元素
     list($b, $a) = array($a, $b);
 &#125;
 
@@ -987,7 +822,7 @@ function leftChild($i) &#123;
 &#125;
 
 function percDown(&amp;$arr, $i, $n) &#123;
-    for($tmp=$arr[$i]; leftChild($i)&lt;$n; $i=$child) &#123;        
+    for($tmp=$arr[$i]; leftChild($i)&lt;$n; $i=$child) &#123;		 
         $child = leftChild($i);
         if($child!=$n-1 &amp;&amp; $arr[$child]&lt;$arr[$child+1]) &#123;
             $child++;
@@ -1003,14 +838,15 @@ function percDown(&amp;$arr, $i, $n) &#123;
 
 function heapSort(&amp;$arr) &#123;
     $len = count($arr);
-    for($i=(int) ($len/2); $i&gt;=0; $i--) &#123;        
+    for($i=(int) ($len/2); $i&gt;=0; $i--) &#123;		 
         percDown($arr, $i, $len);
     &#125;
-    for($j=$len-1; $j&gt;0; $j--) &#123;        
+    for($j=$len-1; $j&gt;0; $j--) &#123;		
         swap($arr[0], $arr[$j]);
         percDown($arr, 0, $j);
     &#125;
-&#125;</code></pre>
+&#125;
+</code></pre>
 
     </div>
 
@@ -1019,6 +855,23 @@ function heapSort(&amp;$arr) &#123;
     
 
     <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>MMSH
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://wsmmsh.github.io/2016/10/10/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93-PHP%E5%92%8CC-%E5%AE%9E%E7%8E%B0/" title="排序算法总结(PHP 和 C++ 实现)">http://wsmmsh.github.io/2016/10/10/排序算法总结-PHP和C-实现/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
           <div class="post-tags">
               <a href="/tags/algorithm/" rel="tag"># algorithm</a>
               <a href="/tags/%E6%8E%92%E5%BA%8F/" rel="tag"># 排序</a>
@@ -1069,25 +922,17 @@ function heapSort(&amp;$arr) &#123;
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">59k</span>
+    <span title="站点总字数">62k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:38</span>
+    <span title="站点阅读时长">1:44</span>
   </span>
 </div>
 <div class="busuanzi-count">
-    <span class="post-meta-item" id="busuanzi_container_site_uv">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="site-uv" title="总访客量">
-        <span id="busuanzi_value_site_uv"></span>
-      </span>
-    </span>
     <span class="post-meta-item" id="busuanzi_container_site_pv">
       <span class="post-meta-item-icon">
         <i class="fa fa-eye"></i>
@@ -1125,7 +970,7 @@ function heapSort(&amp;$arr) &#123;
 <script src="/js/third-party/math/mathjax.js"></script>
 
 
-<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://blog-comment-wsmmsh.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":true,"placeholder":"请文明评论。（填写邮箱可在被回复时收到邮件提醒）","emoji":["https://unpkg.com/@waline/emojis@1.0.1/qq"],"wordLimit":0,"login":"enable","pageSize":10,"copyright":true,"el":"#waline","comment":true,"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","path":"/2016/10/10/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93-PHP%E5%92%8CC-%E5%AE%9E%E7%8E%B0/"}</script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://blog-comment-wsmmsh.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"请文明评论。（填写邮箱可在被回复时收到邮件提醒）","emoji":["https://unpkg.com/@waline/emojis@1.0.1/qq"],"wordLimit":0,"login":"enable","pageSize":10,"copyright":true,"el":"#waline","comment":true,"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","path":"/2016/10/10/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93-PHP%E5%92%8CC-%E5%AE%9E%E7%8E%B0/"}</script>
 <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
 <script>
 document.addEventListener('page:loaded', () => {

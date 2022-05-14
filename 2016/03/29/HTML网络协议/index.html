@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.0">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 5.4.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
@@ -19,25 +20,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"wsmmsh.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.11.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"wsmmsh.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.11.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="本文主要简单的论述下计算机网络的大概结构，并重点讲解下自己对HTTP协议的理解。所有的因特网标准都是以RFC(Request For Comments)的形式在因特网上发表的,任何人都可以用电子邮件随时发表对某个文档的意见或建议。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="HTML网络协议">
-<meta property="og:url" content="http://wsmmsh.github.io/2016/03/29/HTML%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/index.html">
-<meta property="og:site_name" content="MMSH的个人博客">
-<meta property="og:description" content="本文主要简单的论述下计算机网络的大概结构，并重点讲解下自己对HTTP协议的理解。所有的因特网标准都是以RFC(Request For Comments)的形式在因特网上发表的,任何人都可以用电子邮件随时发表对某个文档的意见或建议。">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://7xsex4.com1.z0.glb.clouddn.com/123.png">
-<meta property="article:published_time" content="2016-03-29T08:30:06.000Z">
-<meta property="article:modified_time" content="2017-11-20T12:05:58.000Z">
-<meta property="article:author" content="MMSH">
-<meta property="article:tag" content="html">
-<meta property="article:tag" content="cookie">
-<meta property="article:tag" content="session">
-<meta property="article:tag" content="计算机网络">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://7xsex4.com1.z0.glb.clouddn.com/123.png">
 
 
 <link rel="canonical" href="http://wsmmsh.github.io/2016/03/29/HTML%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/">
@@ -150,7 +134,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB"><span class="nav-number">1.</span> <span class="nav-text">计算机网络体系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#http%E5%8D%8F%E8%AE%AE"><span class="nav-number">2.</span> <span class="nav-text">HTTP协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cookie-session"><span class="nav-number">3.</span> <span class="nav-text">Cookie &amp; Session</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B-%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B"><span class="nav-number">4.</span> <span class="nav-text">三次握手 &amp; 四次挥手</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#http%E6%96%B9%E6%B3%95"><span class="nav-number">5.</span> <span class="nav-text">HTTP方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#get"><span class="nav-number">5.1.</span> <span class="nav-text">GET</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#post"><span class="nav-number">5.2.</span> <span class="nav-text">POST</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95"><span class="nav-number">5.3.</span> <span class="nav-text">其他请求方法</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB"><span class="nav-number">1.</span> <span class="nav-text">计算机网络体系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP%E5%8D%8F%E8%AE%AE"><span class="nav-number">2.</span> <span class="nav-text">HTTP协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cookie-amp-Session"><span class="nav-number">3.</span> <span class="nav-text">Cookie &amp; Session</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B-amp-%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B"><span class="nav-number">4.</span> <span class="nav-text">三次握手 &amp; 四次挥手</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B"><span class="nav-number">4.1.</span> <span class="nav-text">三次握手</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B"><span class="nav-number">4.2.</span> <span class="nav-text">四次挥手</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP%E6%96%B9%E6%B3%95"><span class="nav-number">5.</span> <span class="nav-text">HTTP方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GET"><span class="nav-number">5.1.</span> <span class="nav-text">GET</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#POST"><span class="nav-number">5.2.</span> <span class="nav-text">POST</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95"><span class="nav-number">5.3.</span> <span class="nav-text">其他请求方法</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -283,14 +267,6 @@
   </span>
   
   
-    <span class="post-meta-item" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="waline-pageview-count" data-path="/2016/03/29/HTML%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/"></span>
-    </span>
-  
     <span class="post-meta-break"></span>
     <span class="post-meta-item" title="本文字数">
       <span class="post-meta-item-icon">
@@ -304,7 +280,7 @@
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>6 分钟</span>
+      <span>7 分钟</span>
     </span>
 </div>
 
@@ -315,27 +291,18 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>本文主要简单的论述下计算机网络的大概结构，并重点讲解下自己对HTTP协议的理解。所有的因特网标准都是以<a
-target="_blank" rel="noopener" href="https://www.ietf.org/rfc.html">RFC(Request For
-Comments)</a>的形式在因特网上发表的,任何人都可以用电子邮件随时发表对某个文档的意见或建议。
-<span id="more"></span></p>
-<h2 id="计算机网络体系">计算机网络体系</h2>
-<p>OSI的七层协议概念清楚，理论完整，但它复杂又不实用，在实际中我们广泛应用的是TCP/IP四层体系结构，但我们在学习计算机网络原理时，常采用五层协议的体系结构。五层协议是指<strong>应用层、运输层、网络层、数据链路层、物理层</strong>。<br />
-1.
-<strong>应用层</strong>直接为用户的应用进程(正在运行的程序)提供服务，该层协议有：HTTP、SMTP(电子邮件)、FTP等。<br />
-2.
-<strong>运输层</strong>主要负责为两个主机进程之间的通信提供服务，主要使用TCP(传输控制协议)、UDP(用户数据报协议)这两种协议。TCP是面向连接的、可靠的、有序的、速度慢的协议，常应用于传输大量数据的场合；UDP是无连接的、不可靠的、无序的、速度快的协议，提供尽最大努力交付，常应用于传输少量数据的场合。基于TCP的协议有：HTTP(80)/HTTPS(443)，Telnet(23)，FTP(21)，SMTP(25)。基于UDP的协议有：DHCP(67)，DNS(53)。<br />
-3.
-<strong>网络层</strong>负责为分组交换网上的不同主机提供通信服务，并且要选择合适的路由，使源主机运输层所传下来的分组能够通过网络中的路由器找到目的主机。在TCP/IP体系中，网络层使用IP协议。该层的协议有地址解析协议ARP、逆地址解析协议RARP、网际控制报文协议ICMP、虚拟专用网VPN、网络地址转换NAT等。<br />
-4.
-<strong>数据链路层</strong>负责在相邻两个节点之间传送数据时，将网络层交下来的IP数据报组装成帧(每一帧包括数据和必要的控制信息)，在节点间的链路上透明地传送帧中的数据。<br />
-5.
-<strong>物理层</strong>上传送数据的单位是比特，它的任务就是透明的传送比特流。</p>
-<h2 id="http协议">HTTP协议</h2>
-<p>在这里简单的说一下客户端访问服务器的工作过程。客户端和服务器之间使用HTTP协议建立TCP连接(<a
-href="#three">三次握手</a>)，然后客户端发送HTTP请求报文，服务器返回HTTP响应报文，完成访问后，释放TCP连接(<a
-href="#four">四次挥手</a>)。<br />
-HTTP的<strong>请求报文</strong>和<strong>响应报文</strong>的区别在于请求报文的开始行叫请求行，响应报文的开始行叫状态行。请求行包括方法、请求资源的URL以及HTTP版本。状态行包括HTTP版本、状态码以及解释状态码的简单短语。在这里解释下__状态码__的含义：</p>
+        <p>本文主要简单的论述下计算机网络的大概结构，并重点讲解下自己对HTTP协议的理解。所有的因特网标准都是以<a target="_blank" rel="noopener" href="https://www.ietf.org/rfc.html">RFC(Request For Comments)</a>的形式在因特网上发表的,任何人都可以用电子邮件随时发表对某个文档的意见或建议。</p>
+<span id="more"></span>
+
+<h2 id="计算机网络体系"><a href="#计算机网络体系" class="headerlink" title="计算机网络体系"></a>计算机网络体系</h2><p>OSI的七层协议概念清楚，理论完整，但它复杂又不实用，在实际中我们广泛应用的是TCP&#x2F;IP四层体系结构，但我们在学习计算机网络原理时，常采用五层协议的体系结构。五层协议是指<strong>应用层、运输层、网络层、数据链路层、物理层</strong>。  </p>
+<ol>
+<li><strong>应用层</strong>直接为用户的应用进程(正在运行的程序)提供服务，该层协议有：HTTP、SMTP(电子邮件)、FTP等。  </li>
+<li><strong>运输层</strong>主要负责为两个主机进程之间的通信提供服务，主要使用TCP(传输控制协议)、UDP(用户数据报协议)这两种协议。TCP是面向连接的、可靠的、有序的、速度慢的协议，常应用于传输大量数据的场合；UDP是无连接的、不可靠的、无序的、速度快的协议，提供尽最大努力交付，常应用于传输少量数据的场合。基于TCP的协议有：HTTP(80)&#x2F;HTTPS(443)，Telnet(23)，FTP(21)，SMTP(25)。基于UDP的协议有：DHCP(67)，DNS(53)。  </li>
+<li><strong>网络层</strong>负责为分组交换网上的不同主机提供通信服务，并且要选择合适的路由，使源主机运输层所传下来的分组能够通过网络中的路由器找到目的主机。在TCP&#x2F;IP体系中，网络层使用IP协议。该层的协议有地址解析协议ARP、逆地址解析协议RARP、网际控制报文协议ICMP、虚拟专用网VPN、网络地址转换NAT等。  </li>
+<li><strong>数据链路层</strong>负责在相邻两个节点之间传送数据时，将网络层交下来的IP数据报组装成帧(每一帧包括数据和必要的控制信息)，在节点间的链路上透明地传送帧中的数据。  </li>
+<li><strong>物理层</strong>上传送数据的单位是比特，它的任务就是透明的传送比特流。</li>
+</ol>
+<h2 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h2><p>在这里简单的说一下客户端访问服务器的工作过程。客户端和服务器之间使用HTTP协议建立TCP连接(<a href="#three">三次握手</a>)，然后客户端发送HTTP请求报文，服务器返回HTTP响应报文，完成访问后，释放TCP连接(<a href="#four">四次挥手</a>)。<br>HTTP的<strong>请求报文</strong>和<strong>响应报文</strong>的区别在于请求报文的开始行叫请求行，响应报文的开始行叫状态行。请求行包括方法、请求资源的URL以及HTTP版本。状态行包括HTTP版本、状态码以及解释状态码的简单短语。在这里解释下__状态码__的含义：</p>
 <pre><code>1xx:通知信息。
 2xx:成功。
 3xx:重定向。
@@ -348,106 +315,75 @@ HTTP的<strong>请求报文</strong>和<strong>响应报文</strong>的区别在
 5xx:服务器错误。  
     500:请求未完成，服务器遇到不可知的问题   
     502:请求未完成，服务器从上游服务器收到一个无效的响应
-    504:网关超时</code></pre>
-<h2 id="cookie-session">Cookie &amp; Session</h2>
-<p>HTTP是无状态协议，它没有一个内建机制来维护两个事务之间的状态，但是网站在区别不同用户访问的时候需要进行会话跟踪，所以产生了Cookie和Session。Cookie是通过HTTP请求的头部信息传回服务器的，Session变量的值保存在服务器端(文件/数据库/缓存中)。<br />
-当用户访问某个使用Cookie的网站时，该网站的服务器就为此用户产生一个唯一的识别码，并以此作为索引在服务器的后端数据库中产生一个项目，接着在给该用户的HTTP响应报文中添加一个叫Set-cookie的首部行（首部字段名是"Set-cookie"，字段值是"识别码"）。当用户收到响应时，他所使用的浏览器就在它管理的特定Cookie文件中添加一行，包括这个服务器的主机名和识别码，当用户继续访问该网站时，每发送一个HTTP请求报文，其浏览器就会从Cookie文件中取出这个网站的识别码，并放到HTTP请求报文中的Cookie首部行中，这样网站就能跟踪到该用户在该网站的活动。<br />
-Cookie将数据存储在客户端，但Cookie相对不太安全，单个Cookie的值最大只能存储4k，每次请求都要进行网络传输，占用带宽。Session将用户的会话数据存储在服务端，没有大小限制，通过一个session_id进行用户识别，PHP默认情况下session
-id是通过Cookie来保存的，因此从某种程度上来说，Session依赖于Cookie，但这不是绝对的，只要能将session
-id传递到服务端进行识别的机制都可以实现session。如果客户端禁用Cookie,可以使用URL重写，也可以指定通过GET方式或者POST方式把session
-id传到服务器。</p>
-<h2 id="三次握手-四次挥手">三次握手 &amp; 四次挥手</h2>
-<p>TCP链接的建立采用客户服务器方式，主动发起连接建立的应用进程叫客户，被动等待连接建立的应用进程叫服务器。</p>
-<p><span id="three"></span> ### 三次握手<br />
-<img src="http://7xsex4.com1.z0.glb.clouddn.com/123.png" /></p>
+    504:网关超时
+</code></pre>
+<h2 id="Cookie-amp-Session"><a href="#Cookie-amp-Session" class="headerlink" title="Cookie &amp; Session"></a>Cookie &amp; Session</h2><p>HTTP是无状态协议，它没有一个内建机制来维护两个事务之间的状态，但是网站在区别不同用户访问的时候需要进行会话跟踪，所以产生了Cookie和Session。Cookie是通过HTTP请求的头部信息传回服务器的，Session变量的值保存在服务器端(文件&#x2F;数据库&#x2F;缓存中)。<br>当用户访问某个使用Cookie的网站时，该网站的服务器就为此用户产生一个唯一的识别码，并以此作为索引在服务器的后端数据库中产生一个项目，接着在给该用户的HTTP响应报文中添加一个叫Set-cookie的首部行（首部字段名是”Set-cookie”，字段值是”识别码”）。当用户收到响应时，他所使用的浏览器就在它管理的特定Cookie文件中添加一行，包括这个服务器的主机名和识别码，当用户继续访问该网站时，每发送一个HTTP请求报文，其浏览器就会从Cookie文件中取出这个网站的识别码，并放到HTTP请求报文中的Cookie首部行中，这样网站就能跟踪到该用户在该网站的活动。<br>Cookie将数据存储在客户端，但Cookie相对不太安全，单个Cookie的值最大只能存储4k，每次请求都要进行网络传输，占用带宽。Session将用户的会话数据存储在服务端，没有大小限制，通过一个session_id进行用户识别，PHP默认情况下session id是通过Cookie来保存的，因此从某种程度上来说，Session依赖于Cookie，但这不是绝对的，只要能将session id传递到服务端进行识别的机制都可以实现session。如果客户端禁用Cookie,可以使用URL重写，也可以指定通过GET方式或者POST方式把session id传到服务器。</p>
+<h2 id="三次握手-amp-四次挥手"><a href="#三次握手-amp-四次挥手" class="headerlink" title="三次握手 &amp; 四次挥手"></a>三次握手 &amp; 四次挥手</h2><p>TCP链接的建立采用客户服务器方式，主动发起连接建立的应用进程叫客户，被动等待连接建立的应用进程叫服务器。</p>
+<p><span id="three"></span></p>
+<h3 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h3><p><img src="http://7xsex4.com1.z0.glb.clouddn.com/123.png">	</p>
 <ul>
-<li>第一次握手：客户端将标志位SYN置为1，选择一个初始序号seq=x(随机产生)，并将该数据包发送给服务器，客户端进入SYN-SENT状态，等待服务器确认。</li>
-<li>第二次握手：服务器收到数据包后由标志位SYN=1知道客户端请求建立连接，服务端将标志位SYN和ACK都置为1，确认号ack=x+1(ack为前一个的seq+1)，也选择一个初始序号seq=y，并将该数据包发送给客户端以确认连接请求，服务器进入SYN-RCVD状态。</li>
-<li>第三次握手：客户端收到确认后，确认ACK为1，ack是x+1，如果正确则将标志位ACK置为1，ack=y+1，自己的序号seq=x+1(如果ACK报文段不携带数据则不消耗序号)并将该数据包发送给服务器，服务器检查ack是否为y+1，ACK是否为1，如果正确则连接建立成功，客户端和服务器进入ESTABLISHED状态，完成三次握手，随后客户端与服务器之间可以开始传输数据了。</li>
+<li>第一次握手：客户端将标志位SYN置为1，选择一个初始序号seq&#x3D;x(随机产生)，并将该数据包发送给服务器，客户端进入SYN-SENT状态，等待服务器确认。</li>
+<li>第二次握手：服务器收到数据包后由标志位SYN&#x3D;1知道客户端请求建立连接，服务端将标志位SYN和ACK都置为1，确认号ack&#x3D;x+1(ack为前一个的seq+1)，也选择一个初始序号seq&#x3D;y，并将该数据包发送给客户端以确认连接请求，服务器进入SYN-RCVD状态。</li>
+<li>第三次握手：客户端收到确认后，确认ACK为1，ack是x+1，如果正确则将标志位ACK置为1，ack&#x3D;y+1，自己的序号seq&#x3D;x+1(如果ACK报文段不携带数据则不消耗序号)并将该数据包发送给服务器，服务器检查ack是否为y+1，ACK是否为1，如果正确则连接建立成功，客户端和服务器进入ESTABLISHED状态，完成三次握手，随后客户端与服务器之间可以开始传输数据了。</li>
 </ul>
-<p><span id="four"></span> ### 四次挥手<br />
-<img
-src="http://7xsex4.com1.z0.glb.clouddn.com/%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B.png" /></p>
+<p><span id="four"></span> </p>
+<h3 id="四次挥手"><a href="#四次挥手" class="headerlink" title="四次挥手"></a>四次挥手</h3><p><img src="http://7xsex4.com1.z0.glb.clouddn.com/%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B.png"></p>
 <ul>
-<li><p>第一次挥手：客户端把连接释放报文段首部的FIN置1,序号seq=u(等于前面已传送过的数据的最后一个字节的序号加1),用来关闭客户端到服务器的数据传送，客户端进入FIN-WAIT-1状态。</p></li>
-<li><p>第二次挥手：服务器收到FIN后，发送一个ACK给客户端，确认号为ack=u+1，seq=v,服务器进入CLOSE-WAIT状态(A到B关闭，B到A仍未关闭)。A收到B的确认后，进入Fin-WAIT-2状态。</p></li>
-<li><p>第三次挥手：服务器发送一个FIN，序号seq=w，ack=u+1,用来关闭服务器到客户端的数据传送，服务器进入LAST-ACK状态。</p></li>
-<li><p>第四次挥手：客户端收到FIN后，在确认报文段中使ACK=1，ack=w+1，seq=u+1,然后进入TIME-WAIT状态(2MSL，MSL为最长报文段寿命)，服务器进入CLOSED状态，完成四次挥手。　</p>
-<p>TIME-WAIT状态必须等待2MSL的原因：</p>
+<li><p>第一次挥手：客户端把连接释放报文段首部的FIN置1,序号seq&#x3D;u(等于前面已传送过的数据的最后一个字节的序号加1),用来关闭客户端到服务器的数据传送，客户端进入FIN-WAIT-1状态。</p>
+</li>
+<li><p>第二次挥手：服务器收到FIN后，发送一个ACK给客户端，确认号为ack&#x3D;u+1，seq&#x3D;v,服务器进入CLOSE-WAIT状态(A到B关闭，B到A仍未关闭)。A收到B的确认后，进入Fin-WAIT-2状态。</p>
+</li>
+<li><p>第三次挥手：服务器发送一个FIN，序号seq&#x3D;w，ack&#x3D;u+1,用来关闭服务器到客户端的数据传送，服务器进入LAST-ACK状态。</p>
+</li>
+<li><p>第四次挥手：客户端收到FIN后，在确认报文段中使ACK&#x3D;1，ack&#x3D;w+1，seq&#x3D;u+1,然后进入TIME-WAIT状态(2MSL，MSL为最长报文段寿命)，服务器进入CLOSED状态，完成四次挥手。　</p>
+<p>  TIME-WAIT状态必须等待2MSL的原因：</p>
 <ul>
 <li>为了保证A发送的最后一个ACK报文段能够到达B，若丢失，B超时重传FIN+ACK报文段。</li>
-<li>防止已失效的报文段出现在本连接中，A发送完最后一个ACK报文段后，再经过2MSL，可以使本连接持续的时间内所长生的所有报文段都从网络中消失。　</li>
-</ul></li>
+<li>防止已失效的报文段出现在本连接中，A发送完最后一个ACK报文段后，再经过2MSL，可以使本连接持续的时间内所长生的所有报文段都从网络中消失。</li>
 </ul>
-<h2 id="http方法">HTTP方法</h2>
-<p>HTTP请求方法总共有八种。HTTP1.0定义了三种请求方法：<strong>GET</strong>，<strong>POST</strong>和HEAD方法。HTTP1.1新增了五种请求方法：OPTIONS，PUT，DELETE，TRACE和CONNECT方法。</p>
-<h3 id="get">GET</h3>
-<p>GET用于从指定的资源请求数据，是http的默认请求方式，一般用来获取数据，传输的数据经过url编码后放在路径<code>?</code>之后，多个键值对通过&amp;连接，另外get的传输长度一般不推荐超过255个字节。它一般被视为安全方法，因为它仅用来获取数据而不会对服务器有其他改动。
-&gt;<strong>安全方法</strong><br />
-像HEAD、GET、OPTIONS和TRACE这几种http方法是被认为是“安全的”，这意味着它们只会进行数据获取而不会修改服务器的状态，不会产生负面影响，比如记录日志、创建缓存或者创建其他统计信息。<br />
-像POST、PUT、DELETE和PATCH等方法有可能产生副作用。网络爬虫等一般不会使用这些方式(注:搜索引擎的暗网抓取可能会使用这些方法)。
-尽管GET方法是一般被视为“安全的”，但如果在实际使用中没有做任何设置，比如可以无限制的抓取等情况，也会导致一些不可预料的问题，比如web缓存或者搜索引擎问题。</p>
-<h3 id="post">POST</h3>
-<p>POST用于向指定的资源提交要被处理的数据。数据被包含在请求体中，可能会导致新的资源的建立或已有资源的修改。<br />
-&gt;为什么一些请求会使用POST提交数据?<br />
-&gt;*
-GET请求数据都可以在URL中看到，不应在处理敏感数据时使用，而POST请求数据在URL中是不可见的。<br />
-&gt;*
-GET提交的数据都会有长度限制(URL的最大长度是2048个字符)，POST没有长度限制。<br />
-&gt;* 一般规范，GET用来获取数据，POST用来修改数据。<br />
-&gt;*
-GET请求可以被缓存，会被保留在浏览器的历史记录中，而POST请求不能被缓存，也不会被保留在浏览器的历史记录中。
-&gt;*
-GET请求提交的数据放置在HTTP请求协议头中，而POST提交的数据则放在实体数据中。</p>
-<h3 id="其他请求方法">其他请求方法</h3>
-<table>
+</li>
+</ul>
+<p>　</p>
+<h2 id="HTTP方法"><a href="#HTTP方法" class="headerlink" title="HTTP方法"></a>HTTP方法</h2><p>HTTP请求方法总共有八种。HTTP1.0定义了三种请求方法：<strong>GET</strong>，<strong>POST</strong>和HEAD方法。HTTP1.1新增了五种请求方法：OPTIONS，PUT，DELETE，TRACE和CONNECT方法。</p>
+<h3 id="GET"><a href="#GET" class="headerlink" title="GET"></a>GET</h3><p>GET用于从指定的资源请求数据，是http的默认请求方式，一般用来获取数据，传输的数据经过url编码后放在路径<code>?</code>之后，多个键值对通过&amp;连接，另外get的传输长度一般不推荐超过255个字节。它一般被视为安全方法，因为它仅用来获取数据而不会对服务器有其他改动。</p>
+<blockquote>
+<p><strong>安全方法</strong><br>像HEAD、GET、OPTIONS和TRACE这几种http方法是被认为是“安全的”，这意味着它们只会进行数据获取而不会修改服务器的状态，不会产生负面影响，比如记录日志、创建缓存或者创建其他统计信息。<br>像POST、PUT、DELETE和PATCH等方法有可能产生副作用。网络爬虫等一般不会使用这些方式(注:搜索引擎的暗网抓取可能会使用这些方法)。<br>尽管GET方法是一般被视为“安全的”，但如果在实际使用中没有做任何设置，比如可以无限制的抓取等情况，也会导致一些不可预料的问题，比如web缓存或者搜索引擎问题。</p>
+</blockquote>
+<h3 id="POST"><a href="#POST" class="headerlink" title="POST"></a>POST</h3><p>POST用于向指定的资源提交要被处理的数据。数据被包含在请求体中，可能会导致新的资源的建立或已有资源的修改。  </p>
+<blockquote>
+<p>为什么一些请求会使用POST提交数据?  </p>
+<ul>
+<li>GET请求数据都可以在URL中看到，不应在处理敏感数据时使用，而POST请求数据在URL中是不可见的。  </li>
+<li>GET提交的数据都会有长度限制(URL的最大长度是2048个字符)，POST没有长度限制。  </li>
+<li>一般规范，GET用来获取数据，POST用来修改数据。  </li>
+<li>GET请求可以被缓存，会被保留在浏览器的历史记录中，而POST请求不能被缓存，也不会被保留在浏览器的历史记录中。</li>
+<li>GET请求提交的数据放置在HTTP请求协议头中，而POST提交的数据则放在实体数据中。</li>
+</ul>
+</blockquote>
+<h3 id="其他请求方法"><a href="#其他请求方法" class="headerlink" title="其他请求方法"></a>其他请求方法</h3><table>
 <tr>
-<td>
-HEAD
-</td>
-<td>
-与 GET 相同，但只返回HTTP报头，不返回文档主体。
-</td>
+    <td>HEAD</td>
+    <td>与 GET 相同，但只返回HTTP报头，不返回文档主体。</td>
 </tr>
 <tr>
-<td>
-PUT
-</td>
-<td>
-从客户端向服务器传送数据取代指定的文档内容，如果存在则修改内容，否则创建新内容。
-</td>
+    <td>PUT</td>
+    <td>从客户端向服务器传送数据取代指定的文档内容，如果存在则修改内容，否则创建新内容。</td>
 </tr>
 <tr>
-<td>
-DELETE
-</td>
-<td>
-请求服务器删除指定的页面。
-</td>
+    <td>DELETE</td>
+    <td>请求服务器删除指定的页面。</td>
 </tr>
 <tr>
-<td>
-TRACE
-</td>
-<td>
-返回接受到的请求，用来查看数据经过中间服务器时发生了哪些变动。
-</td>
+    <td>TRACE</td>
+    <td>返回接受到的请求，用来查看数据经过中间服务器时发生了哪些变动。</td>
 </tr>
 <tr>
-<td>
-OPTIONS
-</td>
-<td>
-返回服务器支持的所有HTTP方法。
-</td>
+    <td>OPTIONS</td>
+    <td>返回服务器支持的所有HTTP方法。</td>
 </tr>
 <tr>
-<td>
-CONNECT
-</td>
-<td>
-要求使用SSL和TLS进行TCP通信。
-</td>
+    <td>CONNECT</td>
+    <td>要求使用SSL和TLS进行TCP通信。</td>
 </tr>
 </table>
 
@@ -458,6 +394,23 @@ CONNECT
     
 
     <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>MMSH
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://wsmmsh.github.io/2016/03/29/HTML%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/" title="HTML网络协议">http://wsmmsh.github.io/2016/03/29/HTML网络协议/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
           <div class="post-tags">
               <a href="/tags/html/" rel="tag"># html</a>
               <a href="/tags/cookie/" rel="tag"># cookie</a>
@@ -510,25 +463,17 @@ CONNECT
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">59k</span>
+    <span title="站点总字数">62k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:38</span>
+    <span title="站点阅读时长">1:44</span>
   </span>
 </div>
 <div class="busuanzi-count">
-    <span class="post-meta-item" id="busuanzi_container_site_uv">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="site-uv" title="总访客量">
-        <span id="busuanzi_value_site_uv"></span>
-      </span>
-    </span>
     <span class="post-meta-item" id="busuanzi_container_site_pv">
       <span class="post-meta-item-icon">
         <i class="fa fa-eye"></i>
@@ -566,7 +511,7 @@ CONNECT
 <script src="/js/third-party/math/mathjax.js"></script>
 
 
-<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://blog-comment-wsmmsh.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":true,"placeholder":"请文明评论。（填写邮箱可在被回复时收到邮件提醒）","emoji":["https://unpkg.com/@waline/emojis@1.0.1/qq"],"wordLimit":0,"login":"enable","pageSize":10,"copyright":true,"el":"#waline","comment":true,"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","path":"/2016/03/29/HTML%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/"}</script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://blog-comment-wsmmsh.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"请文明评论。（填写邮箱可在被回复时收到邮件提醒）","emoji":["https://unpkg.com/@waline/emojis@1.0.1/qq"],"wordLimit":0,"login":"enable","pageSize":10,"copyright":true,"el":"#waline","comment":true,"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","path":"/2016/03/29/HTML%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/"}</script>
 <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
 <script>
 document.addEventListener('page:loaded', () => {

@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.0">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 5.4.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
@@ -19,20 +20,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"wsmmsh.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.11.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"wsmmsh.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.11.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="花了大概一个多月的时间，趁着实习的空闲把这本书看完了，感觉本书对于计算机的整个宏观讲的很不错，但在操作系统方面讲的还不够深入，自己看这本书主要是为了自己以后的校招做准备，弥补下自己在操作系统方面的短板。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="《深入理解计算机系统》读书笔记">
-<meta property="og:url" content="http://wsmmsh.github.io/2016/07/17/%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/index.html">
-<meta property="og:site_name" content="MMSH的个人博客">
-<meta property="og:description" content="花了大概一个多月的时间，趁着实习的空闲把这本书看完了，感觉本书对于计算机的整个宏观讲的很不错，但在操作系统方面讲的还不够深入，自己看这本书主要是为了自己以后的校招做准备，弥补下自己在操作系统方面的短板。">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2016-07-17T10:44:59.000Z">
-<meta property="article:modified_time" content="2017-12-01T01:15:42.000Z">
-<meta property="article:author" content="MMSH">
-<meta property="article:tag" content="操作系统">
-<meta name="twitter:card" content="summary">
 
 
 <link rel="canonical" href="http://wsmmsh.github.io/2016/07/17/%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">
@@ -277,21 +266,13 @@
   </span>
   
   
-    <span class="post-meta-item" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="waline-pageview-count" data-path="/2016/07/17/%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"></span>
-    </span>
-  
     <span class="post-meta-break"></span>
     <span class="post-meta-item" title="本文字数">
       <span class="post-meta-item-icon">
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>3k</span>
+      <span>3.1k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -309,45 +290,45 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>花了大概一个多月的时间，趁着实习的空闲把这本书看完了，感觉本书对于计算机的整个宏观讲的很不错，但在操作系统方面讲的还不够深入，自己看这本书主要是为了自己以后的校招做准备，弥补下自己在操作系统方面的短板。
-<span id="more"></span></p>
-<ol type="1">
-<li>外壳是一个命令行解释器，它输出一个提示符，等待你输入一个命令行，然后执行这个命令。如果该命令行的第一个单词不是一个内置的外壳命令，那么外壳就假设这是一个可执行文件的名字，它将加载并运行这个文件。<br />
+        <p>花了大概一个多月的时间，趁着实习的空闲把这本书看完了，感觉本书对于计算机的整个宏观讲的很不错，但在操作系统方面讲的还不够深入，自己看这本书主要是为了自己以后的校招做准备，弥补下自己在操作系统方面的短板。</p>
+<span id="more"></span>  
+
+<ol>
+<li><p>外壳是一个命令行解释器，它输出一个提示符，等待你输入一个命令行，然后执行这个命令。如果该命令行的第一个单词不是一个内置的外壳命令，那么外壳就假设这是一个可执行文件的名字，它将加载并运行这个文件。  </p>
 </li>
-<li>驱动计算机进步的两大动力：
+<li><p>驱动计算机进步的两大动力：  </p>
 <ul>
 <li>要计算机做的更多——并发（一个同时具有多个活动的系统）</li>
 <li>要计算机做的更快——并行（用并发使系统运行的更快）</li>
-</ul></li>
-<li>同变量类似，指针也有两个方面：
+</ul>
+</li>
+<li><p>同变量类似，指针也有两个方面：  </p>
 <ul>
-<li>值（表示某个对象的地址）<br />
+<li>值（表示某个对象的地址）  </li>
+<li>类型（表示那个位置上存储的对象的类型）</li>
+</ul>
 </li>
-<li>类型（表示那个位置上存储的对象的类型）<br />
+<li><p>对于一个字长为w位的机器而言，虚拟地址的范围为$0\sim2^w$，程序最多访问$2^w$个字节。  </p>
 </li>
-</ul></li>
-<li>对于一个字长为w位的机器而言，虚拟地址的范围为<span
-class="math inline">\(0\sim2^w\)</span>，程序最多访问<span
-class="math inline">\(2^w\)</span>个字节。<br />
+<li><p>多字节对象都被存储为连续的字节序列，对象的地址为所使用字节的最小地址。 </p>
 </li>
-<li>多字节对象都被存储为连续的字节序列，对象的地址为所使用字节的最小地址。</li>
-<li>Unix外壳创建的每个进程开始时都有三个打开的文件：标准输入（0）、标准输出（1）和标准错误（2）。头文件&lt;unistd.h&gt;定义了常量STDIN_FILENO、STDOUT_FILENO和STDERR_FILENO，它们可用来代替显式的描述值。<br />
+<li><p>Unix外壳创建的每个进程开始时都有三个打开的文件：标准输入（0）、标准输出（1）和标准错误（2）。头文件&lt;unistd.h&gt;定义了常量STDIN_FILENO、STDOUT_FILENO和STDERR_FILENO，它们可用来代替显式的描述值。  </p>
 </li>
-<li>Unix内核使用三个相关的数据结构来表示打开的文件。描述符表中的表项指向打开文件表中的表项，而打开文件表中的表项又指向v-node表。每个进程都有自己单独的描述符表，所有的进程共享同一个打开文件表和v-node表。<br />
+<li><p>Unix内核使用三个相关的数据结构来表示打开的文件。描述符表中的表项指向打开文件表中的表项，而打开文件表中的表项又指向v-node表。每个进程都有自己单独的描述符表，所有的进程共享同一个打开文件表和v-node表。  </p>
 </li>
-<li>客户端-服务器模型中的基本操作是事务（跟数据库事务完全不一样），它由四步组成：客户端发送请求；服务器处理请求；服务器发送响应；客户端处理响应。<br />
+<li><p>客户端-服务器模型中的基本操作是事务（跟数据库事务完全不一样），它由四步组成：客户端发送请求；服务器处理请求；服务器发送响应；客户端处理响应。  </p>
 </li>
-<li>编写高效程序需要做到以下几点：
+<li><p>编写高效程序需要做到以下几点：  </p>
 <ul>
-<li>必须选择一种合适的数据结构和算法。<br />
-</li>
+<li>必须选择一种合适的数据结构和算法。  </li>
 <li>必须编写出编译器能够有效优化以转换成可执行代码的源代码。</li>
-<li>对处理运算量特别大的计算，将一个任务分成多个部分。<br />
+<li>对处理运算量特别大的计算，将一个任务分成多个部分。</li>
+</ul>
 </li>
-</ul></li>
-<li>在一个使用投机执行的处理器中，处理器会开始执行预测的分支目标处的指令,这样做会避免修改任何实际的寄存器或存储器位置，知道确定了实际的结果。如果预测是正确，那么处理器就会“提交”投机执行的指令的结果，把它们存储到寄存器或存储器中。如果预测是错误的，处理器必须丢弃掉所有投机执行的结果，在正确的位置，重新开始取指令的过程。这样做会引起预测错服除法，因为在产生又有用的结果前，必须重新填充指令流水线。为保证分之预测除法不会阻碍程序的效率，可以使用以下原则：
+<li><p>在一个使用投机执行的处理器中，处理器会开始执行预测的分支目标处的指令,这样做会避免修改任何实际的寄存器或存储器位置，知道确定了实际的结果。如果预测是正确，那么处理器就会“提交”投机执行的指令的结果，把它们存储到寄存器或存储器中。如果预测是错误的，处理器必须丢弃掉所有投机执行的结果，在正确的位置，重新开始取指令的过程。这样做会引起预测错服除法，因为在产生又有用的结果前，必须重新填充指令流水线。为保证分之预测除法不会阻碍程序的效率，可以使用以下原则：</p>
 <ul>
-<li><p>不要过分关系可预测的分支。</p></li>
+<li><p>不要过分关系可预测的分支。</p>
+</li>
 <li><p>书写使用条件传送的代码，使用“功能式的”代码替代“命令式的”代码。</p>
 <pre><code>  #命令式
   if(a[i] &gt; b[i]) &#123;
@@ -359,78 +340,48 @@ class="math inline">\(2^w\)</span>个字节。<br />
   int min = a[i] &lt; b[i] ? a[i] : b[i];
   int max = a[i] &lt; b[i] ? b[i] : a[i];
   a[i] = min;
-  b[i] = max;  </code></pre></li>
-</ul></li>
-<li>优化程序性能的基本策略：
+  b[i] = max;
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>优化程序性能的基本策略：  </p>
 <ul>
 <li>高级设计。为遇到的问题选择适当的算法和数据结构。</li>
-<li>基本编码原则。
-<ul>
+<li>基本编码原则。<ul>
 <li>消除连续的函数调用，在可能时将循环移到循环外。</li>
 <li>消除不必要的存储器引用，引入临时变量来保存中间结果。</li>
-</ul></li>
-<li>低级优化。
-<ul>
+</ul>
+</li>
+<li>低级优化。<ul>
 <li>展开循环，降低开销。</li>
 <li>用功能的风格重写条件操作，使得编译采用条件数据传递。</li>
-</ul></li>
-</ul></li>
-<li>Amdahl定律：考虑一个系统，在其中执行某个应用程序需要时间，假设系统的某个部分需要这个时间的百分比为<span
-class="math inline">\(\alpha\)</span>，而我们将它的性能提高到了<span
-class="math inline">\(k\)</span>倍，即这个部分原来$ <em>{i=0}^n i^2 =
-<span class="math inline">\(需要时间\)</span></em>{old}<span
-class="math inline">\(，而现在需要时间\)</span>_{old}/k$
-，因此整个执行时间会是：<br />
-<span
-class="math display">\[T_{new}=(1-\alpha)T_{old}+(\alphaT_{old})/k$=T_{old}[(1-\alpha)+\alpha/k]\]</span><br />
-据此，我们可以计算加速比<span
-class="math inline">\(S=T_{old}/T_{new}\)</span>为：<span
-class="math inline">\(S=\frac{1}{(1-\alpha)+\alpha/k}\)</span>。要想大幅度提高整个系统的速度，我们必须提高整个系统很大一部分的速度。<br />
+</ul>
 </li>
-<li>一个编写良好的计算机程序常常具有良好的局部性，它们倾向于引用邻近于其他最近引用过的数据项的数据项，或者最近引用过的数据项本身，这种倾向性被称为局部性原理，这是一个持久的概念，对硬件和软件系统的设计和性能都有着极大的影响，分为时间局部性和空间局部性。<br />
+</ul>
 </li>
-<li>量化评价程序局部性的原则：
+<li><p>Amdahl定律：考虑一个系统，在其中执行某个应用程序需要时间，假设系统的某个部分需要这个时间的百分比为$\alpha$，而我们将它的性能提高到了$k$倍，即这个部分原来$ \sum_{i&#x3D;0}^n i^2 &#x3D; \frac{(n^2+n)(2n+1)}{6} $需要时间$\alpha\bulletT_{old}$，而现在需要时间$\alphaT_{old}&#x2F;k$ ，因此整个执行时间会是：<br>$$T_{new}&#x3D;(1-\alpha)T_{old}+(\alphaT_{old})&#x2F;k$&#x3D;T_{old}[(1-\alpha)+\alpha&#x2F;k]$$<br>据此，我们可以计算加速比$S&#x3D;T_{old}&#x2F;T_{new}$为：$S&#x3D;\frac{1}{(1-\alpha)+\alpha&#x2F;k}$。要想大幅度提高整个系统的速度，我们必须提高整个系统很大一部分的速度。  </p>
+</li>
+<li><p>一个编写良好的计算机程序常常具有良好的局部性，它们倾向于引用邻近于其他最近引用过的数据项的数据项，或者最近引用过的数据项本身，这种倾向性被称为局部性原理，这是一个持久的概念，对硬件和软件系统的设计和性能都有着极大的影响，分为时间局部性和空间局部性。  </p>
+</li>
+<li><p>量化评价程序局部性的原则：</p>
 <ul>
 <li>重复引用一个变量的程序有良好的时间局部性。</li>
 <li>对于具有步长为k的引用模式的程序，步长越小，空间局部性约好。具有步长为1的引用模式的程序有很好的空间局部性，在存储器中以大步长跳来跳去的程序空间局部性会很差。</li>
 <li>对于取指令来说，循环有好的时间和空间局部性。循环体越小，循环迭代次数越多，局部性越好。</li>
-</ul></li>
-<li>高速缓存的写操作：
+</ul>
+</li>
+<li><p>高速缓存的写操作：</p>
 <ul>
 <li>直写：立即将w的高速缓存块协会到紧接着的低一层中。虽然简单，但缺点是每次写都会引起总线流量。</li>
-<li>写回：尽可能的推迟存储器更新，只有当替换算法要驱逐更新过的块时，才把它写到紧接着的低一层中。能显著地减少总线流量，但是增加了复杂性。<br />
+<li>写回：尽可能的推迟存储器更新，只有当替换算法要驱逐更新过的块时，才把它写到紧接着的低一层中。能显著地减少总线流量，但是增加了复杂性。</li>
+</ul>
 </li>
-</ul></li>
-<li>基本存储技术包括随机存储器(RAM)、非易失性存储器(ROM，只读存储器)和磁盘。RAM包括静态RAM(SRAM，贵、快，可作CPU芯片上的高速缓存，也可以用作芯片下的高速缓存)和动态RAM(DRAM，便宜、慢，用作主存和图形帧缓冲区)。<br />
+<li><p>基本存储技术包括随机存储器(RAM)、非易失性存储器(ROM，只读存储器)和磁盘。RAM包括静态RAM(SRAM，贵、快，可作CPU芯片上的高速缓存，也可以用作芯片下的高速缓存)和动态RAM(DRAM，便宜、慢，用作主存和图形帧缓冲区)。  </p>
 </li>
 <li></li>
 </ol>
-<p><img
-src="http://7xsex4.com1.z0.glb.clouddn.com/C%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C.png"
-alt="C程序编译执行示意图" /><br />
-之后Unix外壳调用操作系统中的加载器函数，它拷贝可执行文件中的代码和数据到存储器，然后将控制转移到这个程序的开头。<br />
-18.
-程序是一堆代码和数据，可以作为目标模块存放于磁盘上，或者作为段存在于地址空间中。进程是一个执行中的程序的实例。系统中的每个程序都是运行在某个进程的上下文的。上下文是由程序正确运行所需的状态组成的，包括存放在存储器中的程序的代码和数据，它的栈、通用目的寄存器的内容、程序计数器、环境变量以及打开文件描述符的集合。
-19. 进程提供给应用程序的关键抽象： *
-一个独立的逻辑控制流，它提供一个假象，好像我们的程序独占地使用处理器。 *
-一个私有的地址空间，它提供一个假象，好像我们的程序的独占地使用存储器系统。
-20.
-多个流并发地执行的一般现象称为并发，一个进程和其他进程轮流运行的概念称为多任务；
-21. 上下文切换： * 保存当前进程的上下文。 *
-回复某个先前被抢占的进程的被保存的上下文。 *
-将控制传递给这个新恢复的进程。 22.
-一个终止了但还未被回首的进程称为僵死进程。 23.
-fork是一次调用两次返回：一次是在调用进程（父进程）中，返回子进程的pid；一次是在新创建的子进程中，返回0。因为子进程的pid总是非零的，返回值就提供一个明确的方法来分辨程序是在父进程还是在子进程中执行。<br />
-24.
-虚拟存储器是硬件异常、硬件地址翻译、主存、磁盘文件和内核软件的完美交互，它为每个进程提供了一个大的、一致的和私有的地址空间。它有三个重要能力：<br />
-*
-将主存看成是一个存储在磁盘上的地址空间的高速缓存，在主存中只包括活动区域，并根据需要在磁盘和主存见来回传送数据，高效地使用主存。
-* 为每个进程提供了一致的地址空间，从而简化了存储器管理。 *
-保护每个进程的地址空间不被其他进程破坏。 25.
-对于C语言来说，常见的管理和使用虚拟存储器的错误有： * 间接引用坏指针。 *
-读取未初始化的存储器。 * 允许栈缓冲区溢出。 *
-假设指针和它们指向的对象大小相同。 * 引用指针而不是它们所指向的对象。 *
-误解指针运算。 * 引用不存在的变量，引起内存器泄漏。</p>
+<p><img src="http://7xsex4.com1.z0.glb.clouddn.com/C%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C.png" alt="C程序编译执行示意图"><br>之后Unix外壳调用操作系统中的加载器函数，它拷贝可执行文件中的代码和数据到存储器，然后将控制转移到这个程序的开头。<br>18. 程序是一堆代码和数据，可以作为目标模块存放于磁盘上，或者作为段存在于地址空间中。进程是一个执行中的程序的实例。系统中的每个程序都是运行在某个进程的上下文的。上下文是由程序正确运行所需的状态组成的，包括存放在存储器中的程序的代码和数据，它的栈、通用目的寄存器的内容、程序计数器、环境变量以及打开文件描述符的集合。<br>19. 进程提供给应用程序的关键抽象：<br>    * 一个独立的逻辑控制流，它提供一个假象，好像我们的程序独占地使用处理器。<br>    * 一个私有的地址空间，它提供一个假象，好像我们的程序的独占地使用存储器系统。<br>20. 多个流并发地执行的一般现象称为并发，一个进程和其他进程轮流运行的概念称为多任务；<br>21. 上下文切换：<br>    * 保存当前进程的上下文。<br>    * 回复某个先前被抢占的进程的被保存的上下文。<br>    * 将控制传递给这个新恢复的进程。<br>22. 一个终止了但还未被回首的进程称为僵死进程。<br>23. fork是一次调用两次返回：一次是在调用进程（父进程）中，返回子进程的pid；一次是在新创建的子进程中，返回0。因为子进程的pid总是非零的，返回值就提供一个明确的方法来分辨程序是在父进程还是在子进程中执行。<br>24. 虚拟存储器是硬件异常、硬件地址翻译、主存、磁盘文件和内核软件的完美交互，它为每个进程提供了一个大的、一致的和私有的地址空间。它有三个重要能力：<br>    * 将主存看成是一个存储在磁盘上的地址空间的高速缓存，在主存中只包括活动区域，并根据需要在磁盘和主存见来回传送数据，高效地使用主存。<br>    * 为每个进程提供了一致的地址空间，从而简化了存储器管理。<br>    * 保护每个进程的地址空间不被其他进程破坏。<br>25. 对于C语言来说，常见的管理和使用虚拟存储器的错误有：<br>    * 间接引用坏指针。<br>    * 读取未初始化的存储器。<br>    * 允许栈缓冲区溢出。<br>    * 假设指针和它们指向的对象大小相同。<br>    * 引用指针而不是它们所指向的对象。<br>    * 误解指针运算。<br>    * 引用不存在的变量，引起内存器泄漏。  </p>
 <p><font color=#FF0000>注：12条公式错误没解决</font></p>
 
     </div>
@@ -440,6 +391,23 @@ fork是一次调用两次返回：一次是在调用进程（父进程）中，�
     
 
     <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>MMSH
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://wsmmsh.github.io/2016/07/17/%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" title="《深入理解计算机系统》读书笔记">http://wsmmsh.github.io/2016/07/17/《深入理解计算机系统》读书笔记/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
           <div class="post-tags">
               <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag"># 操作系统</a>
           </div>
@@ -489,25 +457,17 @@ fork是一次调用两次返回：一次是在调用进程（父进程）中，�
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">59k</span>
+    <span title="站点总字数">62k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:38</span>
+    <span title="站点阅读时长">1:44</span>
   </span>
 </div>
 <div class="busuanzi-count">
-    <span class="post-meta-item" id="busuanzi_container_site_uv">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="site-uv" title="总访客量">
-        <span id="busuanzi_value_site_uv"></span>
-      </span>
-    </span>
     <span class="post-meta-item" id="busuanzi_container_site_pv">
       <span class="post-meta-item-icon">
         <i class="fa fa-eye"></i>
@@ -545,7 +505,7 @@ fork是一次调用两次返回：一次是在调用进程（父进程）中，�
 <script src="/js/third-party/math/mathjax.js"></script>
 
 
-<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://blog-comment-wsmmsh.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":true,"placeholder":"请文明评论。（填写邮箱可在被回复时收到邮件提醒）","emoji":["https://unpkg.com/@waline/emojis@1.0.1/qq"],"wordLimit":0,"login":"enable","pageSize":10,"copyright":true,"el":"#waline","comment":true,"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","path":"/2016/07/17/%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"}</script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://blog-comment-wsmmsh.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"请文明评论。（填写邮箱可在被回复时收到邮件提醒）","emoji":["https://unpkg.com/@waline/emojis@1.0.1/qq"],"wordLimit":0,"login":"enable","pageSize":10,"copyright":true,"el":"#waline","comment":true,"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","path":"/2016/07/17/%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"}</script>
 <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
 <script>
 document.addEventListener('page:loaded', () => {
