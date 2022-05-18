@@ -1295,98 +1295,102 @@ sudo grub2-mkconfig -o /boot/grub2/grub.cfg more /boot/grub2/grub.cfg
   <entry>
     <title>关于资源站点的那些事儿</title>
     <url>/2021/08/15/%E5%85%B3%E4%BA%8E%E8%B5%84%E6%BA%90%E7%AB%99%E7%82%B9%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/</url>
-    <content><![CDATA[  自己在16年的时候写过一篇类似的<a
-href="http://wsmmsh.github.io/2016/01/24/%E5%85%B3%E4%BA%8E%E7%94%B5%E5%BD%B1%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%B9%BF%E5%91%8A%E5%B1%8F%E8%94%BD%E7%9A%84%E9%82%A3%E7%82%B9%E4%BA%8B%E5%84%BF/">文章</a>，但因为5年过去了，很多网站也都已经不复存在了，遂再次更新下，主要围绕电影、美剧、纪录片、电子书等一些大家日常需要的资源，文里提到的网站也都是自己日常在使用的，质量无需担心。<br />
-<span id="more"></span><br />
+    <content><![CDATA[<p>  自己在16年的时候写过一篇类似的<a href="http://wsmmsh.github.io/2016/01/24/%E5%85%B3%E4%BA%8E%E7%94%B5%E5%BD%B1%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%B9%BF%E5%91%8A%E5%B1%8F%E8%94%BD%E7%9A%84%E9%82%A3%E7%82%B9%E4%BA%8B%E5%84%BF/">文章</a>，但因为5年过去了，很多网站也都已经不复存在了，遂再次更新下，主要围绕电影、美剧、纪录片、电子书等一些大家日常需要的资源，文里提到的网站也都是自己日常在使用的，质量无需担心。</p>
+<span id="more"></span>  
 <center>
-<img src="/images/微信收款码.png" width="40%" height="40%" />
+<img src="/images/微信收款码.png" width="40%" height="40%" />  
 </center>
-######
-<center>
-资源收集不易 欢迎打赏
-</center>
-<marquee direction=right scrollamount=5>
-<p style="color: #FF0000;font-size:20px;font-weight:bold;face=Microsoft YaHei;">
-   请大家有条件的一定要多多支持正版！！！
-</p>
-<p></marquee> ### 电影&amp;美剧下载站<br />
-  本节主要介绍一些电影、美剧的下载站，因为随着现在国家版权保护力度的加强，此类的网站也越来越少，大家切用且珍惜吧。下载的话还是推荐使用迅雷（Windows、MacOS、安卓和iOS的客户端都有），如果提示因版权等原因无法下载的话建议换个资源下载，如果因尺度太大的话可以考虑其他BT下载软件。<br />
+<h6 id="center-资源收集不易-欢迎打赏-center"><center>资源收集不易 欢迎打赏</center></h6>
+<p><marquee direction=right scrollamount=5><p style="color: #FF0000;font-size:20px;font-weight:bold;face=Microsoft YaHei;">   请大家有条件的一定要多多支持正版！！！</p></marquee></p>
+<h3 id="电影-美剧下载站">电影&amp;美剧下载站</h3>
+<p>  本节主要介绍一些电影、美剧的下载站，因为随着现在国家版权保护力度的加强，此类的网站也越来越少，大家切用且珍惜吧。下载的话还是推荐使用迅雷（Windows、MacOS、安卓和iOS的客户端都有），如果提示因版权等原因无法下载的话建议换个资源下载，如果因尺度太大的话可以考虑其他BT下载软件。<br>
   首先介绍下我们经常在网上能看到的视频资源分类和分辨率。</p>
 <blockquote>
 <ul>
-<li><p><strong>枪版</strong>：一般电影首先在院线上映，此时可能流出的资源就是枪版，资源名字里会带有<em>TC</em>、<em>CAM</em>或<em>TS</em>等，强烈不推荐观看此类资源，毫无质量可言。<br />
-</p></li>
-<li><p><strong>WEB-DL版本</strong>、<strong>HD版</strong>：电影在院线上映一段时间后，各大视频网站也都会上映，此时流出的资源是WEB-DL版本（Web
-Download），严格来说其并不是一种影片格式，而是用来标识影片来源、品质的标记，其来源主要是国外的iTunes
-,
-Netflix等和国内的优酷、爱奇艺、腾讯视频等，品质要比HDTV好，相比HDTV，无水印，无台标logo，无插播广告，无任何剪切，但画面品质仍然达不到BD的水平；同期还会流出HD版（HDTV），是High
-Definition
-Television的简称，翻译成中文是“高清晰度电视”的意思，画面质量会比BD稍差，主要表现为亮度不足、色彩不够自然、不够鲜艳等。<br />
-</p></li>
-<li><p><strong>BD版</strong>:视频网站上线一段时间后就会出蓝光盘，此时随之流出的资源就是通过蓝光片源录制的BD版（Bluray
-Disc），缩写为BD，画面品质比HD和WEB-DL要好，也是我们<strong>首推</strong>的观看类型。</p></li>
-<li><p><strong>分辨率</strong>：420P分辨率有效显示格式为720*480；720P分辨率有效显示格式为1280×720；1080P分辨率有效显示格式为：1920×1080；4k分辨率有效显示格式为：4096×2160（属于超高清分辨率,在此分辨率下，观众将可以看清画面中的每一个细节、每一个特写，我的真没有在暗示些什么)。我们选择的分辨率标准肯定是<strong>越高越好</strong>。</p></li>
+<li>
+<p><strong>枪版</strong>：一般电影首先在院线上映，此时可能流出的资源就是枪版，资源名字里会带有<em>TC</em>、<em>CAM</em>或<em>TS</em>等，强烈不推荐观看此类资源，毫无质量可言。</p>
+</li>
+<li>
+<p><strong>WEB-DL版本</strong>、<strong>HD版</strong>：电影在院线上映一段时间后，各大视频网站也都会上映，此时流出的资源是WEB-DL版本（Web Download），严格来说其并不是一种影片格式，而是用来标识影片来源、品质的标记，其来源主要是国外的iTunes , Netflix等和国内的优酷、爱奇艺、腾讯视频等，品质要比HDTV好，相比HDTV，无水印，无台标logo，无插播广告，无任何剪切，但画面品质仍然达不到BD的水平；同期还会流出HD版（HDTV），是High Definition Television的简称，翻译成中文是“高清晰度电视”的意思，画面质量会比BD稍差，主要表现为亮度不足、色彩不够自然、不够鲜艳等。</p>
+</li>
+<li>
+<p><strong>BD版</strong>:视频网站上线一段时间后就会出蓝光盘，此时随之流出的资源就是通过蓝光片源录制的BD版（Bluray Disc），缩写为BD，画面品质比HD和WEB-DL要好，也是我们<strong>首推</strong>的观看类型。</p>
+</li>
+<li>
+<p><strong>分辨率</strong>：420P分辨率有效显示格式为720*480；720P分辨率有效显示格式为1280×720；1080P分辨率有效显示格式为：1920×1080；4k分辨率有效显示格式为：4096×2160（属于超高清分辨率,在此分辨率下，观众将可以看清画面中的每一个细节、每一个特写，我的真没有在暗示些什么)。我们选择的分辨率标准肯定是<strong>越高越好</strong>。</p>
+</li>
 </ul>
 </blockquote>
-<p>  针对BD版的资源再详细说下,一般是正规厂家发布了蓝光原盘，一些高清论坛会进行无损发布（文件大小一半在30G以上），然后各大资源论坛会对原盘进行压制，压制成1080P(一般在10G左右)或者720P(一般在5G左右)的资源，注意这时候电影都是没有双语字幕的（如果原盘是国内发行版的话里面会有一条国语字幕，但效果一般），在这之后各个字幕组再在此基础上进行进一步的压制、添加特效字幕和音轨等，完了在各自的发布途径里发布，字幕组做的字幕比原盘里封装的效果会好很多，每家字幕组也都会有自己的字幕风格，强烈推荐看的时候使用字幕组的字幕。<br />
+<p>  针对BD版的资源再详细说下,一般是正规厂家发布了蓝光原盘，一些高清论坛会进行无损发布（文件大小一半在30G以上），然后各大资源论坛会对原盘进行压制，压制成1080P(一般在10G左右)或者720P(一般在5G左右)的资源，注意这时候电影都是没有双语字幕的（如果原盘是国内发行版的话里面会有一条国语字幕，但效果一般），在这之后各个字幕组再在此基础上进行进一步的压制、添加特效字幕和音轨等，完了在各自的发布途径里发布，字幕组做的字幕比原盘里封装的效果会好很多，每家字幕组也都会有自己的字幕风格，强烈推荐看的时候使用字幕组的字幕。<br>
   推荐一些我经常使用的资源站点吧，按照先后顺序推荐。</p>
 <ul>
-<li><h4 id="bt之家"><strong>BT之家</strong></h4>
-<p>  特别特别老牌的资源站点了，我去看了下论坛里的帖子，最早的帖子都是2004年发的了。它家不做字幕压制，只做资源分享，大家有需要的资源直接在论坛里搜索就行，然后会有各个字幕组、论坛制作的资源，另外每个资源贴里都有截图，可以稍加筛选，大家选一个自己喜欢的清楚的下载就行（<em>如果是老资源的话推荐CMCT、CNSCG、wofei、mp4ba、CNXP等家的，这些论坛现在差不多都被干掉了，新资源基本上不发了</em>）。<br />
-  基本上它家任何资源都能搜索得到，有删减的无删减的等等，唯一的一个缺点是网址经常换，为此它家自己都出了一个地址共享软件，可以通过这个小软件找到论坛最新的可访问地址。<br />
-<a href="https://www.btbtt15.com">网址1</a>  <a
-href="https://btbtt15.com">网址2</a><br />
-<a
-href="https://share.weiyun.com/czEqm3CW">BT之家专用网址查询工具1</a>  <a
-href="https://bjtueducn-my.sharepoint.com/:u:/g/personal/14120335_bjtu_edu_cn/EXDXbMW3LKBKvvknHVo2tmYBvjOxSq7WodK5TzC0oLfwbA?e=mzehCN">BT之家专用网址查询工具2</a></p></li>
-<li><h4 id="电影天堂"><strong>电影天堂</strong></h4>
-<p>  在16年的文章里我就推荐了它家，也是生命力很强的一家网站，它家自己会压制资源，文件都不大，小水管的福音。如果仅仅是手机或者一些不是想收藏的资源也可以从它家下载。另外它家还有很多分店，dygod、dy2018、ygdy、xiaopian等都属于它家的分店。<br />
-<a href="https://www.dy2018.com/">网址1</a>  <a
-href="https://www.ygdy8.com/">网址2</a><br />
-</p></li>
-<li><h4 id="梦幻天堂龙网"><strong>梦幻天堂·龙网</strong></h4>
-<p>  跟CNSCG、CMCT基本上属于同期的老牌资源论坛，没想到一直留存到了现在，以前发布的资源有着标志性的蓝字白框字幕，现在好像没有这种特色了。就冲今年还在用最新的美版高码原盘压制<a
-href="http://longwangbt.com/show.php?hash=ee6ef2bcb3fd0b02849878df73619f9a94ff45ce">《色戒》</a>也得支持他家不是？冲冲冲！
-<a href="http://www.longwangbt.com/">资源发布页</a>  <a
-href="http://lwgod.org/">论坛</a></p></li>
-<li><h4 id="uump4"><strong><a
-href="https://www.uump4.net/">UUMP4</a></strong></h4>
-<p>  它家既自己压制资源（文件名后缀里有UUMP4，MP4格式），也做资源转载，推荐看他家自己压制的MP4格式的资源。</p></li>
-<li><h4 id="钛影视"><strong><a
-href="http://www.taiyingshi.vip/">钛影视</a></strong></h4>
-<p>  可以作为BT之家的补充，也是汇集各家资源，缺点是搜索出资源后都是一条条的，没有详情介绍页，不像BT之家可以看到截图和剧情资源介绍。</p></li>
+<li>
+<h4 id="BT之家"><strong>BT之家</strong></h4>
+</li>
 </ul>
-<h3 id="福利站">福利站</h3>
-<p>  本节主要介绍两个福利网站。<br />
-* #### <strong>小草</strong> ####<br />
-  1024永远的神。<br />
-<a href="https://cl.797z.xyz/index.php">免翻地址</a>   <a
-href="https://t66y.com">永久地址</a>   <a
-href="https://github.com/yuuwill/1024app-android">安卓客户端</a>   <a
-href="https://github.com/yuuwill/1024app-android">iOS客户端</a>    <a
-href="https://github.com/yuuwill/1024app-uwp">电脑端地址更新器</a></p>
+<p>  特别特别老牌的资源站点了，我去看了下论坛里的帖子，最早的帖子都是2004年发的了。它家不做字幕压制，只做资源分享，大家有需要的资源直接在论坛里搜索就行，然后会有各个字幕组、论坛制作的资源，另外每个资源贴里都有截图，可以稍加筛选，大家选一个自己喜欢的清楚的下载就行（<em>如果是老资源的话推荐CMCT、CNSCG、wofei、mp4ba、CNXP等家的，这些论坛现在差不多都被干掉了，新资源基本上不发了</em>）。<br>
+  基本上它家任何资源都能搜索得到，有删减的无删减的等等，唯一的一个缺点是网址经常换，为此它家自己都出了一个地址共享软件，可以通过这个小软件找到论坛最新的可访问地址。<br>
+<a href="https://www.btbtt15.com">网址1</a>  <a href="https://btbtt15.com">网址2</a><br>
+<a href="https://share.weiyun.com/czEqm3CW">BT之家专用网址查询工具1</a>  <a href="https://bjtueducn-my.sharepoint.com/:u:/g/personal/14120335_bjtu_edu_cn/EXDXbMW3LKBKvvknHVo2tmYBvjOxSq7WodK5TzC0oLfwbA?e=mzehCN">BT之家专用网址查询工具2</a></p>
 <ul>
-<li><h4 id="福利吧"><strong><a
-href="https://fuliba2021.net/">福利吧</a></strong></h4>
-  有点文艺清新的福利站。</li>
+<li>
+<h4 id="电影天堂"><strong>电影天堂</strong></h4>
+</li>
 </ul>
+<p>  在16年的文章里我就推荐了它家，也是生命力很强的一家网站，它家自己会压制资源，文件都不大，小水管的福音。如果仅仅是手机或者一些不是想收藏的资源也可以从它家下载。另外它家还有很多分店，dygod、dy2018、ygdy、xiaopian等都属于它家的分店。<br>
+<a href="https://www.dy2018.com/">网址1</a>  <a href="https://www.ygdy8.com/">网址2</a></p>
+<ul>
+<li>
+<h4 id="梦幻天堂·龙网"><strong>梦幻天堂·龙网</strong></h4>
+</li>
+</ul>
+<p>  跟CNSCG、CMCT基本上属于同期的老牌资源论坛，没想到一直留存到了现在，以前发布的资源有着标志性的蓝字白框字幕，现在好像没有这种特色了。就冲今年还在用最新的美版高码原盘压制<a href="http://longwangbt.com/show.php?hash=ee6ef2bcb3fd0b02849878df73619f9a94ff45ce">《色戒》</a>也得支持他家不是？冲冲冲！<br>
+<a href="http://www.longwangbt.com/">资源发布页</a>  <a href="http://lwgod.org/">论坛</a></p>
+<ul>
+<li>
+<h4 id="UUMP4"><strong><a href="https://www.uump4.net/">UUMP4</a></strong></h4>
+</li>
+</ul>
+<p>  它家既自己压制资源（文件名后缀里有UUMP4，MP4格式），也做资源转载，推荐看他家自己压制的MP4格式的资源。</p>
+<ul>
+<li>
+<h4 id="钛影视"><strong><a href="http://www.taiyingshi.vip/">钛影视</a></strong></h4>
+</li>
+</ul>
+<p>  可以作为BT之家的补充，也是汇集各家资源，缺点是搜索出资源后都是一条条的，没有详情介绍页，不像BT之家可以看到截图和剧情资源介绍。</p>
+<h3 id="福利站">福利站</h3>
+<p>  本节主要介绍两个福利网站。</p>
+<ul>
+<li>
+<h4 id="小草"><strong>小草</strong></h4>
+</li>
+</ul>
+<p>  1024永远的神。<br>
+<a href="https://cl.797z.xyz/index.php">免翻地址</a>   <a href="https://t66y.com">永久地址</a>   <a href="https://github.com/yuuwill/1024app-android">安卓客户端</a>   <a href="https://github.com/yuuwill/1024app-android">iOS客户端</a>    <a href="https://github.com/yuuwill/1024app-uwp">电脑端地址更新器</a></p>
+<ul>
+<li>
+<h4 id="福利吧"><strong><a href="https://fuliba2021.net/">福利吧</a></strong></h4>
+</li>
+</ul>
+<p>  有点文艺清新的福利站。</p>
 <h3 id="软件站">软件站</h3>
 <p>  本节主要介绍几个自己常用的软件破解网站。大家如果有条件请多多支持正版！！！</p>
 <ul>
-<li><h4 id="app热"><strong><a
-href="https://apphot.cc/">App热</a></strong></h4>
-<p>  烈火的软件站。之前认识他是因为他做的WinRAR很好用，没广告还稳定，然后找到了他之前的软件站心海e站，后来心海e站废掉了，都是广告。现在他开了新站App热，里面的软件大部都是破解版的，大家在使用的时候优先选择直接输入注册码的版本。</p></li>
-<li><h4 id="down"><strong><a
-href="https://www.423down.com/">423Down</a></strong></h4>
-<p>  站长就是之前有名的zdfans。下面是网站的介绍：<code>「423Down」是一家由个人运营的软件下载站博客，专注去广告类软件输出10年，主要提供电脑软件和安卓软件及系统镜像下载，更新资源速度快，致力于打造个人IP品牌。「zd423」是站长本人最早使用过的网络ID马甲，个人曾经在2013年创建了下载站「zdfans.com」软件分享平台领跑者，原域名是在2016年被网络公司收购商业化运营，目前已经是搜索引擎流量非常大的软件下载站，现在个人IP网址为「423down.com」始于爱好，忠于习惯，不忘初心，方能长久坚持！</code></p></li>
+<li>
+<h4 id="App热"><strong><a href="https://apphot.cc/">App热</a></strong></h4>
+</li>
 </ul>
-<h2 id="参考资料">参考资料：</h2>
-<p>(1)<a
-href="https://zhuanlan.zhihu.com/p/261938045">赶紧收藏了！最全的电影格式介绍来了！</a><br />
-(2)<a
-href="https://www.jianshu.com/p/6c6e1cd1d4aa">关于电影资源画质和一些视频格式的解析</a>
-(3)<a
-href="http://www.360doc.com/content/19/1212/09/27515762_879215614.shtml">文字特效代码集中营</a></p>
+<p>  烈火的软件站。之前认识他是因为他做的WinRAR很好用，没广告还稳定，然后找到了他之前的软件站心海e站，后来心海e站废掉了，都是广告。现在他开了新站App热，里面的软件大部都是破解版的，大家在使用的时候优先选择直接输入注册码的版本。</p>
+<ul>
+<li>
+<h4 id="423Down"><strong><a href="https://www.423down.com/">423Down</a></strong></h4>
+</li>
+</ul>
+<p>  站长就是之前有名的zdfans。下面是网站的介绍：<code>「423Down」是一家由个人运营的软件下载站博客，专注去广告类软件输出10年，主要提供电脑软件和安卓软件及系统镜像下载，更新资源速度快，致力于打造个人IP品牌。「zd423」是站长本人最早使用过的网络ID马甲，个人曾经在2013年创建了下载站「zdfans.com」软件分享平台领跑者，原域名是在2016年被网络公司收购商业化运营，目前已经是搜索引擎流量非常大的软件下载站，现在个人IP网址为「423down.com」始于爱好，忠于习惯，不忘初心，方能长久坚持！</code></p>
+<h2 id="参考资料：">参考资料：</h2>
+<p>(1)<a href="https://zhuanlan.zhihu.com/p/261938045">赶紧收藏了！最全的电影格式介绍来了！</a><br>
+(2)<a href="https://www.jianshu.com/p/6c6e1cd1d4aa">关于电影资源画质和一些视频格式的解析</a><br>
+(3)<a href="http://www.360doc.com/content/19/1212/09/27515762_879215614.shtml">文字特效代码集中营</a></p>
 ]]></content>
       <categories>
         <category>网络资源</category>
