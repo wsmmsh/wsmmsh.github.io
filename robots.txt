@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Allow: /posts/
+Allow: /categories/
+Allow: /about/
+
+Disallow: /js/
+Disallow: /css/
+Disallow: /libs/
