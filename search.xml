@@ -1358,6 +1358,25 @@ sudo grub2-mkconfig -o /boot/grub2/grub.cfg more /boot/grub2/grub.cfg
 </li>
 </ul>
 <p>  可以作为BT之家的补充，也是汇集各家资源，缺点是搜索出资源后都是一条条的，没有详情介绍页，不像BT之家可以看到截图和剧情资源介绍。</p>
+<h3 id="书籍下载站">书籍下载站</h3>
+<ul>
+<li>
+<h4 id="Zlibrary"><strong><a href="https://zh.singlelogin.app/">Zlibrary</a></strong></h4>
+</li>
+</ul>
+<p>  数字图书馆，里面有很多的资源，基本上都能下载到，下载的时候可以选择自己想要的格式。注意域名是登陆页面，注册账号登陆后自动匹配可以打开的网址。</p>
+<ul>
+<li>
+<h4 id="知识库"><strong><a href="https://book.zhishikoo.com/">知识库</a></strong></h4>
+</li>
+</ul>
+<p>  有很多书，每本书下载下来都是一个压缩包，里面azw3、epub、mobi格式都有，很灵活。</p>
+<ul>
+<li>
+<h4 id="iamtxt"><strong><a href="https://www.iamtxt.com/">iamtxt</a></strong></h4>
+</li>
+</ul>
+<p>  很有历史的一个图书资源站，主要是靠大家互相分享，然后使用积分下载。每天签到2积分，刚好可以下载一本书。</p>
 <h3 id="福利站">福利站</h3>
 <p>  本节主要介绍两个福利网站。</p>
 <ul>
@@ -2283,7 +2302,7 @@ function heapSort(&amp;$arr) &#123;
 <h4 id="p-style-color-FFD700-未读-p"><p style="color: #FFD700;">未读</p></h4>
 <ul>
 <li>
-<h5 id="《变量》四部曲">**《变量》四部曲 **</h5>
+<h5 id="《变量》四部曲"><strong>《变量》四部曲</strong></h5>
   何帆的变量四部曲：<a href="https://book.douban.com/subject/30418697/">《变量 : 看见中国社会小趋势》</a>、<a href="https://book.douban.com/subject/34925941/">《变量2 : 推演中国经济基本盘》</a>、<a href="https://book.douban.com/subject/35296865/">《变量3：本土时代的生存策略》</a>、<a href="https://book.douban.com/subject/35703169/">《变量4：大国的腾挪》</a>。EPUB格式。<br>
 <a href="https://share.weiyun.com/ACEmUdOu">下载链接一</a>  <a href="https://bjtueducn-my.sharepoint.com/:f:/g/personal/14120335_bjtu_edu_cn/EqrB2dpzNadKgO4S7-EONAMBzN-a4I5G2dGLD2-L6gpCKw?e=xEduyg">下载链接二</a></li>
 <li>
@@ -2295,7 +2314,7 @@ function heapSort(&amp;$arr) &#123;
   财经大V珍大户新作，超10万人付费学习的经济课。10余年投资管理实战经验总结，历时3年，25万字实用干货。一本书帮你打造自己的经济学知识框架，理解经济世界的运转规律。mobi、epub和pdf格式。<br>
 <a href="https://share.weiyun.com/fGgfp3PP">下载链接一</a>  <a href="https://bjtueducn-my.sharepoint.com/:f:/g/personal/14120335_bjtu_edu_cn/EsSnqqRCq6FFlQSag8gKPRQB2qV19AQhgYqNTMioh8Ao4A?e=ybcPaD">下载链接二</a></li>
 <li>
-<h5 id="《底层逻辑：看清这个世界的底牌》-https-book-douban-com-subject-35620025"><strong>[《底层逻辑：看清这个世界的底牌》]<a href="https://book.douban.com/subject/35620025/">https://book.douban.com/subject/35620025/</a>)</strong></h5>
+<h5 id="《底层逻辑：看清这个世界的底牌》"><strong><a href="https://book.douban.com/subject/35620025/">《底层逻辑：看清这个世界的底牌》</a></strong></h5>
   “底层逻辑”来源于不同中的相同，变化背后的不变。只有掌握了底层逻辑，只有探寻到万变中的不变，才能动态地、持续地看清事物的本质。在本书中，中国著名商业顾问刘润把在《5分钟商学院》中讲述的底层逻辑的内容做了总结，与你分享是非对错、思考问题、个体进化、理解他人和社会协作五个方面的底层逻辑，带你看清这个世界的底牌。“底层逻辑”并不局限于商业世界。希望你在看到千变万化的世界后，依然能心态平静、不焦虑，能够通过“底层逻辑＋环境变量”不断创造新的方法论，在工作和生活中都始终如鱼得水。azw3、mobi、epub和pdf格式。<br>
 <a href="https://share.weiyun.com/jYcESgcn">下载链接一</a>  <a href="https://bjtueducn-my.sharepoint.com/:f:/g/personal/14120335_bjtu_edu_cn/EgiSzvRBQNlPsEkOzr1fV-YBdTDnOqP-Bje-F5sXxF_xKA?e=cfb45x">下载链接二</a></li>
 </ul>
